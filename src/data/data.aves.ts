@@ -1,6 +1,7 @@
 export const AVES= [
 
   {
+    titulo: "AGUILA",
     audio:"assets/sound/aves/aguila.mp3",
     imagen:"assets/img/ave/aguila.jpg",
     duracion:4,
@@ -8,7 +9,7 @@ export const AVES= [
 
   },
   {
-
+    titulo: "AVESTRUZ",
     audio:"assets/sound/aves/avestruz.mp3",
     imagen:"assets/img/ave/avestruz.jpg",
     duracion:4,
@@ -16,7 +17,7 @@ export const AVES= [
 
   },
   {
-
+    titulo: "BUHO",
     audio:"assets/sound/aves/buho.mp3",
     imagen:"assets/img/ave/buho.jpg",
     duracion:4,
@@ -24,7 +25,7 @@ export const AVES= [
 
   },
   {
-
+    titulo: "COLIBRI",
     audio:"assets/sound/aves/colibri.mp3",
     imagen:"assets/img/ave/colibri.jpg",
     duracion:4,
@@ -33,6 +34,7 @@ export const AVES= [
   },
 
   {
+    titulo: "CUERVO",
     audio:"assets/sound/aves/cuervo.mp3",
     imagen:"assets/img/ave/cuervo.jpg",
     duracion:4,
@@ -40,7 +42,7 @@ export const AVES= [
 
   },
   {
-
+    titulo: "GALLO",
     audio:"assets/sound/aves/gallo.mp3",
     imagen:"assets/img/ave/gallo.jpg",
     duracion:4,
@@ -48,7 +50,7 @@ export const AVES= [
 
   },
   {
-
+    titulo: "GOLONDRINA",
     audio:"assets/sound/aves/golondrina.mp3",
     imagen:"assets/img/ave/golondrina.jpg",
     duracion:4,
@@ -56,6 +58,7 @@ export const AVES= [
 
   },
   {
+    titulo: "HALCON",
     audio:"assets/sound/aves/halcon.mp3",
     imagen:"assets/img/ave/halcon.jpg",
     duracion:4,
@@ -63,6 +66,7 @@ export const AVES= [
 
   },
   {
+    titulo: "PAVO",
     audio:"assets/sound/aves/pavo.mp3",
     imagen:"assets/img/ave/pavo.jpg",
     duracion:4,
@@ -70,7 +74,7 @@ export const AVES= [
 
   },
   {
-
+    titulo: "PICAFLOR",
     audio:"assets/sound/aves/picaflor.mp3",
     imagen:"assets/img/ave/picaflor.jpg",
     duracion:4,
