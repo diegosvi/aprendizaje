@@ -1,0 +1,36 @@
+<!--
+  Generated template for the TransportePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Transportes</ion-title>
+    <ion-buttons>
+      <button ion-button icon-left menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div text-center>
+    <img class="imagen" (click)="irTerrestre()" src="../../assets/img/pri/terrestre.jpg">
+    <!--<button ion-button outline (click)="irMamiferos()">Mamiferos</button>-->
+    <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
+  </div>
+  <div text-center>
+    <img class="imagen" (click)="irMaritimo()" src="../../assets/img/pri/maritimo.jpg">
+    <!--<button ion-button outline (click)="irPeces()">Peces</button>-->
+    <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
+  </div>
+  <div text-center>
+    <img class="imagen" (click)="irAereo()" src="../../assets/img/pri/aereo.jpg">
+    <!--<button ion-button outline (click)="irAves()">Aves</button>-->
+    <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
+  </div>

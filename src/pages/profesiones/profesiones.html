@@ -1,0 +1,30 @@
+<!--
+  Generated template for the ProfesionesPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profesiones</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+        <ion-card *ngFor="let pro of prof" (click)="reproducir(pro)">
+          <img [src]="pro.imagen">
+          <div class="card-title"><ion-icon name="play" *ngIf="!pro.reproduciendo"item-right=""></ion-icon></div>
+          <div class="card-subtitle"><ion-icon name="pause" *ngIf="pro.reproduciendo"item-right=""></ion-icon></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

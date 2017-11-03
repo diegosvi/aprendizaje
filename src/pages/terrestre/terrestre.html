@@ -1,0 +1,31 @@
+<!--
+  Generated template for the TerrestrePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Terrestre</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+
+        <ion-card *ngFor="let terres of terre" (click)="reproducir(terres)">
+          <img [src]="terres.imagen">
+          <div class="card-title"><ion-icon name="play" *ngIf="!terres.reproduciendo"item-right=""></ion-icon></div>
+          <div class="card-subtitle"><ion-icon name="pause" *ngIf="terres.reproduciendo"item-right=""></ion-icon></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

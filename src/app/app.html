@@ -1,0 +1,18 @@
+<ion-menu [content]="pepito">
+  <ion-header color="danger">
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button ion-item (click)="irPagina(principal)">Básico</button>
+      <button ion-item (click)="irPagina(animal)">Animales</button>
+      <button ion-item (click)="irPagina(intermedio)">Intermedio</button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #pepito></ion-nav>
+
+<!--<ion-nav [root]="rootPage"></ion-nav>-->
