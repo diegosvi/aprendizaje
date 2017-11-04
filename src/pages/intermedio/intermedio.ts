@@ -4,6 +4,7 @@ import { FruhoPage} from '../../pages/fruho/fruho';
 import { TransportePage} from '../../pages/transporte/transporte';
 import { ProfesionesPage} from '../../pages/profesiones/profesiones';
 import { MesesPage} from '../../pages/meses/meses';
+import { DeportesPage} from '../../pages/deportes/deportes';
 
 /**
  * Generated class for the IntermedioPage page.
@@ -40,5 +41,9 @@ export class IntermedioPage {
 
   irMeses(){
     this.navCtrl.push(MesesPage);
+  }
+
+  irDeportes(){
+    this.navCtrl.push(DeportesPage);
   }
 }

@@ -23,3 +23,5 @@ export {HortalizasPage} from './hortalizas/hortalizas';
 export {RelojPage} from './reloj/reloj';
 export {HoramPage} from './horam/horam';
 export {HoratPage} from './horat/horat';
+export {DeportesPage} from './deportes/deportes';
+
