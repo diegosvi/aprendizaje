@@ -20,3 +20,6 @@ export {AereoPage} from './aereo/aereo';
 export {TerrestrePage} from './terrestre/terrestre';
 export {FruhoPage} from './fruho/fruho';
 export {HortalizasPage} from './hortalizas/hortalizas';
+export {RelojPage} from './reloj/reloj';
+export {HoramPage} from './horam/horam';
+export {HoratPage} from './horat/horat';

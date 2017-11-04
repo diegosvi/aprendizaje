@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FruhoPage} from '../../pages/fruho/fruho';
 import { TransportePage} from '../../pages/transporte/transporte';
 import { ProfesionesPage} from '../../pages/profesiones/profesiones';
+import { MesesPage} from '../../pages/meses/meses';
 
 /**
  * Generated class for the IntermedioPage page.
@@ -37,4 +38,7 @@ export class IntermedioPage {
     this.navCtrl.push(FruhoPage);
   }
 
+  irMeses(){
+    this.navCtrl.push(MesesPage);
+  }
 }

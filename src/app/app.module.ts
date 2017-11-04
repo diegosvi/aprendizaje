@@ -7,7 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 // import { HomePage } from '../pages/home/home';
 import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, ColoresPage,AnimalesPage, MamiferosPage, AvesPage, PecesPage,
-          ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,TerrestrePage,AereoPage,MaritimoPage} from '../pages/index.pages'
+          ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
+          TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage} from '../pages/index.pages'
 @NgModule({
   declarations: [
     MyApp,
@@ -33,7 +34,10 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     AereoPage,
     MaritimoPage,
     HortalizasPage,
-    FruhoPage
+    FruhoPage,
+    RelojPage,
+    HoratPage,
+    HoramPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +68,10 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     AereoPage,
     MaritimoPage,
     HortalizasPage,
-    FruhoPage
+    FruhoPage,
+    RelojPage,
+    HoratPage,
+    HoramPage
   ],
   providers: [
     StatusBar,
