@@ -24,4 +24,12 @@ export {RelojPage} from './reloj/reloj';
 export {HoramPage} from './horam/horam';
 export {HoratPage} from './horat/horat';
 export {DeportesPage} from './deportes/deportes';
-
+export {PaisesPage} from './paises/paises';
+export {AmericaPage} from './america/america';
+export {AsiaPage} from './asia/asia';
+export {AfricaPage} from './africa/africa';
+export {EuropaPage} from './europa/europa';
+export {OceaniaPage} from './oceania/oceania';
+export {AmericanPage} from './american/american';
+export {AmericacPage} from './americac/americac';
+export {AmericasPage} from './americas/americas';

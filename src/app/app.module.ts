@@ -8,7 +8,8 @@ import { MyApp } from './app.component';
 // import { HomePage } from '../pages/home/home';
 import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, ColoresPage,AnimalesPage, MamiferosPage, AvesPage, PecesPage,
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
-          TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage} from '../pages/index.pages'
+          TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage,OceaniaPage,EuropaPage,AfricaPage,AsiaPage,
+          AmericaPage,PaisesPage,AmericacPage,AmericanPage,AmericasPage} from '../pages/index.pages'
 @NgModule({
   declarations: [
     MyApp,
@@ -38,7 +39,13 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     RelojPage,
     HoratPage,
     HoramPage,
-    DeportesPage
+    DeportesPage,
+    OceaniaPage,
+    EuropaPage,
+    AfricaPage,
+    AsiaPage,
+    AmericaPage,
+    PaisesPage,AmericacPage,AmericanPage,AmericasPage
   ],
   imports: [
     BrowserModule,
@@ -73,7 +80,13 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     RelojPage,
     HoratPage,
     HoramPage,
-    DeportesPage
+    DeportesPage,
+    OceaniaPage,
+    EuropaPage,
+    AfricaPage,
+    AsiaPage,
+    AmericaPage,
+    PaisesPage,AmericacPage,AmericanPage,AmericasPage
   ],
   providers: [
     StatusBar,
