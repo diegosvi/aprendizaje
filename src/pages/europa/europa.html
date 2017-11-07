@@ -7,12 +7,28 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>europa</ion-title>
+    <ion-title>Europa</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+
+        <ion-card *ngFor="let euro of eur" (click)="reproducir(euro)">
+          <!--<h2>{{anfibios.titulo}}</h2>-->
+          <img [src]="euro.imagen">
+
+          <!--<div class="card-title"><ion-icon name="play" *ngIf="!euro.reproduciendo"item-right=""></ion-icon></div>-->
+          <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="euro.reproduciendo"item-right=""></ion-icon></div>-->
+        </ion-card>
+        <br>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

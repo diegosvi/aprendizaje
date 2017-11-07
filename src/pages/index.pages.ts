@@ -33,3 +33,4 @@ export {OceaniaPage} from './oceania/oceania';
 export {AmericanPage} from './american/american';
 export {AmericacPage} from './americac/americac';
 export {AmericasPage} from './americas/americas';
+export {EuroasiaticoPage} from './euroasiatico/euroasiatico';

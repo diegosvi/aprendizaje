@@ -5,6 +5,7 @@ import { AfricaPage} from '../../pages/africa/africa';
 import { EuropaPage} from '../../pages/europa/europa';
 import { OceaniaPage} from '../../pages/oceania/oceania';
 import { AmericaPage} from '../../pages/america/america';
+import { EuroasiaticoPage} from '../../pages/euroasiatico/euroasiatico';
 
 /**
  * Generated class for the PaisesPage page.
@@ -43,6 +44,9 @@ export class PaisesPage {
   }
   irOceania(){
     this.navCtrl.push(OceaniaPage);
+  }
+  irEuroa(){
+    this.navCtrl.push(EuroasiaticoPage);
   }
 
 
