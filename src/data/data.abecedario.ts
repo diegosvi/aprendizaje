@@ -41,6 +41,14 @@ export const ABECEDARIO= [
   },
   {
 
+    audio:"assets/sound/b.mp3",
+    imagen:"assets/img/abs/f.png",
+    duracion:4,
+    reproduciendo: false
+
+  },
+  {
+
     audio:"assets/sounds/c.mp3",
     imagen:"/assets/img/abs/g.jpg",
     duracion:4,
