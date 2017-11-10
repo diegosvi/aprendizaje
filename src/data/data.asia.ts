@@ -23,14 +23,6 @@ export const ASIA= [
 
   },
   {
-
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/asi/kazajistan.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/asi/mongolia.png",
     duracion:4,
