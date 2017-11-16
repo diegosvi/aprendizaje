@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { ProvinciasPage} from '../../pages/provincias/provincias';
+
 
 /**
  * Generated class for the AvanzadoPage page.
@@ -20,6 +22,10 @@ export class AvanzadoPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AvanzadoPage');
+  }
+
+  irProvincias(){
+    this.navCtrl.push(ProvinciasPage);
   }
 
 }

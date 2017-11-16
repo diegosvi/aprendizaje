@@ -1,0 +1,49 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { COSTA } from '../../data/data.costa';
+import  { Costa } from '../../interface/interface.costa';
+
+/**
+ * Generated class for the CostaPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
+@Component({
+  selector: 'page-costa',
+  templateUrl: 'costa.html',
+})
+export class CostaPage {
+
+  cos: Costa[] = [];
+
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.cos = COSTA.slice(0);
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad AbecedarioPage');
+  }
+
+  reproducir(cos: Costa) {
+    console.log(cos);
+    let audio = new Audio();
+    audio.src = cos.audio;
+
+
+    audio.load();
+    audio.play();
+
+    cos.reproduciendo = true;
+    setTimeout(
+      () => {
+        cos.reproduciendo = false;
+      }, cos.duracion * 1000
+    );
+
+  }
+
+}

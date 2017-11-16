@@ -1,0 +1,33 @@
+<!--
+  Generated template for the InsularPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Región Insular o Galápagos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img  src="../../assets/img/prov/galapagos/galapago.jpg">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+
+        <ion-card *ngFor="let gala of gal" (click)="reproducir(gala)">
+          <!--<h2>{{anfibios.titulo}}</h2>-->
+          <img [src]="gala.imagen">
+          <div class="card-title"><ion-icon name="play" *ngIf="!gala.reproduciendo"item-right=""></ion-icon></div>
+          <div class="card-subtitle"><ion-icon name="pause" *ngIf="gala.reproduciendo"item-right=""></ion-icon></div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
