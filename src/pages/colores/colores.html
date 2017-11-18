@@ -13,12 +13,17 @@
 </ion-header>
 
 
-<ion-content class="card-background-page1">
+<ion-content class="fondoc">
 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
     <ion-card *ngFor="let colore of color" (click)="reproducir(colore)">
       <img [src]="colore.imagen">
       <div class="card-title"><ion-icon name="play" *ngIf="!colore.reproduciendo"item-right=""></ion-icon></div>
       <div class="card-subtitle"><ion-icon name="pause" *ngIf="colore.reproduciendo"item-right=""></ion-icon></div>
     </ion-card>
-
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
