@@ -96,7 +96,7 @@ export const ABECEDARIO= [
   {
 
     audio:"assets/sounds/c.mp3",
-    imagen:"/assets/img/m.jpg",
+    imagen:"/assets/img/abs/m.jpg",
     duracion:4,
     reproduciendo: false
 
@@ -165,7 +165,7 @@ export const ABECEDARIO= [
   {
 
     audio:"assets/sounds/c.mp3",
-    imagen:"/assets/img/abs/.jpg",
+    imagen:"/assets/img/abs/u.jpg",
     duracion:4,
     reproduciendo: false
 

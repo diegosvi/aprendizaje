@@ -7,20 +7,24 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>meses</ion-title>
+    <ion-title>Meses</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content class="card-background-page1">
+<ion-content class="fondocal">
 
-  <div class="col-sm-4">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
     <ion-card *ngFor="let meses of mes" (click)="reproducir(meses)">
       <img [src]="meses.imagen">
       <div class="card-title"><ion-icon name="play" *ngIf="!meses.reproduciendo"item-right=""></ion-icon></div>
       <div class="card-subtitle"><ion-icon name="pause" *ngIf="meses.reproduciendo"item-right=""></ion-icon></div>
     </ion-card>
-  </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>
