@@ -18,7 +18,8 @@ import  { Frutas } from '../../interface/interface.frutas';
 export class FrutasPage {
 
   fru: Frutas[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.fru = FRUTAS.slice(0);
@@ -28,22 +29,39 @@ export class FrutasPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(fru: Frutas) {
-    console.log(fru);
-    let audio = new Audio();
-    audio.src = fru.audio;
+  reproducir(frut: Frutas){
+    this.pausarSonido(frut);
+    if(frut.reproduciendo){
+      frut.reproduciendo=false;
+      return;
+    }
+    console.log(frut);
+
+    //let audio = new Audio();
+    this.audio.src = frut.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    fru.reproduciendo = true;
-    setTimeout(
+    frut.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        fru.reproduciendo = false;
-      }, fru.duracion * 1000
+        frut.reproduciendo = false;
+      }, frut.duracion*1000
     );
 
   }
 
+
+  pausarSonido(frutSelected: Frutas){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let frut of this.fru){
+      if(frut.imagen != frut.imagen){
+        frut.reproduciendo = false;
+      }
+    }
+  }
 }

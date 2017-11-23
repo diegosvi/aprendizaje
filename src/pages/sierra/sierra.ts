@@ -18,7 +18,8 @@ import  { Sierra } from '../../interface/interface.sierra';
 export class SierraPage {
 
   sie: Sierra[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.sie = SIERRA.slice(0);
@@ -28,22 +29,40 @@ export class SierraPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(sie: Sierra) {
-    console.log(sie);
-    let audio = new Audio();
-    audio.src = sie.audio;
+  reproducir(sier: Sierra){
+    this.pausarSonido(sier);
+    if(sier.reproduciendo){
+      sier.reproduciendo=false;
+      return;
+    }
+    console.log(sier);
+
+    //let audio = new Audio();
+    this.audio.src = sier.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    sie.reproduciendo = true;
-    setTimeout(
+    sier.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        sie.reproduciendo = false;
-      }, sie.duracion * 1000
+        sier.reproduciendo = false;
+      }, sier.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(sierSelected: Sierra){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let sier of this.sie){
+      if(sier.imagen != sier.imagen){
+        sier.reproduciendo = false;
+      }
+    }
   }
 
 }

@@ -18,7 +18,8 @@ import  { Euroa } from '../../interface/interface.euroa';
 export class EuroasiaticoPage {
 
   eura: Euroa[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.eura = EUROA.slice(0);
@@ -28,22 +29,40 @@ export class EuroasiaticoPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(eura: Euroa) {
-    console.log(eura);
-    let audio = new Audio();
-    audio.src = eura.audio;
+  reproducir(euroa: Euroa){
+    this.pausarSonido(euroa);
+    if(euroa.reproduciendo){
+      euroa.reproduciendo=false;
+      return;
+    }
+    console.log(euroa);
+
+    //let audio = new Audio();
+    this.audio.src = euroa.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    eura.reproduciendo = true;
-    setTimeout(
+    euroa.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        eura.reproduciendo = false;
-      }, eura.duracion * 1000
+        euroa.reproduciendo = false;
+      }, euroa.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(euroaSelected: Euroa){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let euroa of this.eura){
+      if(euroa.imagen != euroa.imagen){
+        euroa.reproduciendo = false;
+      }
+    }
   }
 
 

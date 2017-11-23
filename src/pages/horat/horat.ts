@@ -18,7 +18,8 @@ import  { Horat } from '../../interface/interface.horat';
 export class HoratPage {
 
   ht: Horat[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.ht = HORAT.slice(0);
@@ -28,22 +29,40 @@ export class HoratPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(ht: Horat) {
-    console.log(ht);
-    let audio = new Audio();
-    audio.src = ht.audio;
+  reproducir(hot: Horat){
+    this.pausarSonido(hot);
+    if(hot.reproduciendo){
+      hot.reproduciendo=false;
+      return;
+    }
+    console.log(hot);
+
+    //let audio = new Audio();
+    this.audio.src = hot.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    ht.reproduciendo = true;
-    setTimeout(
+    hot.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        ht.reproduciendo = false;
-      }, ht.duracion * 1000
+        hot.reproduciendo = false;
+      }, hot.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(hotSelected: Horat){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let hot of this.ht){
+      if(hot.imagen != hotSelected.imagen){
+        hot.reproduciendo = false;
+      }
+    }
   }
 
 }

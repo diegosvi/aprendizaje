@@ -18,7 +18,8 @@ import  { Aereo } from '../../interface/interface.aereo';
 export class AereoPage {
 
   aer: Aereo[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.aer = AEREO.slice(0);
@@ -28,21 +29,41 @@ export class AereoPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(aer: Aereo) {
+
+
+  reproducir(aer: Aereo){
+    this.pausarSonido(aer);
+    if(aer.reproduciendo){
+      aer.reproduciendo=false;
+      return;
+    }
     console.log(aer);
-    let audio = new Audio();
-    audio.src = aer.audio;
+
+    //let audio = new Audio();
+    this.audio.src = aer.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    aer.reproduciendo = true;
-    setTimeout(
+    aer.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
         aer.reproduciendo = false;
-      }, aer.duracion * 1000
+      }, aer.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(aerSelected: Aereo){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let aereo of this.aer){
+      if(aereo.imagen != aereo.imagen){
+        aereo.reproduciendo = false;
+      }
+    }
   }
 }

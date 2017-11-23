@@ -18,7 +18,8 @@ import  { Abecedario } from '../../interface/interface.abecedario';
 export class AbecedarioPage {
 
   abeceda: Abecedario[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.abeceda = ABECEDARIO.slice(0);
@@ -28,21 +29,41 @@ export class AbecedarioPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(abecedario: Abecedario) {
+
+  reproducir(abecedario: Abecedario){
+    this.pausarSonido(abecedario);
+    if(abecedario.reproduciendo){
+      abecedario.reproduciendo=false;
+      return;
+    }
     console.log(abecedario);
-    let audio = new Audio();
-    audio.src = abecedario.audio;
+
+    //let audio = new Audio();
+    this.audio.src = abecedario.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    abecedario.reproduciendo = true;
-    setTimeout(
+    abecedario.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
         abecedario.reproduciendo = false;
-      }, abecedario.duracion * 1000
+      }, abecedario.duracion*1000
     );
 
   }
+
+
+  pausarSonido(abecedarioSelected: Abecedario){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let abecedario of this.abeceda){
+      if(abecedario.imagen != abecedarioSelected.imagen){
+        abecedario.reproduciendo = false;
+      }
+    }
+  }
+
 }

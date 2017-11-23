@@ -18,7 +18,8 @@ import  { Galapagos } from '../../interface/interface.galapagos';
 export class InsularPage {
 
   gal: Galapagos[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.gal = GALAPAGOS.slice(0);
@@ -28,21 +29,41 @@ export class InsularPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(gal: Galapagos) {
-    console.log(gal);
-    let audio = new Audio();
-    audio.src = gal.audio;
+
+  reproducir(gala: Galapagos){
+    this.pausarSonido(gala);
+    if(gala.reproduciendo){
+      gala.reproduciendo=false;
+      return;
+    }
+    console.log(gala);
+
+    //let audio = new Audio();
+    this.audio.src = gala.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    gal.reproduciendo = true;
-    setTimeout(
+    gala.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        gal.reproduciendo = false;
-      }, gal.duracion * 1000
+        gala.reproduciendo = false;
+      }, gala.duracion*1000
     );
 
   }
+
+
+  pausarSonido(galaSelected: Galapagos){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let gala of this.gal){
+      if(gala.imagen != gala.imagen){
+        gala.reproduciendo = false;
+      }
+    }
+  }
+
 }

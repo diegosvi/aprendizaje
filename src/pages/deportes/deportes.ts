@@ -18,6 +18,8 @@ import  { Deportes } from '../../interface/interface.deportes';
 export class DeportesPage {
 
   dep: Deportes[] = [];
+  audio: any = new Audio();
+  tiempo: any;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -28,23 +30,40 @@ export class DeportesPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(dep: Deportes) {
-    console.log(dep);
-    let audio = new Audio();
-    audio.src = dep.audio;
+  reproducir(depo: Deportes){
+    this.pausarSonido(depo);
+    if(depo.reproduciendo){
+      depo.reproduciendo=false;
+      return;
+    }
+    console.log(depo);
+
+    //let audio = new Audio();
+    this.audio.src = depo.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    dep.reproduciendo = true;
-    setTimeout(
+    depo.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        dep.reproduciendo = false;
-      }, dep.duracion * 1000
+        depo.reproduciendo = false;
+      }, depo.duracion*1000
     );
 
   }
 
+
+  pausarSonido(depoSelected: Deportes){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let depo of this.dep){
+      if(depo.imagen != depo.imagen){
+        depo.reproduciendo = false;
+      }
+    }
+  }
 
 }

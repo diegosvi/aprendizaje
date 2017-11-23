@@ -18,7 +18,8 @@ import  { Artropodos } from '../../interface/interface.artropodos';
 export class AntropodosPage {
 
   artropodo: Artropodos[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.artropodo = ARTROPODOS.slice(0);
@@ -28,22 +29,40 @@ export class AntropodosPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(artropodo: Artropodos) {
-    console.log(artropodo);
-    let audio = new Audio();
-    audio.src = artropodo.audio;
+  reproducir(antr: Artropodos){
+    this.pausarSonido(antr);
+    if(antr.reproduciendo){
+      antr.reproduciendo=false;
+      return;
+    }
+    console.log(antr);
+
+    //let audio = new Audio();
+    this.audio.src = antr.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    artropodo.reproduciendo = true;
-    setTimeout(
+    antr.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        artropodo.reproduciendo = false;
-      }, artropodo.duracion * 1000
+        antr.reproduciendo = false;
+      }, antr.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(antrSelected: Artropodos){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let antr of this.artropodo){
+      if(antr.imagen != antrSelected.imagen){
+        antr.reproduciendo = false;
+      }
+    }
   }
 
 

@@ -18,7 +18,8 @@ import  { Africa } from '../../interface/interface.africa';
 export class AfricaPage {
 
   afr: Africa[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.afr = AFRICA.slice(0);
@@ -28,23 +29,41 @@ export class AfricaPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(afr: Africa) {
+
+  reproducir(afr: Africa){
+    this.pausarSonido(afr);
+    if(afr.reproduciendo){
+      afr.reproduciendo=false;
+      return;
+    }
     console.log(afr);
-    let audio = new Audio();
-    audio.src = afr.audio;
+
+    //let audio = new Audio();
+    this.audio.src = afr.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    afr.reproduciendo = true;
-    setTimeout(
+    afr.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
         afr.reproduciendo = false;
-      }, afr.duracion * 1000
+      }, afr.duracion*1000
     );
 
   }
 
+
+  pausarSonido(afrSelected: Africa){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let afri of this.afr){
+      if(afri.imagen != afri.imagen){
+        afri.reproduciendo = false;
+      }
+    }
+  }
 
 }

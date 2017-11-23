@@ -18,7 +18,8 @@ import  { Horam } from '../../interface/interface.horam';
 export class HoramPage {
 
   hm: Horam[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.hm = HORAM.slice(0);
@@ -28,22 +29,40 @@ export class HoramPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(hm: Horam) {
-    console.log(hm);
-    let audio = new Audio();
-    audio.src = hm.audio;
+  reproducir(hom: Horam){
+    this.pausarSonido(hom);
+    if(hom.reproduciendo){
+      hom.reproduciendo=false;
+      return;
+    }
+    console.log(hom);
+
+    //let audio = new Audio();
+    this.audio.src = hom.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    hm.reproduciendo = true;
-    setTimeout(
+    hom.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        hm.reproduciendo = false;
-      }, hm.duracion * 1000
+        hom.reproduciendo = false;
+      }, hom.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(homSelected: Horam){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let hom of this.hm){
+      if(hom.imagen != homSelected.imagen){
+        hom.reproduciendo = false;
+      }
+    }
   }
 
 }

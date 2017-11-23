@@ -18,7 +18,8 @@ import  { Asia } from '../../interface/interface.asia';
 export class AsiaPage {
 
   asi: Asia[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.asi = ASIA.slice(0);
@@ -28,22 +29,40 @@ export class AsiaPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(asi: Asia) {
+  reproducir(asi: Asia){
+    this.pausarSonido(asi);
+    if(asi.reproduciendo){
+      asi.reproduciendo=false;
+      return;
+    }
     console.log(asi);
-    let audio = new Audio();
-    audio.src = asi.audio;
+
+    //let audio = new Audio();
+    this.audio.src = asi.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    asi.reproduciendo = true;
-    setTimeout(
+    asi.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
         asi.reproduciendo = false;
-      }, asi.duracion * 1000
+      }, asi.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(asiSelected: Asia){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let asia of this.asi){
+      if(asia.imagen != asia.imagen){
+        asia.reproduciendo = false;
+      }
+    }
   }
 
 

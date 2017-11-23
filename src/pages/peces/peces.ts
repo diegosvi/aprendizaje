@@ -18,7 +18,8 @@ import  { Peces } from '../../interface/interface.peces';
 export class PecesPage {
 
   pez: Peces[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.pez = PECES.slice(0);
@@ -28,22 +29,40 @@ export class PecesPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(pez: Peces) {
-    console.log(pez);
-    let audio = new Audio();
-    audio.src = pez.audio;
+  reproducir(peze: Peces){
+    this.pausarSonido(peze);
+    if(peze.reproduciendo){
+      peze.reproduciendo=false;
+      return;
+    }
+    console.log(peze);
+
+    //let audio = new Audio();
+    this.audio.src = peze.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    pez.reproduciendo = true;
-    setTimeout(
+    peze.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        pez.reproduciendo = false;
-      }, pez.duracion * 1000
+        peze.reproduciendo = false;
+      }, peze.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(pezeSelected: Peces){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let peze of this.pez){
+      if(peze.imagen != pezeSelected.imagen){
+        peze.reproduciendo = false;
+      }
+    }
   }
 
 }

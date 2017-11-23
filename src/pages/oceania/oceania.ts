@@ -18,7 +18,8 @@ import { OCEANIA } from '../../data/data.oceania';
 export class OceaniaPage {
 
   oce: Oceania[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.oce = OCEANIA.slice(0);
@@ -28,22 +29,40 @@ export class OceaniaPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(oce: Oceania) {
-    console.log(oce);
-    let audio = new Audio();
-    audio.src = oce.audio;
+  reproducir(ocea: Oceania){
+    this.pausarSonido(ocea);
+    if(ocea.reproduciendo){
+      ocea.reproduciendo=false;
+      return;
+    }
+    console.log(ocea);
+
+    //let audio = new Audio();
+    this.audio.src = ocea.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    oce.reproduciendo = true;
-    setTimeout(
+    ocea.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        oce.reproduciendo = false;
-      }, oce.duracion * 1000
+        ocea.reproduciendo = false;
+      }, ocea.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(oceaSelected: Oceania){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let ocea of this.oce){
+      if(ocea.imagen != ocea.imagen){
+        ocea.reproduciendo = false;
+      }
+    }
   }
 
 

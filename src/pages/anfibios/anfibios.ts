@@ -18,7 +18,8 @@ import  { Anfibios } from '../../interface/interface.anfibios';
 export class AnfibiosPage {
 
   anfibio: Anfibios[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.anfibio = ANFIBIOS.slice(0);
@@ -28,23 +29,40 @@ export class AnfibiosPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(anfibio: Anfibios) {
-    console.log(anfibio);
-    let audio = new Audio();
-    audio.src = anfibio.audio;
+  reproducir(anfi: Anfibios){
+    this.pausarSonido(anfi);
+    if(anfi.reproduciendo){
+      anfi.reproduciendo=false;
+      return;
+    }
+    console.log(anfi);
+
+    //let audio = new Audio();
+    this.audio.src = anfi.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    anfibio.reproduciendo = true;
-    setTimeout(
+    anfi.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        anfibio.reproduciendo = false;
-      }, anfibio.duracion * 1000
+        anfi.reproduciendo = false;
+      }, anfi.duracion*1000
     );
 
   }
 
+
+  pausarSonido(anfiSelected: Anfibios){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let anfi of this.anfibio){
+      if(anfi.imagen != anfiSelected.imagen){
+        anfi.reproduciendo = false;
+      }
+    }
+  }
 
 }

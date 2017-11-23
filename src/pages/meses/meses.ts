@@ -18,7 +18,8 @@ import  { Meses } from '../../interface/interface.meses';
 export class MesesPage {
 
   mes: Meses[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.mes = MESES.slice(0);
@@ -28,22 +29,40 @@ export class MesesPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(mes: Meses) {
-    console.log(mes);
-    let audio = new Audio();
-    audio.src = mes.audio;
+  reproducir(mese: Meses){
+    this.pausarSonido(mese);
+    if(mese.reproduciendo){
+      mese.reproduciendo=false;
+      return;
+    }
+    console.log(mese);
+
+    //let audio = new Audio();
+    this.audio.src = mese.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    mes.reproduciendo = true;
-    setTimeout(
+    mese.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        mes.reproduciendo = false;
-      }, mes.duracion * 1000
+        mese.reproduciendo = false;
+      }, mese.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(meseSelected: Meses){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let mese of this.mes){
+      if(mese.imagen != meseSelected.imagen){
+        mese.reproduciendo = false;
+      }
+    }
   }
 
 }

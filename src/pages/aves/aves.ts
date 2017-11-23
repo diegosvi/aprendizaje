@@ -18,7 +18,8 @@ import  { Aves } from '../../interface/interface.aves';
 export class AvesPage {
 
   ave: Aves[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.ave = AVES.slice(0);
@@ -28,22 +29,40 @@ export class AvesPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(ave: Aves) {
-    console.log(ave);
-    let audio = new Audio();
-    audio.src = ave.audio;
+  reproducir(aves: Aves){
+    this.pausarSonido(aves);
+    if(aves.reproduciendo){
+      aves.reproduciendo=false;
+      return;
+    }
+    console.log(aves);
+
+    //let audio = new Audio();
+    this.audio.src = aves.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    ave.reproduciendo = true;
-    setTimeout(
+    aves.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        ave.reproduciendo = false;
-      }, ave.duracion * 1000
+        aves.reproduciendo = false;
+      }, aves.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(avesSelected: Aves){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let aves of this.ave){
+      if(aves.imagen != avesSelected.imagen){
+        aves.reproduciendo = false;
+      }
+    }
   }
 
 

@@ -18,7 +18,8 @@ import  { Oriente } from '../../interface/interface.oriente';
 export class OrientePage {
 
   ori: Oriente[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.ori = ORIENTE.slice(0);
@@ -28,21 +29,40 @@ export class OrientePage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(ori: Oriente) {
-    console.log(ori);
-    let audio = new Audio();
-    audio.src = ori.audio;
+  reproducir(orie: Oriente){
+    this.pausarSonido(orie);
+    if(orie.reproduciendo){
+      orie.reproduciendo=false;
+      return;
+    }
+    console.log(orie);
+
+    //let audio = new Audio();
+    this.audio.src = orie.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    ori.reproduciendo = true;
-    setTimeout(
+    orie.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        ori.reproduciendo = false;
-      }, ori.duracion * 1000
+        orie.reproduciendo = false;
+      }, orie.duracion*1000
     );
 
   }
+
+
+  pausarSonido(orieSelected: Oriente){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let orie of this.ori){
+      if(orie.imagen != orie.imagen){
+        orie.reproduciendo = false;
+      }
+    }
+  }
+
 }

@@ -18,7 +18,8 @@ import  { Hortalizas } from '../../interface/interface.hortalizas';
 export class HortalizasPage {
 
   hor: Hortalizas[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.hor = HORTALIZAS.slice(0);
@@ -28,21 +29,40 @@ export class HortalizasPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(hor: Hortalizas) {
+
+  reproducir(hor: Hortalizas){
+    this.pausarSonido(hor);
+    if(hor.reproduciendo){
+      hor.reproduciendo=false;
+      return;
+    }
     console.log(hor);
-    let audio = new Audio();
-    audio.src = hor.audio;
+
+    //let audio = new Audio();
+    this.audio.src = hor.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    hor.reproduciendo = true;
-    setTimeout(
+    hor.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
         hor.reproduciendo = false;
-      }, hor.duracion * 1000
+      }, hor.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(horSelected: Hortalizas){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let hort of this.hor){
+      if(hort.imagen != hort.imagen){
+        hort.reproduciendo = false;
+      }
+    }
   }
 }

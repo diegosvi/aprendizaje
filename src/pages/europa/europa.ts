@@ -18,7 +18,8 @@ import  { Europa } from '../../interface/interface.europa';
 export class EuropaPage {
 
   eur: Europa[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.eur = EUROPA.slice(0);
@@ -28,22 +29,40 @@ export class EuropaPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(eur: Europa) {
-    console.log(eur);
-    let audio = new Audio();
-    audio.src = eur.audio;
+  reproducir(euro: Europa){
+    this.pausarSonido(euro);
+    if(euro.reproduciendo){
+      euro.reproduciendo=false;
+      return;
+    }
+    console.log(euro);
+
+    //let audio = new Audio();
+    this.audio.src = euro.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    eur.reproduciendo = true;
-    setTimeout(
+    euro.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        eur.reproduciendo = false;
-      }, eur.duracion * 1000
+        euro.reproduciendo = false;
+      }, euro.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(euroSelected: Europa){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let euro of this.eur){
+      if(euro.imagen != euro.imagen){
+        euro.reproduciendo = false;
+      }
+    }
   }
 
 }

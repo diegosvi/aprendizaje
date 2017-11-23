@@ -18,7 +18,8 @@ import  { Reptiles } from '../../interface/interface.reptiles';
 export class ReptilesPage {
 
   reptil: Reptiles[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.reptil = REPTILES.slice(0);
@@ -28,22 +29,40 @@ export class ReptilesPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(reptil: Reptiles) {
-    console.log(reptil);
-    let audio = new Audio();
-    audio.src = reptil.audio;
+  reproducir(rep: Reptiles){
+    this.pausarSonido(rep);
+    if(rep.reproduciendo){
+      rep.reproduciendo=false;
+      return;
+    }
+    console.log(rep);
+
+    //let audio = new Audio();
+    this.audio.src = rep.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    reptil.reproduciendo = true;
-    setTimeout(
+    rep.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        reptil.reproduciendo = false;
-      }, reptil.duracion * 1000
+        rep.reproduciendo = false;
+      }, rep.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(repSelected: Reptiles){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let rep of this.reptil){
+      if(rep.imagen != repSelected.imagen){
+        rep.reproduciendo = false;
+      }
+    }
   }
 
 }

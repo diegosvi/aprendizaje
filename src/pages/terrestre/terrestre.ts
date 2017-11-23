@@ -18,7 +18,8 @@ import  { Terrestre } from '../../interface/interface.terrestre';
 export class TerrestrePage {
 
   terre: Terrestre[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.terre = TERRESTRE.slice(0);
@@ -28,22 +29,40 @@ export class TerrestrePage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(terr: Terrestre) {
-    console.log(terr);
-    let audio = new Audio();
-    audio.src = terr.audio;
+  reproducir(ter: Terrestre){
+    this.pausarSonido(ter);
+    if(ter.reproduciendo){
+      ter.reproduciendo=false;
+      return;
+    }
+    console.log(ter);
+
+    //let audio = new Audio();
+    this.audio.src = ter.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    terr.reproduciendo = true;
-    setTimeout(
+    ter.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        terr.reproduciendo = false;
-      }, terr.duracion * 1000
+        ter.reproduciendo = false;
+      }, ter.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(terSelected: Terrestre){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let ter of this.terre){
+      if(ter.imagen != ter.imagen){
+        ter.reproduciendo = false;
+      }
+    }
   }
 
 }

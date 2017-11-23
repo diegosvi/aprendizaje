@@ -18,7 +18,8 @@ import  { Colores } from '../../interface/interface.colores';
 export class ColoresPage {
 
   color: Colores[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.color = COLORES.slice(0);
@@ -28,22 +29,40 @@ export class ColoresPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(colore: Colores) {
-    console.log(colore);
-    let audio = new Audio();
-    audio.src = colore.audio;
+  reproducir(colo: Colores){
+    this.pausarSonido(colo);
+    if(colo.reproduciendo){
+      colo.reproduciendo=false;
+      return;
+    }
+    console.log(colo);
+
+    //let audio = new Audio();
+    this.audio.src = colo.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    colore.reproduciendo = true;
-    setTimeout(
+    colo.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        colore.reproduciendo = false;
-      }, colore.duracion * 1000
+        colo.reproduciendo = false;
+      }, colo.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(coloSelected: Colores){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let colo of this.color){
+      if(colo.imagen != coloSelected.imagen){
+        colo.reproduciendo = false;
+      }
+    }
   }
 
 }

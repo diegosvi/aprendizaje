@@ -18,7 +18,8 @@ import  { Profesiones } from '../../interface/interface.profesiones';
 export class ProfesionesPage {
 
   prof: Profesiones[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.prof = PROFESIONES.slice(0);
@@ -28,22 +29,40 @@ export class ProfesionesPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(prof: Profesiones) {
-    console.log(prof);
-    let audio = new Audio();
-    audio.src = prof.audio;
+  reproducir(profe: Profesiones){
+    this.pausarSonido(profe);
+    if(profe.reproduciendo){
+      profe.reproduciendo=false;
+      return;
+    }
+    console.log(profe);
+
+    //let audio = new Audio();
+    this.audio.src = profe.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    prof.reproduciendo = true;
-    setTimeout(
+    profe.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        prof.reproduciendo = false;
-      }, prof.duracion * 1000
+        profe.reproduciendo = false;
+      }, profe.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(profeSelected: Profesiones){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let profe of this.prof){
+      if(profe.imagen != profeSelected.imagen){
+        profe.reproduciendo = false;
+      }
+    }
   }
 
 }

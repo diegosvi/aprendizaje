@@ -18,6 +18,8 @@ import  { Maritimo } from '../../interface/interface.maritimo';
 export class MaritimoPage {
 
   marit: Maritimo[] = [];
+  audio: any = new Audio();
+  tiempo: any;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -28,22 +30,39 @@ export class MaritimoPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(marit: Maritimo) {
-    console.log(marit);
-    let audio = new Audio();
-    audio.src = marit.audio;
+  reproducir(mari: Maritimo){
+    this.pausarSonido(mari);
+    if(mari.reproduciendo){
+      mari.reproduciendo=false;
+      return;
+    }
+    console.log(mari);
+
+    //let audio = new Audio();
+    this.audio.src = mari.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    marit.reproduciendo = true;
-    setTimeout(
+    mari.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        marit.reproduciendo = false;
-      }, marit.duracion * 1000
+        mari.reproduciendo = false;
+      }, mari.duracion*1000
     );
 
   }
 
+
+  pausarSonido(mariSelected: Maritimo){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let mari of this.marit){
+      if(mari.imagen != mari.imagen){
+        mari.reproduciendo = false;
+      }
+    }
+  }
 }

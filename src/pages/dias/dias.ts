@@ -18,7 +18,8 @@ import  { Dias } from '../../interface/interface.dias';
 export class DiasPage {
 
   dia: Dias[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.dia = DIAS.slice(0);
@@ -28,22 +29,40 @@ export class DiasPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(dias: Dias) {
+  reproducir(dias: Dias){
+    this.pausarSonido(dias);
+    if(dias.reproduciendo){
+      dias.reproduciendo=false;
+      return;
+    }
     console.log(dias);
-    let audio = new Audio();
-    audio.src = dias.audio;
+
+    //let audio = new Audio();
+    this.audio.src = dias.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    dias.reproduciendo = true;
-    setTimeout(
+    dias.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
         dias.reproduciendo = false;
-      }, dias.duracion * 1000
+      }, dias.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(diasSelected: Dias){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let dias of this.dia){
+      if(dias.imagen != diasSelected.imagen){
+        dias.reproduciendo = false;
+      }
+    }
   }
 
 }

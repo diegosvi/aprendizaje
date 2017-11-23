@@ -19,7 +19,8 @@ import  { Mamiferos } from '../../interface/interface.mamiferos';
 export class MamiferosPage {
 
   mamifero: Mamiferos[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.mamifero = MAMIFEROS.slice(0);
@@ -29,22 +30,40 @@ export class MamiferosPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(mamiferos: Mamiferos) {
+  reproducir(mamiferos: Mamiferos){
+    this.pausarSonido(mamiferos);
+    if(mamiferos.reproduciendo){
+      mamiferos.reproduciendo=false;
+      return;
+    }
     console.log(mamiferos);
-    let audio = new Audio();
-    audio.src = mamiferos.audio;
+
+    //let audio = new Audio();
+    this.audio.src = mamiferos.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    mamiferos.reproduciendo = true;
-    setTimeout(
+    mamiferos.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
         mamiferos.reproduciendo = false;
-      }, mamiferos.duracion * 1000
+      }, mamiferos.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(mamiferoSelected: Mamiferos){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let mamiferos of this.mamifero){
+      if(mamiferos.titulo != mamiferoSelected.titulo){
+        mamiferos.reproduciendo = false;
+      }
+    }
   }
 
 }

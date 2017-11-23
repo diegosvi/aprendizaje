@@ -18,7 +18,8 @@ import  { Costa } from '../../interface/interface.costa';
 export class CostaPage {
 
   cos: Costa[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.cos = COSTA.slice(0);
@@ -28,22 +29,40 @@ export class CostaPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(cos: Costa) {
-    console.log(cos);
-    let audio = new Audio();
-    audio.src = cos.audio;
+  reproducir(cost: Costa){
+    this.pausarSonido(cost);
+    if(cost.reproduciendo){
+      cost.reproduciendo=false;
+      return;
+    }
+    console.log(cost);
+
+    //let audio = new Audio();
+    this.audio.src = cost.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    cos.reproduciendo = true;
-    setTimeout(
+    cost.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        cos.reproduciendo = false;
-      }, cos.duracion * 1000
+        cost.reproduciendo = false;
+      }, cost.duracion*1000
     );
 
+  }
+
+
+  pausarSonido(costSelected: Costa){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let cost of this.cos){
+      if(cost.imagen != cost.imagen){
+        cost.reproduciendo = false;
+      }
+    }
   }
 
 }

@@ -18,7 +18,8 @@ import  { Americac } from '../../interface/interface.americac';
 export class AmericacPage {
 
   ame: Americac[] = [];
-
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.ame = AMERICAC.slice(0);
@@ -28,23 +29,42 @@ export class AmericacPage {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(ame: Americac) {
+  reproducir(ame: Americac){
+    this.pausarSonido(ame);
+    if(ame.reproduciendo){
+      ame.reproduciendo=false;
+      return;
+    }
     console.log(ame);
-    let audio = new Audio();
-    audio.src = ame.audio;
+
+    //let audio = new Audio();
+    this.audio.src = ame.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    ame.reproduciendo = true;
-    setTimeout(
+    ame.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
         ame.reproduciendo = false;
-      }, ame.duracion * 1000
+      }, ame.duracion*1000
     );
 
   }
+
+
+  pausarSonido(ameSelected: Americac){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let amer of this.ame){
+      if(amer.imagen != amer.imagen){
+        amer.reproduciendo = false;
+      }
+    }
+  }
+
 
 
 }

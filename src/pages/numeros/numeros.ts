@@ -18,6 +18,8 @@ import { NUMEROS } from '../../data/data.numeros';
 export class NumerosPage {
 
   numero: Numeros[] = [];
+  audio: any = new Audio();
+  tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.numero = NUMEROS.slice(0);
@@ -27,22 +29,39 @@ export class NumerosPage {
     console.log('ionViewDidLoad NumerosPage');
   }
 
-  reproducir(numeros: Numeros) {
-    console.log(numeros);
-    let audio = new Audio();
-    audio.src = numeros.audio;
+  reproducir(nume: Numeros){
+    this.pausarSonido(nume);
+    if(nume.reproduciendo){
+      nume.reproduciendo=false;
+      return;
+    }
+    console.log(nume);
+
+    //let audio = new Audio();
+    this.audio.src = nume.audio;
 
 
-    audio.load();
-    audio.play();
+    this.audio.load();
+    this.audio.play();
 
-    numeros.reproduciendo = true;
-    setTimeout(
+    nume.reproduciendo=true;
+    this.tiempo=setTimeout (
       () => {
-        numeros.reproduciendo = false;
-      }, numeros.duracion * 1000
+        nume.reproduciendo = false;
+      }, nume.duracion*1000
     );
 
   }
 
+
+  pausarSonido(numeSelected: Numeros){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let nume of this.numero){
+      if(nume.imagen != numeSelected.imagen){
+        nume.reproduciendo = false;
+      }
+    }
+  }
 }

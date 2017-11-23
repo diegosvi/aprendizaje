@@ -1,6 +1,7 @@
 export const PROFESIONES= [
 
   {
+    titulo: "PROFESOR",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/profesor.jpg",
     duracion:4,
@@ -8,6 +9,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "DENTISTA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/ntista.jpg",
     duracion:4,
@@ -15,6 +17,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "EECTRICISTA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/electricit.jpg",
     duracion:4,
@@ -22,6 +25,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "CARPINTERO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/carpintero.jpg",
     duracion:4,
@@ -29,6 +33,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "ALBAÑIL",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/albañil.jpg",
     duracion:4,
@@ -36,6 +41,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "COSTURERA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/costurera.jpg",
     duracion:4,
@@ -43,6 +49,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "MECANICO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/mecanico.jpg",
     duracion:4,
@@ -50,6 +57,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "PESCADOR",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/pescador.jpg",
     duracion:4,
@@ -57,6 +65,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "VETERINARIO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/veterinaria.jpg",
     duracion:4,
@@ -64,6 +73,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "PELUQUERO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/peluquero.jpg",
     duracion:4,
@@ -71,6 +81,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "FOTOGRAFO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/fotografo.jpg",
     duracion:4,
@@ -78,6 +89,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "CERRAJERO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/cerrajero.jpg",
     duracion:4,
@@ -85,6 +97,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "BOMBERO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/bombero.jpg",
     duracion:4,
@@ -92,6 +105,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "DOCTOR",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/doctor.jpg",
     duracion:4,
@@ -99,6 +113,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "MILITAR",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/militar.jpg",
     duracion:4,
@@ -106,6 +121,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "POLICIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/policia.jpg",
     duracion:4,
@@ -113,6 +129,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "ZAPATERO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/zapatero.jpg",
     duracion:4,
@@ -120,6 +137,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "PERIODISTA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/periodista.jpg",
     duracion:4,
@@ -127,6 +145,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "CHEF",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/chef.jpg",
     duracion:4,
@@ -134,6 +153,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "HELADERO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/heladero.jpg",
     duracion:4,
@@ -141,6 +161,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "PILOTO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/piloto.jpg",
     duracion:4,
@@ -148,6 +169,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "DISEÑADORA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/diseñadora.jpg",
     duracion:4,
@@ -155,6 +177,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "MESERO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/mesero.jpg",
     duracion:4,
@@ -162,6 +185,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "ARQUITECTO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/arquitecto.jpg",
     duracion:4,
@@ -169,6 +193,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "ENFERMERA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/enfermera.jpg",
     duracion:4,
@@ -176,6 +201,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "CARTERO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/cartero.jpg",
     duracion:4,
@@ -183,6 +209,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "SECRETARIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/secretaria.jpg",
     duracion:4,
@@ -190,6 +217,7 @@ export const PROFESIONES= [
 
   },
   {
+    titulo: "PANADERO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/pro/panadero.jpg",
     duracion:4,
