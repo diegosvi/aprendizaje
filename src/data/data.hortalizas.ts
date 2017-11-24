@@ -1,6 +1,7 @@
 export const HORTALIZAS= [
 
   {
+    titulo: "LECGUGA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/lechuga.jpg",
     duracion:4,
@@ -8,6 +9,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "RABANO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/rabano.jpg",
     duracion:4,
@@ -15,6 +17,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "CEBOLLA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/cebolla.jpg",
     duracion:4,
@@ -22,6 +25,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "ACELGA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/acelga.jpg",
     duracion:4,
@@ -29,6 +33,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "REMOLACHA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/remolacha.jpg",
     duracion:4,
@@ -36,6 +41,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "AJO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/ajo.jpg",
     duracion:4,
@@ -43,6 +49,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "CHAMPIÑONES",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/champi.jpg",
     duracion:4,
@@ -50,6 +57,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "MAIZ",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/maiz.jpg",
     duracion:4,
@@ -57,6 +65,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "COLIFLOR",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/coliflor.jpg",
     duracion:4,
@@ -64,6 +73,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "PAPA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/papa.jpg",
     duracion:4,
@@ -71,6 +81,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "ZANAHORIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/zanahoria.jpg",
     duracion:4,
@@ -78,6 +89,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "APIO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/apio.jpg",
     duracion:4,
@@ -85,6 +97,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "COL DE BRUCELAS",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/colbru.jpg",
     duracion:4,
@@ -92,6 +105,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "TOMATE",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/tomate.jpg",
     duracion:4,
@@ -99,6 +113,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "ALCACHOFA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/alcachofa.jpg",
     duracion:4,
@@ -106,6 +121,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "PEREJIL",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/perejil.jpg",
     duracion:4,
@@ -113,6 +129,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "ESPARRAGO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/esparrago.jpg",
     duracion:4,
@@ -120,6 +137,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "BERENJENA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/berenjena.jpg",
     duracion:4,
@@ -127,6 +145,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "PEPINO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/pepino.jpg",
     duracion:4,
@@ -134,6 +153,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "BROCOLI",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/brocoli.jpg",
     duracion:4,
@@ -141,6 +161,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "ESPINACA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/espinaca.jpg",
     duracion:4,
@@ -148,6 +169,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "HABA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/haba.jpg",
     duracion:4,
@@ -155,6 +177,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "CALABAZA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/calabaza.jpg",
     duracion:4,
@@ -162,6 +185,7 @@ export const HORTALIZAS= [
 
   },
   {
+    titulo: "PIMIENTO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/hor/pimiento.jpg",
     duracion:4,

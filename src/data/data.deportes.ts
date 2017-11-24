@@ -1,6 +1,7 @@
 export const DEPORTES= [
 
   {
+    titulo: "KARATE",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/depo/karate.jpg",
     duracion:4,
@@ -8,7 +9,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "NATACION",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/depo/natacion.jpg",
     duracion:4,
@@ -16,7 +17,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "PING PONG",
     audio:"assets/sounds/c.mp3",
     imagen:"/assets/img/depo/ping.jpg",
     duracion:4,
@@ -25,6 +26,7 @@ export const DEPORTES= [
   },
 
   {
+    titulo: "AJEDREZ",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/depo/ajedrez.jpg",
     duracion:4,
@@ -32,7 +34,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "CICLISMO",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/depo/ciclismo.jpg",
     duracion:4,
@@ -40,7 +42,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "RUGBY",
     audio:"assets/sounds/c.mp3",
     imagen:"/assets/img/depo/rugby.jpg",
     duracion:4,
@@ -48,6 +50,7 @@ export const DEPORTES= [
 
   },
   {
+    titulo: "FUTBOL",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/depo/futbol.jpg",
     duracion:4,
@@ -55,7 +58,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "FUTBOL AMERICANO",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/depo/americano.jpg",
     duracion:4,
@@ -63,7 +66,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "BOXEO",
     audio:"assets/sounds/c.mp3",
     imagen:"/assets/img/depo/boxeo.jpg",
     duracion:4,
@@ -71,6 +74,7 @@ export const DEPORTES= [
 
   },
   {
+    titulo: "VOLEY",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/depo/voly.jpg",
     duracion:4,
@@ -78,7 +82,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "BASKET",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/depo/basket.jpg",
     duracion:4,
@@ -86,7 +90,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "ESGRIMA",
     audio:"assets/sounds/c.mp3",
     imagen:"/assets/img/depo/esgrima.jpg",
     duracion:4,
@@ -94,6 +98,7 @@ export const DEPORTES= [
 
   },
   {
+    titulo: "ATLETISMO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/depo/atletismo.jpg",
     duracion:4,
@@ -101,7 +106,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "SURF",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/depo/surf.jpg",
     duracion:4,
@@ -109,7 +114,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "BEISBOL",
     audio:"assets/sounds/c.mp3",
     imagen:"/assets/img/depo/beisbol.jpg",
     duracion:4,
@@ -117,6 +122,7 @@ export const DEPORTES= [
 
   },
   {
+    titulo: "BILLAR",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/depo/billar.jpg",
     duracion:4,
@@ -124,7 +130,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "GIMNASIA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/depo/gimnasia.jpg",
     duracion:4,
@@ -132,7 +138,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "TENNIS",
     audio:"assets/sounds/c.mp3",
     imagen:"/assets/img/depo/tennis.jpg",
     duracion:4,
@@ -140,6 +146,7 @@ export const DEPORTES= [
 
   },
   {
+    titulo: "BOLOS",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/depo/bolos.jpg",
     duracion:4,
@@ -147,7 +154,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "HOCKEY",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/depo/hockey.jpg",
     duracion:4,
@@ -155,7 +162,7 @@ export const DEPORTES= [
 
   },
   {
-
+    titulo: "GOLF",
     audio:"assets/sounds/c.mp3",
     imagen:"/assets/img/depo/golf.jpg",
     duracion:4,
