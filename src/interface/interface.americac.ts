@@ -1,5 +1,6 @@
 export interface Americac
 {
+  titulo: string;
   audio:string;
   imagen:string;
   duracion:number;

@@ -1,6 +1,7 @@
 export const EUROPA= [
 
   {
+    titulo: "ISLANDIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/islandia.png",
     duracion:4,
@@ -8,7 +9,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "NORUEGA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/noruega.png",
     duracion:4,
@@ -16,6 +17,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "FINLANDIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/finlandia.png",
     duracion:4,
@@ -23,7 +25,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "SUECIA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/suecia.png",
     duracion:4,
@@ -31,6 +33,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "REINO UNIDO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/unido.png",
     duracion:4,
@@ -38,7 +41,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "IRLANDA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/irlanda.png",
     duracion:4,
@@ -46,6 +49,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "ESTONIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/estonia.png",
     duracion:4,
@@ -53,7 +57,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "LETONIA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/letonia.png",
     duracion:4,
@@ -61,14 +65,7 @@ export const EUROPA= [
 
   },
   {
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/eur/lituania.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-
+    titulo: "DINAMARCA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/dinamarca.png",
     duracion:4,
@@ -76,6 +73,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "PAISES BAJOS",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/bajos.png",
     duracion:4,
@@ -83,14 +81,7 @@ export const EUROPA= [
 
   },
   {
-
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/eur/bielorrusia.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
+    titulo: "ALEMANIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/alemania.png",
     duracion:4,
@@ -98,7 +89,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "BELGICA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/belgica.png",
     duracion:4,
@@ -106,6 +97,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "POLONIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/polonia.png",
     duracion:4,
@@ -113,7 +105,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "UCRANIA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/ucrania.png",
     duracion:4,
@@ -121,6 +113,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "LUXEMBURGO",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/luxemburgo.png",
     duracion:4,
@@ -128,7 +121,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "REPUBLICA CHECA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/checa.png",
     duracion:4,
@@ -136,6 +129,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "FRANCIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/francia.png",
     duracion:4,
@@ -143,7 +137,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "SUIZA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/suiza.png",
     duracion:4,
@@ -151,6 +145,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "AUSTRIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/austria.png",
     duracion:4,
@@ -158,14 +153,7 @@ export const EUROPA= [
 
   },
   {
-
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/eur/liechtenstein.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
+    titulo: "ESPAÑA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/espana.png",
     duracion:4,
@@ -173,7 +161,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "PORTUGAL",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/portugal.png",
     duracion:4,
@@ -181,7 +169,15 @@ export const EUROPA= [
 
   },
   {
+    titulo: "MONACO",
+    audio:"assets/sound/b.mp3",
+    imagen:"assets/img/eur/monaco.png",
+    duracion:4,
+    reproduciendo: false
 
+  },
+  {
+    titulo: "ESLOVAQUIA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/eslovaquia.png",
     duracion:4,
@@ -189,6 +185,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "HUNGRIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/hungria.png",
     duracion:4,
@@ -196,15 +193,15 @@ export const EUROPA= [
 
   },
   {
-
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/eur/moldavia.png",
+    titulo: "ITALIA",
+    audio:"assets/sound/a.mp3",
+    imagen:"assets/img/eur/italia.png",
     duracion:4,
     reproduciendo: false
 
   },
   {
-
+    titulo: "RUMANIA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/rumania.png",
     duracion:4,
@@ -212,6 +209,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "ESLOVENIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/eslovenia.png",
     duracion:4,
@@ -219,7 +217,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "CROACIA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/croacia.png",
     duracion:4,
@@ -227,7 +225,7 @@ export const EUROPA= [
 
   },
   {
-
+    titulo: "SERBIA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/serbia.png",
     duracion:4,
@@ -235,6 +233,7 @@ export const EUROPA= [
 
   },
   {
+    titulo: "BULGARIA",
     audio:"assets/sound/a.mp3",
     imagen:"assets/img/eur/bulgaria.png",
     duracion:4,
@@ -242,46 +241,9 @@ export const EUROPA= [
 
   },
   {
-
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/eur/macedonia.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/eur/albania.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/eur/montenegro.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-
+    titulo: "GRECIA",
     audio:"assets/sound/b.mp3",
     imagen:"assets/img/eur/grecia.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/eur/bosnia.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/eur/vaticano.png",
     duracion:4,
     reproduciendo: false
 

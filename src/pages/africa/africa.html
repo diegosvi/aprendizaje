@@ -20,7 +20,7 @@
       <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
 
         <ion-card *ngFor="let afri of afr" (click)="reproducir(afri)">
-          <!--<h2>{{aves.titulo}}</h2>-->
+          <h2>{{afri.titulo}}</h2>
           <img [src]="afri.imagen">
           <div class="card-title"><ion-icon name="play" *ngIf="!afri.reproduciendo"item-right=""></ion-icon></div>
           <div class="card-subtitle"><ion-icon name="pause" *ngIf="afri.reproduciendo"item-right=""></ion-icon></div>

@@ -1,5 +1,6 @@
 export interface Americas
 {
+  titulo: string;
   audio:string;
   imagen:string;
   duracion:number;
