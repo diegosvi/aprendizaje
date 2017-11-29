@@ -19,7 +19,7 @@
     <ion-row>
       <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
 
-        <ion-card *ngFor="let mamiferos of mamifero" (click)="reproducir(mamiferos)">
+        <ion-card class="fon" *ngFor="let mamiferos of mamifero" (click)="reproducir(mamiferos)">
           <h2>{{mamiferos.titulo}}</h2>
           <img [src]="mamiferos.imagen">
           <div class="card-title"><ion-icon name="play" *ngIf="!mamiferos.reproduciendo"item-right=""></ion-icon></div>

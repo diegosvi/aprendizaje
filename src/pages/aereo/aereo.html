@@ -19,7 +19,7 @@
     <ion-row>
       <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
 
-        <ion-card *ngFor="let aereo of aer" (click)="reproducir(aereo)">
+        <ion-card class="fon" *ngFor="let aereo of aer" (click)="reproducir(aereo)">
           <h2>{{aereo.titulo}}</h2>
           <img [src]="aereo.imagen">
           <div class="card-title"><ion-icon name="play" *ngIf="!aereo.reproduciendo"item-right=""></ion-icon></div>
