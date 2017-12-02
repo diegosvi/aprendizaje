@@ -49,7 +49,7 @@ export class AbecedarioPage {
     this.tiempo=setTimeout (
       () => {
         abecedario.reproduciendo = false;
-      }, abecedario.duracion*1000
+      }, abecedario.duracion*300
     );
 
   }
