@@ -60,7 +60,7 @@ export class HortalizasPage {
     this.audio.pause();
     this.audio.currentTime=0;
     for(let hort of this.hor){
-      if(hort.imagen != hort.imagen){
+      if(hort.imagen != horSelected.imagen){
         hort.reproduciendo = false;
       }
     }

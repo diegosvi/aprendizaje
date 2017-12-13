@@ -1,8 +1,8 @@
 export const TERRESTRE= [
 
   {
-    titulo: "AUTOMOVIL",
-    audio:"assets/sound/a.mp3",
+    titulo: "AUTOMÓVIL",
+    audio:"assets/sound/terrestre/auto.mp3",
     imagen:"assets/img/trans/terrestre/auto.jpg",
     duracion:4,
     reproduciendo: false
@@ -10,56 +10,56 @@ export const TERRESTRE= [
   },
   {
     titulo: "BICICLETA",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/terrestre/bicicleta.mp3",
     imagen:"assets/img/trans/terrestre/bicicleta.jpg",
     duracion:4,
     reproduciendo: false
 
   },{
-    titulo: "AUTOBUS",
-    audio:"assets/sound/a.mp3",
+    titulo: "AUTOBÚS",
+    audio:"assets/sound/terrestre/bus.mp3",
     imagen:"assets/img/trans/terrestre/bus.jpg",
     duracion:4,
     reproduciendo: false
 
   },{
-    titulo: "CAMION",
-    audio:"assets/sound/a.mp3",
+    titulo: "CAMIÓN",
+    audio:"assets/sound/terrestre/camion.mp3",
     imagen:"assets/img/trans/terrestre/camion.jpg",
     duracion:4,
     reproduciendo: false
 
   },{
     titulo: "METRO",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/terrestre/metro.mp3",
     imagen:"assets/img/trans/terrestre/metro.jpg",
     duracion:4,
     reproduciendo: false
 
   },{
     titulo: "MOTOCICLETA",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/terrestre/moto.mp3",
     imagen:"assets/img/trans/terrestre/moto.jpg",
     duracion:4,
     reproduciendo: false
 
   },{
-    titulo: "TRANSPORTE DE TRACCION",
-    audio:"assets/sound/a.mp3",
+    titulo: "TRANSPORTE DE TRACCIÓN",
+    audio:"assets/sound/terrestre/traccion.mp3",
     imagen:"assets/img/trans/terrestre/traccion.jpg",
     duracion:4,
     reproduciendo: false
 
   },{
-    titulo: "TRANVIA",
-    audio:"assets/sound/a.mp3",
+    titulo: "TRANVÍA",
+    audio:"assets/sound/terrestre/tranvia.mp3",
     imagen:"assets/img/trans/terrestre/tranvia.jpg",
     duracion:4,
     reproduciendo: false
 
   },{
     titulo: "TREN",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/terrestre/tren.mp3",
     imagen:"assets/img/trans/terrestre/tren.jpg",
     duracion:4,
     reproduciendo: false

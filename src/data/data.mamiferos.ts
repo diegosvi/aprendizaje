@@ -17,7 +17,7 @@ export const MAMIFEROS= [
 
   },
   {
-    titulo: "DELFIN",
+    titulo: "DELFÍN",
     audio:"assets/sound/mamiferos/delfin.mp3",
     imagen:"assets/img/mam/delfin.jpg",
     duracion:4,
@@ -50,7 +50,7 @@ export const MAMIFEROS= [
 
   },
   {
-    titulo: "LEON",
+    titulo: "LEÓN",
     audio:"assets/sound/mamiferos/leon.mp3",
     imagen:"assets/img/mam/leon.jpg",
     duracion:4,
@@ -83,7 +83,7 @@ export const MAMIFEROS= [
   },
 
   {
-    titulo: "RATON",
+    titulo: "RATÓN",
     audio:"assets/sound/mamiferos/raton.mp3",
     imagen:"assets/img/mam/raton.jpg",
     duracion:4,

@@ -60,7 +60,7 @@ export class MaritimoPage {
     this.audio.pause();
     this.audio.currentTime=0;
     for(let mari of this.marit){
-      if(mari.imagen != mari.imagen){
+      if(mari.imagen != mariSelected.imagen){
         mari.reproduciendo = false;
       }
     }

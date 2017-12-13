@@ -59,7 +59,7 @@ export class FrutasPage {
     this.audio.pause();
     this.audio.currentTime=0;
     for(let frut of this.fru){
-      if(frut.imagen != frut.imagen){
+      if(frut.imagen != frutSelected.imagen){
         frut.reproduciendo = false;
       }
     }

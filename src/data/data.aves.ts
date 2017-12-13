@@ -1,7 +1,7 @@
 export const AVES= [
 
   {
-    titulo: "AGUILA",
+    titulo: "ÁGUILA",
     audio:"assets/sound/aves/aguila.mp3",
     imagen:"assets/img/ave/aguila.jpg",
     duracion:4,
@@ -58,7 +58,7 @@ export const AVES= [
 
   },
   {
-    titulo: "HALCON",
+    titulo: "HALCÓN",
     audio:"assets/sound/aves/halcon.mp3",
     imagen:"assets/img/ave/halcon.jpg",
     duracion:4,

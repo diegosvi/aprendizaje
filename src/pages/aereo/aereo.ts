@@ -61,7 +61,7 @@ export class AereoPage {
     this.audio.pause();
     this.audio.currentTime=0;
     for(let aereo of this.aer){
-      if(aereo.imagen != aereo.imagen){
+      if(aereo.imagen != aerSelected.imagen){
         aereo.reproduciendo = false;
       }
     }

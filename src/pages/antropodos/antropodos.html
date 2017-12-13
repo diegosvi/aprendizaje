@@ -20,7 +20,8 @@
       <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
 
         <ion-card class="fon" *ngFor="let artropodos of artropodo" (click)="reproducir(artropodos)">
-          <h2>{{artropodos.titulo}}</h2>
+
+          <br> <h2>{{artropodos.titulo}}</h2>
           <img [src]="artropodos.imagen">
           <div class="card-title"><ion-icon name="play" *ngIf="!artropodos.reproduciendo"item-right=""></ion-icon></div>
           <div class="card-subtitle"><ion-icon name="pause" *ngIf="artropodos.reproduciendo"item-right=""></ion-icon></div>

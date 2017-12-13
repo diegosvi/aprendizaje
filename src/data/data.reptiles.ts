@@ -9,7 +9,7 @@ export const REPTILES= [
 
   },
   {
-    titulo: "CAMALEON",
+    titulo: "CAMALEÓN",
     audio:"assets/sound/rep/camaleon.mp3",
     imagen:"assets/img/rep/camaleon.jpg",
     duracion:4,
@@ -34,7 +34,7 @@ export const REPTILES= [
   },
 
   {
-    titulo: "DRAGON DE KOMODO",
+    titulo: "DRAGÓN DE KOMODO",
     audio:"assets/sound/rep/dragon.mp3",
     imagen:"assets/img/rep/dragon.jpg",
     duracion:4,

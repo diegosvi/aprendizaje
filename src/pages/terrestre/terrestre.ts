@@ -59,7 +59,7 @@ export class TerrestrePage {
     this.audio.pause();
     this.audio.currentTime=0;
     for(let ter of this.terre){
-      if(ter.imagen != ter.imagen){
+      if(ter.imagen != terSelected.imagen){
         ter.reproduciendo = false;
       }
     }
