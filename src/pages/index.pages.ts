@@ -40,3 +40,6 @@ export {SierraPage} from './sierra/sierra';
 export {OrientePage} from './oriente/oriente';
 export {InsularPage} from './insular/insular';
 export {ProvinciasPage} from './provincias/provincias';
+export {AhorcadoPage} from './ahorcado/ahorcado';
+export {TabsPage} from './tabs/tabs';
+export {PracticaPage} from './practica/practica';
