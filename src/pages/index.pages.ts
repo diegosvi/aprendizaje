@@ -43,3 +43,4 @@ export {ProvinciasPage} from './provincias/provincias';
 export {AhorcadoPage} from './ahorcado/ahorcado';
 export {TabsPage} from './tabs/tabs';
 export {PracticaPage} from './practica/practica';
+export {AdivinaPage} from './adivina/adivina';

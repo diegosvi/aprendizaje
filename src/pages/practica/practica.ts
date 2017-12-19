@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AhorcadoPage} from '../../pages/ahorcado/ahorcado';
+import { AdivinaPage} from '../../pages/adivina/adivina';
 
 /**
  * Generated class for the PracticaPage page.
@@ -25,5 +26,9 @@ export class PracticaPage {
 
   irAhorcado(){
     this.navCtrl.push(AhorcadoPage);
+  }
+
+  irAdivina(){
+    this.navCtrl.push(AdivinaPage);
   }
 }

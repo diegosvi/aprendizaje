@@ -9,7 +9,7 @@ import { NavController } from 'ionic-angular';
 export class AhorcadoPage {
   // Definimos las variables
   letra: string = '';
-  nombres: any = ['COCHE', 'MOTO', 'CARTEL', 'COCHECITO', 'RAQUETA'];
+  nombres: any = ['BARCO', 'MOTOCICLETA', 'AVION', 'BUQUE', 'AUTOMOVIL', 'FUTBOL', 'NATACION', 'KARATE', 'TENNIS', 'BOLOS','ECUADOR', 'MEXICO', 'PANAMA', 'PORTUGAL', 'CHINA'];
   nombreSecreto: any = this.palabraAleatoria(0, (this.nombres.length - 1));
   palabra: any = '';
   muestraHuecos: any = this.muestraHuecosPalabra();

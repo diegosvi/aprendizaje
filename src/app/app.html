@@ -6,12 +6,37 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <button ion-item (click)="irPagina(principal)">Básico</button>
-      <button ion-item (click)="irPagina(animal)">Animales</button>
-      <button ion-item (click)="irPagina(intermedio)">Intermedio</button>
-      <button ion-item (click)="irPagina(paises)">Paises</button>
-      <button ion-item (click)="irPagina(avanzado)">Avanzado</button>
+      <button ion-item (click)="irPagina(principal)">
+              <ion-icon name='md-book' item-start></ion-icon>
+        Básico
+      </button>
+      <!--<button ion-item (click)="irPagina(principal)">Básico</button>-->
+      <button ion-item (click)="irPagina(animal)">
+        <ion-icon name='md-paw' item-start></ion-icon>
+        Animales
+      </button>
+      <button ion-item (click)="irPagina(intermedio)">
+        <ion-icon name='car' item-start></ion-icon>
+        Intermedio
+      </button>
+      <button ion-item (click)="irPagina(paises)">
+        <ion-icon name='md-globe' item-start></ion-icon>
+        Paises
+      </button>
+      <button ion-item (click)="irPagina(avanzado)">
+        <ion-icon name='md-school' item-start></ion-icon>
+        Avanzado
+      </button>
+
+
     </ion-list>
+    <br>
+    <ion-list-header>
+      <button ion-item (click)="irPagina(tab1)">
+        <ion-icon name='ios-home' item-start></ion-icon>
+        Página Principal
+      </button>
+    </ion-list-header>
   </ion-content>
 </ion-menu>
 

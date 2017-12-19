@@ -18,6 +18,7 @@ export class MyApp {
   intermedio: any = IntermedioPage;
   paises: any = PaisesPage;
   avanzado: any = AvanzadoPage;
+  tab1: any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private _menuCtrl:MenuController) {
     platform.ready().then(() => {
