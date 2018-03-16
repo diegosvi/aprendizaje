@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProvinciasPage} from '../../pages/provincias/provincias';
+import { FruhoPage} from '../../pages/fruho/fruho';
+import { TransportePage} from '../../pages/transporte/transporte';
 
 
 /**
@@ -28,4 +30,11 @@ export class AvanzadoPage {
     this.navCtrl.push(ProvinciasPage);
   }
 
+  irFruho(){
+    this.navCtrl.push(FruhoPage);
+  }
+
+  irTransporte(){
+    this.navCtrl.push(TransportePage);
+  }
 }

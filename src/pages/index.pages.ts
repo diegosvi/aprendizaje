@@ -44,3 +44,4 @@ export {AhorcadoPage} from './ahorcado/ahorcado';
 export {TabsPage} from './tabs/tabs';
 export {PracticaPage} from './practica/practica';
 export {AdivinaPage} from './adivina/adivina';
+//export {JuegocolPage} from './juegocol/juegocol';

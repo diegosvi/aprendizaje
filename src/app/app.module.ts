@@ -15,6 +15,7 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
   declarations: [
     MyApp,
     // HomePage
+    //JuegocolPage,
     PrincipalPage,
     AhorcadoPage,
     AdivinaPage,
@@ -57,7 +58,7 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     AfricaPage,
     AsiaPage,
     AmericaPage,
-    PaisesPage,AmericacPage,AmericanPage,AmericasPage
+    PaisesPage,AmericacPage,AmericanPage,AmericasPage,
   ],
   imports: [
     BrowserModule,
@@ -109,7 +110,8 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     AfricaPage,
     AsiaPage,
     AmericaPage,
-    PaisesPage,AmericacPage,AmericanPage,AmericasPage
+    PaisesPage,AmericacPage,AmericanPage,AmericasPage,
+    //JuegocolPage
   ],
   providers: [
     StatusBar,

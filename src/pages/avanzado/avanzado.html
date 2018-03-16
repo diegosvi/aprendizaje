@@ -18,7 +18,20 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="fondoina">
+  <div text-center>
+    <h1>TRANSPORTES</h1>
+    <img class="imagen" (click)="irTransporte()" src="../../assets/img/pri/transporte.jpg">
+    <!--<button ion-button outline (click)="irPeces()">Peces</button>-->
+    <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
+  </div>
+  <div text-center>
+    <h1>FRUTAS Y HORTALIZAS</h1>
+    <img class="imagen" (click)="irFruho()" src="../../assets/img/pri/fruho.jpg">
+    <!--<button ion-button outline (click)="irAves()">Aves</button>-->
+    <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
+  </div>
+
   <div text-center>
     <h1>PROVINCIAS DEL ECUADOR</h1>
     <img class="imagen" (click)="irProvincias()" src="../../assets/img/pri/ecuador.jpg">
@@ -30,21 +43,5 @@
     <!--<button ion-button outline (click)="irMamiferos()">Mamiferos</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
   </div>
-  <div text-center>
-    <img class="imagen" (click)="irDeportes()" src="../../assets/img/pri/deportes.jpg">
-    <!--<button ion-button outline (click)="irMeses()">Meses del Año</button>-->
-    <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
-  <div text-center>
-    <img class="imagen" (click)="irTransporte()" src="../../assets/img/pri/transporte.jpg">
-    <!--<button ion-button outline (click)="irPeces()">Peces</button>-->
-    <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
-  <div text-center>
-    <img class="imagen" (click)="irFruho()" src="../../assets/img/pri/fruho.jpg">
-    <!--<button ion-button outline (click)="irAves()">Aves</button>-->
-    <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
-
 
 </ion-content>

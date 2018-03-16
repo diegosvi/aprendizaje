@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FruhoPage} from '../../pages/fruho/fruho';
-import { TransportePage} from '../../pages/transporte/transporte';
+// import { FruhoPage} from '../../pages/fruho/fruho';
+// import { TransportePage} from '../../pages/transporte/transporte';
 import { ProfesionesPage} from '../../pages/profesiones/profesiones';
 import { MesesPage} from '../../pages/meses/meses';
 import { DeportesPage} from '../../pages/deportes/deportes';
+import { RelojPage} from '../../pages/reloj/reloj';
 
 /**
  * Generated class for the IntermedioPage page.
@@ -31,13 +32,17 @@ export class IntermedioPage {
     this.navCtrl.push(ProfesionesPage);
   }
 
-  irTransporte(){
-    this.navCtrl.push(TransportePage);
+  // irTransporte(){
+  //   this.navCtrl.push(TransportePage);
+  // }
+
+  irReloj(){
+    this.navCtrl.push(RelojPage);
   }
 
-  irFruho(){
-    this.navCtrl.push(FruhoPage);
-  }
+  // irFruho(){
+  //   this.navCtrl.push(FruhoPage);
+  // }
 
   irMeses(){
     this.navCtrl.push(MesesPage);

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { AbecedarioPage} from '../../pages/abecedario/abecedario';
 import { NumerosPage} from '../../pages/numeros/numeros';
-import { RelojPage} from '../../pages/reloj/reloj';
+// import { RelojPage} from '../../pages/reloj/reloj';
 import { DiasPage} from '../../pages/dias/dias';
 import { ColoresPage} from '../../pages/colores/colores';
 
@@ -40,9 +40,9 @@ export class PrincipalPage {
     this.navCtrl.push(ColoresPage);
   }
 
-  irReloj(){
-    this.navCtrl.push(RelojPage);
-  }
+  // irReloj(){
+  //   this.navCtrl.push(RelojPage);
+  // }
   irDias(){
     this.navCtrl.push(DiasPage);
   }
