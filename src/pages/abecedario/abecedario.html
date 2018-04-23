@@ -14,18 +14,29 @@
 
 
 <ion-content class="fondoab">
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col">
 
-  <ion-grid>
-    <ion-row >
-      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
-        <ion-card *ngFor="let abecedario of abeceda" (click)="reproducir(abecedario)">
-          <img [src]="abecedario.imagen">
-          <div class="card-title"><ion-icon name="play" *ngIf="!abecedario.reproduciendo"item-right=""></ion-icon></div>
-          <div class="card-subtitle"><ion-icon name="pause" *ngIf="abecedario.reproduciendo"item-right=""></ion-icon></div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+      </div>
+      <div class="col-8">
+        <ion-grid>
+          <ion-row >
+              <ion-card *ngFor="let abecedario of abeceda" (click)="reproducir(abecedario)">
+                <img [src]="abecedario.imagen">
+                <div class="card-title"><ion-icon name="play" *ngIf="!abecedario.reproduciendo"item-right=""></ion-icon></div>
+                <div class="card-subtitle"><ion-icon name="pause" *ngIf="abecedario.reproduciendo"item-right=""></ion-icon></div>
+              </ion-card>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div class="col">
+
+      </div>
+    </div>
+  </div>
+
 
 
   <!--<div class="col-sm-4">-->

@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AhorcadoPage} from '../../pages/ahorcado/ahorcado';
-import { AdivinaPage} from '../../pages/adivina/adivina';
-import {JuegocolPage} from "../juegocol/juegocol";
+
+import {PbasicoPage} from "../pbasico/pbasico";
 
 /**
  * Generated class for the PracticaPage page.
@@ -25,15 +24,9 @@ export class PracticaPage {
     console.log('ionViewDidLoad PracticaPage');
   }
 
-  irAhorcado(){
-    this.navCtrl.push(AhorcadoPage);
-  }
 
-  irAdivina(){
-    this.navCtrl.push(AdivinaPage);
-  }
 
-  irJuegoCol(){
-    this.navCtrl.push(JuegocolPage);
+  irpbasico(){
+    this.navCtrl.push(PbasicoPage);
   }
 }

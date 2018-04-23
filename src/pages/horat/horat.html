@@ -14,19 +14,28 @@
 
 
 <ion-content padding class="fondot">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+      </div>
+      <div class="col">
+        <ion-grid>
+          <ion-row>
+              <ion-card *ngFor="let hor of ht" (click)="reproducir(hor)">
+                <!--<h2>{{hor.titulo}}</h2>-->
+                <img [src]="hor.imagen">
+                <!--<div class="card-title"><ion-icon name="play" *ngIf="!hor.reproduciendo"item-right=""></ion-icon></div>-->
+                <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="hor.reproduciendo"item-right=""></ion-icon></div>-->
+              </ion-card>
+          </ion-row>
+        </ion-grid>
 
-        <ion-card *ngFor="let hor of ht" (click)="reproducir(hor)">
-          <!--<h2>{{hor.titulo}}</h2>-->
-          <img [src]="hor.imagen">
-          <div class="card-title"><ion-icon name="play" *ngIf="!hor.reproduciendo"item-right=""></ion-icon></div>
-          <div class="card-subtitle"><ion-icon name="pause" *ngIf="hor.reproduciendo"item-right=""></ion-icon></div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+      </div>
+      <div class="col-2">
+
+      </div>
+    </div>
+  </div>
 
 </ion-content>

@@ -14,20 +14,27 @@
 
 
 <ion-content padding class="fondoinv">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+      </div>
+      <div class="col">
+        <ion-grid>
+          <ion-row>
+             <ion-card class="fon" *ngFor="let artropodos of artropodo" (click)="reproducir(artropodos)">
+                <h2>{{artropodos.titulo}}</h2>
+                <img [src]="artropodos.imagen">
+                <!--<div class="card-title"><ion-icon name="play" *ngIf="!artropodos.reproduciendo"item-right=""></ion-icon></div>-->
+                <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="artropodos.reproduciendo"item-right=""></ion-icon></div>-->
+              </ion-card>
+          </ion-row>
+        </ion-grid>
 
-        <ion-card class="fon" *ngFor="let artropodos of artropodo" (click)="reproducir(artropodos)">
+      </div>
+      <div class="col-2">
 
-          <br> <h2>{{artropodos.titulo}}</h2>
-          <img [src]="artropodos.imagen">
-          <div class="card-title"><ion-icon name="play" *ngIf="!artropodos.reproduciendo"item-right=""></ion-icon></div>
-          <div class="card-subtitle"><ion-icon name="pause" *ngIf="artropodos.reproduciendo"item-right=""></ion-icon></div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
+      </div>
+    </div>
+  </div>
 </ion-content>

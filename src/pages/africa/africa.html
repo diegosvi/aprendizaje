@@ -14,19 +14,28 @@
 
 
 <ion-content padding class="fondoafr">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+      </div>
+      <div class="col">
 
-        <ion-card *ngFor="let afri of afr" (click)="reproducir(afri)">
-          <h2>{{afri.titulo}}</h2>
-          <img [src]="afri.imagen">
-          <div class="card-title"><ion-icon name="play" *ngIf="!afri.reproduciendo"item-right=""></ion-icon></div>
-          <div class="card-subtitle"><ion-icon name="pause" *ngIf="afri.reproduciendo"item-right=""></ion-icon></div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        <ion-grid>
+          <ion-row>
+              <ion-card *ngFor="let afri of afr" (click)="reproducir(afri)">
+                <h2>{{afri.titulo}}</h2>
+                <img [src]="afri.imagen">
+                <!--<div class="card-title"><ion-icon name="play" *ngIf="!afri.reproduciendo"item-right=""></ion-icon></div>-->
+                <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="afri.reproduciendo"item-right=""></ion-icon></div>-->
+              </ion-card>
+          </ion-row>
+        </ion-grid>
 
+      </div>
+      <div class="col-2">
+
+      </div>
+    </div>
+  </div>
 </ion-content>

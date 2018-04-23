@@ -14,20 +14,28 @@
 
 
 <ion-content padding class="fondoave">
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+      </div>
+      <div class="col">
 
-        <ion-card class="fon" *ngFor="let aves of ave" (click)="reproducir(aves)">
-          <br>
-          <h2>{{aves.titulo}}</h2>
-          <img [src]="aves.imagen">
-          <div class="card-title"><ion-icon name="play" *ngIf="!aves.reproduciendo"item-right=""></ion-icon></div>
-          <div class="card-subtitle"><ion-icon name="pause" *ngIf="aves.reproduciendo"item-right=""></ion-icon></div>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+        <ion-grid>
+          <ion-row>
+             <ion-card class="fon" *ngFor="let aves of ave" (click)="reproducir(aves)">
+                <h2>{{aves.titulo}}</h2>
+                <img [src]="aves.imagen">
+                <!--<div class="card-title"><ion-icon name="play" *ngIf="!aves.reproduciendo"item-right=""></ion-icon></div>-->
+                <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="aves.reproduciendo"item-right=""></ion-icon></div>-->
+              </ion-card>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div class="col-2">
+
+      </div>
+    </div>
+  </div>
 
 </ion-content>
