@@ -9,7 +9,7 @@ import { MyApp } from './app.component';
 import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, ColoresPage,AnimalesPage, MamiferosPage, AvesPage, PecesPage,
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
           TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage,OceaniaPage,EuropaPage,AfricaPage,AsiaPage,
-          AmericaPage,PaisesPage,AmericacPage,AmericanPage,AmericasPage, EuroasiaticoPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
+          AmericaPage,PaisesPage,AmericacPage,AmericanPage,AmericasPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
           CostaPage, ProvinciasPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage} from '../pages/index.pages'
 @NgModule({
   declarations: [
@@ -23,7 +23,6 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     PracticaPage,
     TabsPage,
     AvanzadoPage,
-    EuroasiaticoPage,
     ProvinciasPage,
     AbecedarioPage,
     NumerosPage,
@@ -98,7 +97,6 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     TerrestrePage,
     AereoPage,
     MaritimoPage,
-    EuroasiaticoPage,
     HortalizasPage,
     FruhoPage,
     RelojPage,

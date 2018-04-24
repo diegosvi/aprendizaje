@@ -17,15 +17,6 @@ export const DEPORTES= [
 
   },
   {
-    titulo: "PING PONG",
-    audio:"assets/sound/depo/ping.mp3",
-    imagen:"/assets/img/depo/ping.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-
-  {
     titulo: "AJEDRÉZ",
     audio:"assets/sound/depo/ajedrez.mp3",
     imagen:"assets/img/depo/ajedrez.jpg",
@@ -146,25 +137,9 @@ export const DEPORTES= [
 
   },
   {
-    titulo: "BOLOS",
-    audio:"assets/sound/depo/bolos.mp3",
-    imagen:"assets/img/depo/bolos.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "HOCKEY",
     audio:"assets/sound/depo/hockey.mp3",
     imagen:"assets/img/depo/hockey.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "GOLF",
-    audio:"assets/sound/depo/golf.mp3",
-    imagen:"/assets/img/depo/golf.jpg",
     duracion:4,
     reproduciendo: false
 

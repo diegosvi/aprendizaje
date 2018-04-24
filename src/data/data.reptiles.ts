@@ -19,7 +19,7 @@ export const REPTILES= [
   {
     titulo: "SERPIENTE CASCABEL",
     audio:"assets/sound/rep/cascabel.mp3",
-    imagen:"assets/img/rep/cascabel.jpeg",
+    imagen:"assets/img/rep/cascabel.jpg",
     duracion:4,
     reproduciendo: false
 

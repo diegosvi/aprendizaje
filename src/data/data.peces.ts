@@ -44,7 +44,7 @@ export const PECES= [
   {
     titulo: "MEDUSA",
     audio:"assets/sound/pez/medusa.mp3",
-    imagen:"assets/img/pez/medusa.jpeg",
+    imagen:"assets/img/pez/medusa.jpg",
     duracion:4,
     reproduciendo: false
 

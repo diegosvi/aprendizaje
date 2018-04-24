@@ -34,7 +34,6 @@ export {AmericanPage} from './american/american';
 export {AmericacPage} from './americac/americac';
 export {AmericasPage} from './americas/americas';
 export {AvanzadoPage} from './avanzado/avanzado';
-export {EuroasiaticoPage} from './euroasiatico/euroasiatico';
 export {CostaPage} from './costa/costa';
 export {SierraPage} from './sierra/sierra';
 export {OrientePage} from './oriente/oriente';

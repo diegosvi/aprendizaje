@@ -2,7 +2,7 @@ export const ASIA= [
 
   {
     titulo: "JAPON",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/pais/asi/japon.mp3",
     imagen:"assets/img/asi/japon.png",
     duracion:4,
     reproduciendo: false
@@ -10,7 +10,7 @@ export const ASIA= [
   },
   {
     titulo: "COREA DEL NORTE",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/norte.mp3",
     imagen:"assets/img/asi/corean.png",
     duracion:4,
     reproduciendo: false
@@ -18,23 +18,15 @@ export const ASIA= [
   },
   {
     titulo: "COREA DEL SUR",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/pais/asi/sur.mp3",
     imagen:"assets/img/asi/coreas.png",
     duracion:4,
     reproduciendo: false
 
   },
   {
-    titulo: "MONGOLIA",
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/asi/mongolia.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "CHINA",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/china.mp3",
     imagen:"assets/img/asi/china.png",
     duracion:4,
     reproduciendo: false
@@ -42,7 +34,7 @@ export const ASIA= [
   },
   {
     titulo: "SIRIA",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/siria.mp3",
     imagen:"assets/img/asi/siria.png",
     duracion:4,
     reproduciendo: false
@@ -50,7 +42,7 @@ export const ASIA= [
   },
   {
     titulo: "IRAN",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/pais/asi/iran.mp3",
     imagen:"assets/img/asi/iran.png",
     duracion:4,
     reproduciendo: false
@@ -58,23 +50,15 @@ export const ASIA= [
   },
   {
     titulo: "IRAQ",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/iraq.mp3",
     imagen:"assets/img/asi/iraq.png",
     duracion:4,
     reproduciendo: false
 
   },
   {
-    titulo: "AFGANISTAN",
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/asi/afganistan.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "ARABIA SAUDITA",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/arabia.mp3",
     imagen:"assets/img/asi/arabia.png",
     duracion:4,
     reproduciendo: false
@@ -82,7 +66,7 @@ export const ASIA= [
   },
   {
     titulo: "QATAR",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/pais/asi/qatar.mp3",
     imagen:"assets/img/asi/qatar.png",
     duracion:4,
     reproduciendo: false
@@ -90,7 +74,7 @@ export const ASIA= [
   },
   {
     titulo: "VIETNAM",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/vietnam.mp3",
     imagen:"assets/img/asi/vietnam.png",
     duracion:4,
     reproduciendo: false
@@ -98,7 +82,7 @@ export const ASIA= [
   },
   {
     titulo: "TAILANDIA",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/pais/asi/tailandia.mp3",
     imagen:"assets/img/asi/tailandia.png",
     duracion:4,
     reproduciendo: false
@@ -106,7 +90,7 @@ export const ASIA= [
   },
   {
     titulo: "INDIA",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/india.mp3",
     imagen:"assets/img/asi/india.png",
     duracion:4,
     reproduciendo: false
@@ -114,7 +98,7 @@ export const ASIA= [
   },
   {
     titulo: "INDONESIA",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/indonesia.mp3",
     imagen:"assets/img/asi/indonesia.png",
     duracion:4,
     reproduciendo: false
@@ -122,71 +106,15 @@ export const ASIA= [
   },
   {
     titulo: "ISRAEL",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/israel.mp3",
     imagen:"assets/img/asi/israel.png",
     duracion:4,
     reproduciendo: false
 
   },
   {
-    titulo: "JORDANIA",
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/asi/jordania.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "MALASIA",
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/asi/malasia.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "FILIPINAS",
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/asi/filipinas.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "BANGLADESH",
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/asi/bangladesh.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "LANKA",
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/asi/lanka.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "EMIRATOS ARABES",
-    audio:"assets/sound/b.mp3",
-    imagen:"assets/img/asi/emiratos.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "MALDIVAS",
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/asi/maldivas.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "PAKISTAN",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/asi/pakistan.mp3",
     imagen:"assets/img/asi/pakistan.png",
     duracion:4,
     reproduciendo: false

@@ -1,16 +1,8 @@
 export const AMERICAC= [
 
   {
-    titulo: "BELICE",
-    audio:"assets/sound/a.mp3",
-    imagen:"assets/img/ame/central/belice.png",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "HONDURAS",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/centro/honduras.mp3",
     imagen:"assets/img/ame/central/honduras.jpg",
     duracion:4,
     reproduciendo: false
@@ -18,7 +10,7 @@ export const AMERICAC= [
   },
   {
     titulo: "EL SALVADOR",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/pais/centro/salvador.mp3",
     imagen:"assets/img/ame/central/salvador.png",
     duracion:4,
     reproduciendo: false
@@ -26,7 +18,7 @@ export const AMERICAC= [
   },
   {
     titulo: "GUATEMALA",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/centro/guatemala.mp3",
     imagen:"assets/img/ame/central/guatemala.png",
     duracion:4,
     reproduciendo: false
@@ -34,7 +26,7 @@ export const AMERICAC= [
   },
   {
     titulo: "NICARAGUA",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/pais/centro/nicaragua.mp3",
     imagen:"assets/img/ame/central/nicaragua.jpg",
     duracion:4,
     reproduciendo: false
@@ -42,7 +34,7 @@ export const AMERICAC= [
   },
   {
     titulo: "COSTA RICA",
-    audio:"assets/sound/b.mp3",
+    audio:"assets/sound/pais/centro/costa.mp3",
     imagen:"assets/img/ame/central/costar.png",
     duracion:4,
     reproduciendo: false
@@ -50,7 +42,7 @@ export const AMERICAC= [
   },
   {
     titulo: "PANAMA",
-    audio:"assets/sound/a.mp3",
+    audio:"assets/sound/pais/centro/panama.mp3",
     imagen:"assets/img/ame/central/panama.jpg",
     duracion:4,
     reproduciendo: false
