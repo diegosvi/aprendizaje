@@ -10,12 +10,13 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
           TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage,OceaniaPage,EuropaPage,AfricaPage,AsiaPage,
           AmericaPage,PaisesPage,AmericacPage,AmericanPage,AmericasPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
-          CostaPage, ProvinciasPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage} from '../pages/index.pages'
+          CostaPage, ProvinciasPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
 @NgModule({
   declarations: [
     MyApp,
     // HomePage
     //JuegocolPage,
+    EntradaPage,
     PbasicoPage,
     PrincipalPage,
     AhorcadoPage,
@@ -110,6 +111,7 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     AsiaPage,
     AmericaPage,
     PaisesPage,AmericacPage,AmericanPage,AmericasPage,PbasicoPage,
+    EntradaPage,
     //JuegocolPage
   ],
   providers: [

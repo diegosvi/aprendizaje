@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import {TabsPage} from "../tabs/tabs";
+
 /**
  * Generated class for the EntradaPage page.
  *
@@ -21,5 +23,10 @@ export class EntradaPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad EntradaPage');
   }
+
+  irtabs(){
+    this.navCtrl.push(TabsPage);
+  }
+
 
 }
