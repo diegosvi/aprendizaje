@@ -17,14 +17,6 @@ export const PROFESIONES= [
 
   },
   {
-    titulo: "ELECTRICISTA",
-    audio:"assets/sound/pro/electricit.mp3",
-    imagen:"assets/img/pro/electricit.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "CARPINTERO",
     audio:"assets/sound/pro/carpintero.mp3",
     imagen:"assets/img/pro/carpintero.jpg",
@@ -41,25 +33,9 @@ export const PROFESIONES= [
 
   },
   {
-    titulo: "COSTURERA",
-    audio:"assets/sound/pro/costurera.mp3",
-    imagen:"assets/img/pro/costurera.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "MECÁNICO",
     audio:"assets/sound/pro/mecanico.mp3",
     imagen:"assets/img/pro/mecanico.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "PESCADOR",
-    audio:"assets/sound/pro/pescador.mp3",
-    imagen:"assets/img/pro/pescador.jpg",
     duracion:4,
     reproduciendo: false
 
@@ -84,14 +60,6 @@ export const PROFESIONES= [
     titulo: "FOTÓGRAFO",
     audio:"assets/sound/pro/fotografo.mp3",
     imagen:"assets/img/pro/fotografo.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "CERRAJERO",
-    audio:"assets/sound/pro/cerrajero.mp3",
-    imagen:"assets/img/pro/cerrajero.jpg",
     duracion:4,
     reproduciendo: false
 
@@ -136,26 +104,11 @@ export const PROFESIONES= [
     reproduciendo: false
 
   },
-  {
-    titulo: "PERIODISTA",
-    audio:"assets/sound/pro/periodista.mp3",
-    imagen:"assets/img/pro/periodista.jpg",
-    duracion:4,
-    reproduciendo: false
 
-  },
   {
     titulo: "CHEF",
     audio:"assets/sound/pro/chef.mp3",
     imagen:"assets/img/pro/chef.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "HELADERO",
-    audio:"assets/sound/pro/heladero.mp3",
-    imagen:"assets/img/pro/heladero.jpg",
     duracion:4,
     reproduciendo: false
 
@@ -193,25 +146,9 @@ export const PROFESIONES= [
 
   },
   {
-    titulo: "ENFERMERA",
-    audio:"assets/sound/pro/enfermera.mp3",
-    imagen:"assets/img/pro/enfermera.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "CARTERO",
     audio:"assets/sound/pro/cartero.mp3",
     imagen:"assets/img/pro/cartero.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "SECRETARIA",
-    audio:"assets/sound/pro/secretaria.mp3",
-    imagen:"assets/img/pro/secretaria.jpg",
     duracion:4,
     reproduciendo: false
 

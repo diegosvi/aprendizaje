@@ -32,15 +32,6 @@ export const REPTILES= [
     reproduciendo: false
 
   },
-
-  {
-    titulo: "DRAGÓN DE KOMODO",
-    audio:"assets/sound/rep/dragon.mp3",
-    imagen:"assets/img/rep/dragon.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
   {
     titulo: "SERPIENTE",
     audio:"assets/sound/rep/serpiente.mp3",

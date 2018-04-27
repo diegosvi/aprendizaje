@@ -43,21 +43,8 @@ export const TERRESTRE= [
     duracion:4,
     reproduciendo: false
 
-  },{
-    titulo: "TRANSPORTE DE TRACCIÓN",
-    audio:"assets/sound/terrestre/traccion.mp3",
-    imagen:"assets/img/trans/terrestre/traccion.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },{
-    titulo: "TRANVÍA",
-    audio:"assets/sound/terrestre/tranvia.mp3",
-    imagen:"assets/img/trans/terrestre/tranvia.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },{
+  },
+  {
     titulo: "TREN",
     audio:"assets/sound/terrestre/tren.mp3",
     imagen:"assets/img/trans/terrestre/tren.jpg",

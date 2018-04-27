@@ -1,33 +1,9 @@
 export const FRUTAS= [
 
   {
-    titulo: "AGUACATE",
-    audio:"assets/sound/fru/aguacate.mp3",
-    imagen:"assets/img/fru/aguacate.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "ARÁNDANO",
-    audio:"assets/sound/fru/arandano.mp3",
-    imagen:"assets/img/fru/arandano.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "CEREZA",
     audio:"assets/sound/fru/cereza.mp3",
     imagen:"assets/img/fru/cereza.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "CHIRIMOYA",
-    audio:"assets/sound/fru/chirimoya.mp3",
-    imagen:"assets/img/fru/chirimoya.jpg",
     duracion:4,
     reproduciendo: false
 
@@ -52,14 +28,6 @@ export const FRUTAS= [
     titulo: "FRESA",
     audio:"assets/sound/fru/fresa.mp3",
     imagen:"assets/img/fru/fresa.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "HIGO",
-    audio:"assets/sound/fru/higo.mp3",
-    imagen:"assets/img/fru/higo.jpg",
     duracion:4,
     reproduciendo: false
 
@@ -100,14 +68,6 @@ export const FRUTAS= [
     titulo: "SANDÍA",
     audio:"assets/sound/fru/sandia.mp3",
     imagen:"assets/img/fru/sandia.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "ZARZAMORA",
-    audio:"assets/sound/fru/zarzamora.mp3",
-    imagen:"assets/img/fru/zarzamora.jpg",
     duracion:4,
     reproduciendo: false
 

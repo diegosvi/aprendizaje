@@ -58,7 +58,7 @@ export const ARTROPODOS= [
 
   },
   {
-    titulo: "TARáNTULA",
+    titulo: "TARANTULA",
     audio:"assets/sound/inv/tarantula.mp3",
     imagen:"assets/img/inv/tarantula.jpg",
     duracion:4,

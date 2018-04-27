@@ -97,14 +97,6 @@ export const HORTALIZAS= [
 
   },
   {
-    titulo: "COL DE BRUCELAS",
-    audio:"assets/sound/hor/colbru.mp3",
-    imagen:"assets/img/hor/colbru.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "TOMATE",
     audio:"assets/sound/hor/tomate.mp3",
     imagen:"assets/img/hor/tomate.jpg",
@@ -113,33 +105,9 @@ export const HORTALIZAS= [
 
   },
   {
-    titulo: "ALCACHOFA",
-    audio:"assets/sound/hor/alcachofa.mp3",
-    imagen:"assets/img/hor/alcachofa.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "PEREJIL",
     audio:"assets/sound/hor/perejil.mp3",
     imagen:"assets/img/hor/perejil.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "ESPÁRRAGO",
-    audio:"assets/sound/hor/esparrago.mp3",
-    imagen:"assets/img/hor/esparrago.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "BERENJENA",
-    audio:"assets/sound/hor/berenjena.mp3",
-    imagen:"assets/img/hor/berenjena.jpg",
     duracion:4,
     reproduciendo: false
 
@@ -172,14 +140,6 @@ export const HORTALIZAS= [
     titulo: "HABA",
     audio:"assets/sound/hor/haba.mp3",
     imagen:"assets/img/hor/haba.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "CALABAZA",
-    audio:"assets/sound/hor/calabaza.mp3",
-    imagen:"assets/img/hor/calabaza.jpg",
     duracion:4,
     reproduciendo: false
 

@@ -23,13 +23,6 @@ export const MARITIMO= [
     reproduciendo: false
 
   },{
-    titulo: "KAYAC",
-    audio:"assets/sound/maritimo/kayac.mp3",
-    imagen:"assets/img/trans/maritimo/kayac.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },{
     titulo: "LANCHA",
     audio:"assets/sound/maritimo/lancha.mp3",
     imagen:"assets/img/trans/maritimo/lancha.jpg",
@@ -47,13 +40,6 @@ export const MARITIMO= [
     titulo: "SUBMARINO",
     audio:"assets/sound/maritimo/submarino.mp3",
     imagen:"assets/img/trans/maritimo/submarino.jpg",
-    duracion:4,
-    reproduciendo: false
-  },
-  {
-    titulo: "VELERO",
-    audio:"assets/sound/maritimo/velero.mp3",
-    imagen:"assets/img/trans/maritimo/velero.jpg",
     duracion:4,
     reproduciendo: false
   }
