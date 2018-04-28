@@ -113,14 +113,6 @@ export const DEPORTES= [
 
   },
   {
-    titulo: "BILLAR",
-    audio:"assets/sound/depo/billar.mp3",
-    imagen:"assets/img/depo/billar.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
     titulo: "GIMNASIA",
     audio:"assets/sound/depo/gimnasia.mp3",
     imagen:"assets/img/depo/gimnasia.jpg",
