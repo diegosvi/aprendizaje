@@ -8,31 +8,43 @@
 
   <ion-navbar>
     <ion-title>Provincias</ion-title>
+    <ion-buttons>
+      <button ion-button icon-left menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="fondoecu">
-
+  <br>
+  <br>
   <div text-center>
     <h1>COSTA</h1>
     <img class="imagen" (click)="irCosta()" src="../../assets/img/pri/costa.jpg">
     <!--<button ion-button outline (click)="irMeses()">Meses del Año</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
   </div>
+  <br>
+  <br>
   <div text-center>
     <h1>SIERRA</h1>
     <img class="imagen" (click)="irSierra()" src="../../assets/img/pri/sierra.gif">
     <!--<button ion-button outline (click)="irMamiferos()">Mamiferos</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
   </div>
+  <br>
+  <br>
   <div text-center>
     <h1>ORIENTE O AMAZONIA</h1>
     <img class="imagen" (click)="irOriente()" src="../../assets/img/pri/amazonia.gif">
     <!--<button ion-button outline (click)="irMeses()">Meses del Año</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
   </div>
+  <br>
+  <br>
   <div text-center>
     <h1>REGION INSULAR O GALAPAGOS</h1>
     <img class="imagen" (click)="irInsular()" src="../../assets/img/pri/galapagos.png">

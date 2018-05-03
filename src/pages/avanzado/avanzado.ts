@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ProvinciasPage} from '../../pages/provincias/provincias';
+// import { PaisesPage} from '../../pages/paises/paises';
 import { FruhoPage} from '../../pages/fruho/fruho';
 import { TransportePage} from '../../pages/transporte/transporte';
-
+import { AmericaPage} from '../../pages/america/america';
 
 /**
  * Generated class for the AvanzadoPage page.
@@ -26,10 +26,13 @@ export class AvanzadoPage {
     console.log('ionViewDidLoad AvanzadoPage');
   }
 
-  irProvincias(){
-    this.navCtrl.push(ProvinciasPage);
-  }
+  // irPaises(){
+  //   this.navCtrl.push(PaisesPage);
+  // }
 
+  irAmerica(){
+    this.navCtrl.push(AmericaPage);
+  }
   irFruho(){
     this.navCtrl.push(FruhoPage);
   }

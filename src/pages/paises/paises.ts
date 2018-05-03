@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
-import { AsiaPage} from '../../pages/asia/asia';
-import { AfricaPage} from '../../pages/africa/africa';
-import { EuropaPage} from '../../pages/europa/europa';
-import { OceaniaPage} from '../../pages/oceania/oceania';
 import { AmericaPage} from '../../pages/america/america';
 
 
@@ -28,23 +24,10 @@ export class PaisesPage {
     console.log('ionViewDidLoad PrincipalPage');
   }
 
-  irAsia(){
-    this.navCtrl.push(AsiaPage);
-  }
-
-  irAfrica(){
-    this.navCtrl.push(AfricaPage);
-  }
   irAmerica(){
     this.navCtrl.push(AmericaPage);
   }
 
-  irEuropa(){
-    this.navCtrl.push(EuropaPage);
-  }
-  irOceania(){
-    this.navCtrl.push(OceaniaPage);
-  }
 
 
 
