@@ -42,3 +42,4 @@ export {AdivinaPage} from './adivina/adivina';
 export {PbasicoPage} from './pbasico/pbasico';
 //export {JuegocolPage} from './juegocol/juegocol';
 export {EntradaPage} from './entrada/entrada';
+export {FigurasPage} from './figuras/figuras'

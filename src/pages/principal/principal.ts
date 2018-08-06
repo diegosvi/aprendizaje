@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 import { AbecedarioPage} from '../../pages/abecedario/abecedario';
 import { NumerosPage} from '../../pages/numeros/numeros';
 // import { RelojPage} from '../../pages/reloj/reloj';
-import { DiasPage} from '../../pages/dias/dias';
+import { FigurasPage} from '../../pages/figuras/figuras';
 import { ColoresPage} from '../../pages/colores/colores';
 
 
@@ -43,8 +43,8 @@ export class PrincipalPage {
   // irReloj(){
   //   this.navCtrl.push(RelojPage);
   // }
-  irDias(){
-    this.navCtrl.push(DiasPage);
+  irFiguras(){
+    this.navCtrl.push(FigurasPage);
   }
 
 

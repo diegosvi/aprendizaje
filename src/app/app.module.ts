@@ -11,6 +11,8 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
           TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage,
           AmericaPage,PaisesPage,AmericacPage,AmericanPage,AmericasPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
           CostaPage, ProvinciasPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
+import {Figuras} from "../interface/interface.figuras";
+import {FigurasPage} from "../pages/figuras/figuras";
 @NgModule({
   declarations: [
     MyApp,
@@ -55,7 +57,7 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     HoramPage,
     DeportesPage,
     AmericaPage,
-    PaisesPage,AmericacPage,AmericanPage,AmericasPage,
+    PaisesPage,AmericacPage,AmericanPage,AmericasPage,FigurasPage
   ],
   imports: [
     BrowserModule,
@@ -104,6 +106,7 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
     AmericaPage,
     PaisesPage,AmericacPage,AmericanPage,AmericasPage,PbasicoPage,
     EntradaPage,
+    FigurasPage,
     //JuegocolPage
   ],
   providers: [

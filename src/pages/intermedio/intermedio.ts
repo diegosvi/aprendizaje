@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // import { FruhoPage} from '../../pages/fruho/fruho';
 // import { TransportePage} from '../../pages/transporte/transporte';
-import { ProfesionesPage} from '../../pages/profesiones/profesiones';
+import { DiasPage} from '../../pages/dias/dias';
 import { MesesPage} from '../../pages/meses/meses';
 import { DeportesPage} from '../../pages/deportes/deportes';
 import { RelojPage} from '../../pages/reloj/reloj';
@@ -28,8 +28,8 @@ export class IntermedioPage {
     console.log('ionViewDidLoad IntermedioPage');
   }
 
-  irProfesion(){
-    this.navCtrl.push(ProfesionesPage);
+  irDias(){
+    this.navCtrl.push(DiasPage);
   }
 
   // irTransporte(){

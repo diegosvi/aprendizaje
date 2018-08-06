@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // import { PaisesPage} from '../../pages/paises/paises';
 import { FruhoPage} from '../../pages/fruho/fruho';
 import { TransportePage} from '../../pages/transporte/transporte';
-import { AmericaPage} from '../../pages/america/america';
+import { ProfesionesPage} from '../../pages/profesiones/profesiones';
 
 /**
  * Generated class for the AvanzadoPage page.
@@ -30,8 +30,8 @@ export class AvanzadoPage {
   //   this.navCtrl.push(PaisesPage);
   // }
 
-  irAmerica(){
-    this.navCtrl.push(AmericaPage);
+  irProfesion(){
+    this.navCtrl.push(ProfesionesPage);
   }
   irFruho(){
     this.navCtrl.push(FruhoPage);
