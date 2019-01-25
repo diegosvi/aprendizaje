@@ -1,6 +1,8 @@
 {
   "name": "prueba",
-  "app_id": "10e12006",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular",
-  "integrations": {}
+  "id": "10e12006"
 }
