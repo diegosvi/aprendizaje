@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 
 @Component({
   selector: 'page-ahorcado',
@@ -7,157 +7,119 @@ import { NavController } from 'ionic-angular';
 })
 
 export class AhorcadoPage {
-  // Definimos las variables
-  letra: string = '';
-  nombres: any = ['BARCO', 'MOTOCICLETA', 'AVION', 'BUQUE', 'AUTOMOVIL', 'FUTBOL', 'NATACION', 'KARATE', 'TENNIS', 'BOLOS','ECUADOR', 'MEXICO', 'PANAMA', 'PORTUGAL', 'CHINA'];
-  nombreSecreto: any = this.palabraAleatoria(0, (this.nombres.length - 1));
-  palabra: any = '';
-  muestraHuecos: any = this.muestraHuecosPalabra();
-  mensaje: string = 'Selecciona una letra del listado.';
-  vidas: number = 5;
-  puntos: number = 0;
-  ganador: number = 0;
 
-  // Creamos un array para guardar las letras que se van seleccionando.
-  controlLetras = new Array;
+  readonly LETRAS = [
+    "A", "B", "C", "D", "E", "F", "G",
+    "H", "I", "J", "K", "L", "M", "N",
+    "Ñ", "O", "P", "Q", "R", "S", "T",
+    "U", "V", "W", "X", "Y", "Z"];
 
-  constructor(public navCtrl: NavController) {  }
+  readonly PALABRAS = ["CARACOLA", "TOCINO", "BARCELONA", 'BARCO', 'MOTOCICLETA', 'AVION', 'BUQUE', 'AUTOMOVIL', 'FUTBOL', 'NATACION', 'KARATE', 'TENNIS', 'BOLOS','ECUADOR', 'MEXICO', 'PANAMA', 'PORTUGAL', 'CHINA'];
 
-  // Método que genera una palabra aleatoria comprendida en el array nombres.
-  public palabraAleatoria(primer, ultimo) {
-    let numberOfName = Math.round(Math.random() * (ultimo - primer) + (primer));
-    return this.nombres[numberOfName];
+  botones: Array<{ letra: string, estado: string }>;
+
+  palabraAdivinadaPorAhora: string;
+  palabraAAdivinar: string;
+  fallos: Array<string>;
+  numFallos: number;
+  numAciertos: number;
+
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController) {
+    this.inicializar();
   }
 
-  // Método que valida la letra seleccionada.
-  public compruebaLetra() {
-    // Formateamos a mayúsculas para mejorar la legibilidad.
-    let letraMayusculas = this.letra.toUpperCase();
+  inicializar(): void {
 
-    // Si se ha seleccionado una letra...
-    if (letraMayusculas) {
+    this.numFallos = 0;
+    this.numAciertos = 0;
+    this.fallos = [];
+    this.botones = [];
+    let numero = Math.floor(Math.random() * this.PALABRAS.length);
+    this.palabraAAdivinar = this.PALABRAS[numero];
 
-      if (this.nombreSecreto.indexOf(letraMayusculas) != -1) {
+    this.generarPalabraAdivinadaPorAhora();
+    this.inicializarBotones();
+  }
 
-        let nombreSecretoModificado = this.nombreSecreto;
-        let posicion = new Array;
-        let posicionTotal = 0;
+  inicializarBotones(): void {
+    for (let i = 0; i < this.LETRAS.length; i++) {
+      this.botones.push({ letra: this.LETRAS[i], estado: "boton-no-pulsado-aun" });
+    }
+  }
 
-        let contador = 1;
-        while (nombreSecretoModificado.indexOf(letraMayusculas) != -1) {
+  generarPalabraAdivinadaPorAhora(): void {
 
-          posicion[contador] = nombreSecretoModificado.indexOf(letraMayusculas);
-          nombreSecretoModificado = nombreSecretoModificado.substring(nombreSecretoModificado.indexOf(letraMayusculas) + letraMayusculas.length, nombreSecretoModificado.length);
+    this.palabraAdivinadaPorAhora = "";
+    for (let i = 0; i < this.palabraAAdivinar.length; i++) {
+      this.palabraAdivinadaPorAhora += "-";
+    }
+  }
 
-          // Calculamos la posición total.
-          if (contador > 1) {
-            posicionTotal = posicionTotal + posicion[contador] + 1;
-          }
-          else {
-            posicionTotal = posicionTotal + posicion[contador];
-          }
+  botonClicked(boton: { letra: string, estado: string}): void {
 
-          this.palabra[posicionTotal] = letraMayusculas;
-          this.mensaje = 'Genial, la letra ' + letraMayusculas + ' está en la palabra secreta.';
-
-          // Sumamos puntos
-          if (this.controlLetras.indexOf(letraMayusculas) == -1) {
-            this.puntos = this.puntos + 10;
-          }
-          else {
-            this.mensaje = 'La letra ' + letraMayusculas + ' fue seleccionada anteriormente.';
-          }
-
-          contador++;
-        }
-
-        // Si ya no quedan huecos, mustramos el mensaje para el ganador.
-        if (this.palabra.indexOf('_') == -1) {
-
-          // Sumamos puntos
-          if (this.controlLetras.indexOf(letraMayusculas) == -1) {
-            this.puntos = this.puntos + 50;
-          }
-
-          // Damos el juego por finalizado, el jugador gana.
-          this.finDelJuego('gana')
-        }
+    if (!this.letraAcertada(boton.letra)) {
+      if (this.numFallos < 5) {
+        this.aumentarFallos(boton.letra);
+      } else {
+        this.mostrarMensajeDePerder();
       }
-      else {
-        // Restamos una vida.
-        this.nuevoFallo();
-
-        // Comprobamos si nos queda alguna vida.
-        if (this.vidas > 0) {
-
-          // Restamos puntos siempre y cuando no sean 0.
-          if (this.puntos > 0) {
-            if (this.controlLetras.indexOf(letraMayusculas) == -1) {
-              this.puntos = this.puntos - 5;
-            }
-          }
-
-          // Mostramos un mensaje indicando el fallo.
-          this.mensaje = 'Fallo, la letra ' + letraMayusculas + ' no está en la palabra secreta, recuerda que te quedan ' + this.vidas + ' vidas.';
-        }
-        else {
-          // Damos el juego por finalizado, el jugador pierde.
-          this.finDelJuego('pierde')
-        }
+      boton.estado = "boton-letra-no-acertada";
+    } else {
+      if (this.numAciertos == this.palabraAAdivinar.length) {
+        this.mostrarMensajeDeGanar();
       }
-
-      // La añadimos al array de letras seleccionadas.
-      this.controlLetras.push(letraMayusculas);
-
-    }
-    else {
-      this.mensaje = 'Seleccione una letra del listado.';
+      boton.estado = "boton-letra-acertada";
     }
   }
 
-  public muestraHuecosPalabra() {
-    let totalHuecos = this.nombreSecreto.length;
+  letraAcertada(letra: string): boolean {
 
-    // Declaramos la variable huecos como nuevo array.
-    let huecos = new Array;
-    for (let i = 0; i < totalHuecos; i++) {
-      //Asignamos tantos huecos como letras tenga la palabra.
-      huecos.push('_');
+    let letraAcertada = false;
+    let longitud = this.palabraAAdivinar.length;
+
+    for (let i = 0; i < longitud; i++) {
+      if (letra == this.palabraAAdivinar[i]) {
+        this.palabraAdivinadaPorAhora =
+          (i == 0 ? "" : this.palabraAdivinadaPorAhora.substr(0, i)) +
+          letra +
+          this.palabraAdivinadaPorAhora.substr(i + 1);
+        letraAcertada = true;
+        this.numAciertos++;
+      }
     }
-
-    // Para empezar formamos la variable palabra tan solo con los huecos, ya que en este momento aún no se ha seleccionado ninguna letra.
-    this.palabra = huecos;
-    return this.palabra;
+    return letraAcertada;
   }
 
-  public nuevoFallo() {
-    this.vidas = this.vidas - 1;
-    return this.vidas;
+  aumentarFallos(letra: string): void {
+    this.fallos.push(letra);
+    this.numFallos++;
   }
 
-  public finDelJuego(valor) {
-    // Perdedor
-    if (valor == 'pierde') {
-      // Mostramos el mensaje como que el juego ha terminado
-      this.mensaje = 'Perdiste!, Inténtalo de nuevo. Has conseguido un total de ' + this.puntos + ' puntos. La palabra secreta es ' + this.nombreSecreto;
-    }
-
-    // Ganador
-    if (valor == 'gana') {
-      this.mensaje = 'Enhorabuena!, Has acertado la palabra secreta. Has conseguido un total de ' + this.puntos + ' puntos.';
-      this.ganador = 1;
-    }
+  mostrarMensajeDePerder(): void {
+    const alert = this.alertCtrl.create({
+      title: 'Ha Perdido',
+      subTitle: '¡Lo siento! Pulse Ok para jugar otra vez.',
+      buttons: [{
+        text: 'Ok',
+        handler: () => {
+          this.inicializar();
+        }
+      }]
+    });
+    alert.present();
   }
 
-  public reiniciaJuego() {
-    this.letra = '';
-    this.palabra = '';
-    this.vidas = 5;
-    this.mensaje = '';
-    this.ganador = 0;
-    this.puntos = 0;
-    this.nombreSecreto = this.palabraAleatoria(0, (this.nombres.length-1));
-    this.muestraHuecos = this.muestraHuecosPalabra();
+  mostrarMensajeDeGanar(): void {
+    const alert = this.alertCtrl.create({
+      title: 'Ha Ganado',
+      subTitle: '¡Felicidades! Pulse Ok para jugar otra vez.',
+      buttons: [{
+        text: 'Ok',
+        handler: () => {
+          this.inicializar();
+        }
+      }]
+    });
+    alert.present();
   }
-
 }
