@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ABECEDARIO } from '../../data/data.abecedario';
 import  { Abecedario } from '../../interface/interface.abecedario';
-
+import { ABECEDARIOI } from '../../data/data.abecedarioi';
+import  { Abecedarioi } from '../../interface/interface.abecedarioi';
 /**
  * Generated class for the AbecedarioPage page.
  *
@@ -18,11 +19,13 @@ import  { Abecedario } from '../../interface/interface.abecedario';
 export class AbecedarioPage {
 
   abeceda: Abecedario[] = [];
+  abecedar: Abecedarioi[] = [];
   audio: any = new Audio();
   tiempo: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.abeceda = ABECEDARIO.slice(0);
+    this.abecedar = ABECEDARIOI.slice();
   }
 
   ionViewDidLoad() {
@@ -54,6 +57,29 @@ export class AbecedarioPage {
 
   }
 
+  reproducir1(abecedarioi: Abecedarioi){
+    this.pausarSonido1(abecedarioi);
+    if(abecedarioi.reproduciendo){
+      abecedarioi.reproduciendo=false;
+      return;
+    }
+    console.log(abecedarioi);
+
+    //let audio = new Audio();
+    this.audio.src = abecedarioi.audio;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    abecedarioi.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        abecedarioi.reproduciendo = false;
+      }, abecedarioi.duracion*300
+    );
+
+  }
 
   pausarSonido(abecedarioSelected: Abecedario){
     clearTimeout(this.tiempo);
@@ -66,4 +92,15 @@ export class AbecedarioPage {
     }
   }
 
+
+  pausarSonido1(abecedarioiSelected: Abecedarioi){
+    clearTimeout(this.tiempo);
+    this.audio.pause();
+    this.audio.currentTime=0;
+    for(let abecedarioi of this.abecedar){
+      if(abecedarioi.imagen != abecedarioiSelected.imagen){
+        abecedarioi.reproduciendo = false;
+      }
+    }
+  }
 }

@@ -44,7 +44,7 @@ export const ABECEDARIO= [
   {
     titulo: "LETRA F",
     audio:"assets/sound/abc/f.mp3",
-    imagen:"assets/img/abs/f.png",
+    imagen:"assets/img/abs/f.jpg",
     duracion:4,
     reproduciendo: false
 
@@ -109,14 +109,6 @@ export const ABECEDARIO= [
     titulo: "LETRA N",
     audio:"assets/sound/abc/n.mp3",
     imagen:"assets/img/abs/n.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
-    titulo: "LETRA Ñ",
-    audio:"assets/sound/abc/ñ.mp3",
-    imagen:"assets/img/abs/ñ.jpg",
     duracion:4,
     reproduciendo: false
 
