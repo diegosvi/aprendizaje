@@ -18,7 +18,7 @@ export class MyApp {
   principal:any = PrincipalPage;
   intermedio: any = IntermedioPage;
   provincias: any = ProvinciasPage;
-  // paises: any = PaisesPage;
+
   avanzado: any = AvanzadoPage;
   inicio: any = EntradaPage;
   tab1: any = TabsPage;

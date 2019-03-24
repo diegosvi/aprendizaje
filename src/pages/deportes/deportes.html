@@ -25,7 +25,7 @@
           <ion-row>
               <ion-card class="fon" *ngFor="let depo of dep" (click)="reproducir(depo)">
                 <h2>{{depo.titulo}}</h2>
-                <img [src]="depo.imagen">
+                <img [src]="depo.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!depo.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="depo.reproduciendo"item-right=""></ion-icon></div>-->
               </ion-card>

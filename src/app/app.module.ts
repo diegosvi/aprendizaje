@@ -8,8 +8,7 @@ import { MyApp } from './app.component';
 // import { HomePage } from '../pages/home/home';
 import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, ColoresPage,AnimalesPage, MamiferosPage, AvesPage, PecesPage,
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
-          TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage,
-          AmericaPage,PaisesPage,AmericacPage,AmericanPage,AmericasPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
+          TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
           CostaPage, ProvinciasPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
 import {Figuras} from "../interface/interface.figuras";
 import {FigurasPage} from "../pages/figuras/figuras";
@@ -55,9 +54,7 @@ import {FigurasPage} from "../pages/figuras/figuras";
     RelojPage,
     HoratPage,
     HoramPage,
-    DeportesPage,
-    AmericaPage,
-    PaisesPage,AmericacPage,AmericanPage,AmericasPage,FigurasPage
+    DeportesPage,FigurasPage
   ],
   imports: [
     BrowserModule,
@@ -102,9 +99,8 @@ import {FigurasPage} from "../pages/figuras/figuras";
     HoratPage,
     HoramPage,
     AvanzadoPage,
-    DeportesPage,
-    AmericaPage,
-    PaisesPage,AmericacPage,AmericanPage,AmericasPage,PbasicoPage,
+    DeportesPage
+    ,PbasicoPage,
     EntradaPage,
     FigurasPage,
     //JuegocolPage

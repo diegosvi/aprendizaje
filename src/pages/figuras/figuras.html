@@ -25,7 +25,7 @@
           <ion-row>
             <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
               <ion-card *ngFor="let colore of figura" (click)="reproducir(colore)">
-                <img [src]="colore.imagen">
+                <img [src]="colore.imagen" width="100" height="300">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!colore.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="colore.reproduciendo"item-right=""></ion-icon></div>-->
               </ion-card>

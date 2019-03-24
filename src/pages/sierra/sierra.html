@@ -25,7 +25,7 @@
           <ion-row>
               <ion-card *ngFor="let sier of sie" (click)="reproducir(sier)">
                 <!--<h2>{{anfibios.titulo}}</h2>-->
-                <img [src]="sier.imagen">
+                <img [src]="sier.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!sier.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="sier.reproduciendo"item-right=""></ion-icon></div>-->
               </ion-card>

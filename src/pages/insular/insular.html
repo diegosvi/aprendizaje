@@ -26,7 +26,7 @@
           <ion-row>
               <ion-card *ngFor="let gala of gal" (click)="reproducir(gala)">
                 <!--<h2>{{anfibios.titulo}}</h2>-->
-                <img [src]="gala.imagen">
+                <img [src]="gala.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!gala.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="gala.reproduciendo"item-right=""></ion-icon></div>-->
               </ion-card>

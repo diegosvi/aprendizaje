@@ -23,12 +23,17 @@
       <div class="col-8">
         <ion-grid>
           <ion-row>
-            <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
+            <ion-col size="5">
+
               <ion-card *ngFor="let numeros of numero" (click)="reproducir(numeros)">
-                <img [src]="numeros.imagen">
-                <!--<div class="card-title"><ion-icon name="play" *ngIf="!numeros.reproduciendo"item-right=""></ion-icon></div>-->
-                <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="numeros.reproduciendo"item-right=""></ion-icon></div>-->
+                <img  [src]="numeros.imagen" width="150" height="150">
               </ion-card>
+            </ion-col>
+            <ion-col size="6">
+              <ion-card *ngFor="let numerosi of numeroo" (click)="reproducir1(numerosi)">
+                <img [src]="numerosi.imagen" width="150" height="150">
+              </ion-card>
+
             </ion-col>
           </ion-row>
         </ion-grid>

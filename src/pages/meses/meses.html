@@ -23,7 +23,7 @@
         <ion-grid>
           <ion-row>
               <ion-card *ngFor="let meses of mes" (click)="reproducir(meses)">
-                <img [src]="meses.imagen">
+                <img [src]="meses.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!meses.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="meses.reproduciendo"item-right=""></ion-icon></div>-->
               </ion-card>
