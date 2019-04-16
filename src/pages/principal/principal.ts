@@ -47,9 +47,4 @@ export class PrincipalPage {
     this.navCtrl.push(FigurasPage);
   }
 
-
-
-  mostrarMenu(){
-    this._menuCtrl.toggle(); //sabe si esta abierto o cerrado el menu
-  }
 }

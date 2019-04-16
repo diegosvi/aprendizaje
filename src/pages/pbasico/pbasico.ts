@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AhorcadoPage} from '../../pages/ahorcado/ahorcado';
 import { AdivinaPage} from '../../pages/adivina/adivina';
+import { JuegocolPage} from '../../pages/juegocol/juegocol';
 /**
  * Generated class for the PbasicoPage page.
  *
@@ -29,5 +30,9 @@ export class PbasicoPage {
 
   irAdivina(){
     this.navCtrl.push(AdivinaPage);
+  }
+
+  irColores(){
+    this.navCtrl.push(JuegocolPage);
   }
 }

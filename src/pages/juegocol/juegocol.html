@@ -14,7 +14,7 @@
 
 
 <ion-content padding>
-  <div class="container">
+  <!--<div class="container">
     <h1 align="center" style="color: darkred"><strong>Atrapa los Colores</strong></h1>
     <br>
     <div class="row">
@@ -74,5 +74,26 @@
     </div>
 
 
-  </div>
+  </div>-->
+
+  <ion-row>
+    <ion-col col-6>Vidas: {{life}}</ion-col>
+    <ion-col col-6>Puntos: {{valor}}</ion-col>
+  </ion-row>
+
+  <ion-item>
+    Selecciona el color:
+    <div text-center>{{Selectgroceries.name}}</div>
+  </ion-item>
+
+  <ion-list>
+    <ion-item *ngFor="let grocery of groceries" [color]="grocery.color" (click)="chooseColor(grocery)">
+      <div class="color-text">{{grocery.name}}</div>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button (click)="volverJuagr()">
+    Vuleve a intentar
+  </button>
+
 </ion-content>

@@ -9,14 +9,14 @@ import { MyApp } from './app.component';
 import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, ColoresPage,AnimalesPage, MamiferosPage, AvesPage, PecesPage,
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
           TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
-          CostaPage, ProvinciasPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
+          CostaPage, InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
 import {Figuras} from "../interface/interface.figuras";
-import {FigurasPage} from "../pages/figuras/figuras";
+
 @NgModule({
   declarations: [
     MyApp,
     // HomePage
-    //JuegocolPage,
+    JuegocolPage,
     EntradaPage,
     PbasicoPage,
     PrincipalPage,
@@ -54,7 +54,7 @@ import {FigurasPage} from "../pages/figuras/figuras";
     RelojPage,
     HoratPage,
     HoramPage,
-    DeportesPage,FigurasPage
+    DeportesPage,FigurasPage,InformacionPage
   ],
   imports: [
     BrowserModule,
@@ -103,7 +103,8 @@ import {FigurasPage} from "../pages/figuras/figuras";
     ,PbasicoPage,
     EntradaPage,
     FigurasPage,
-    //JuegocolPage
+    InformacionPage,
+    JuegocolPage
   ],
   providers: [
     StatusBar,

@@ -35,6 +35,7 @@ export {TabsPage} from './tabs/tabs';
 export {PracticaPage} from './practica/practica';
 export {AdivinaPage} from './adivina/adivina';
 export {PbasicoPage} from './pbasico/pbasico';
-//export {JuegocolPage} from './juegocol/juegocol';
+export {JuegocolPage} from './juegocol/juegocol';
 export {EntradaPage} from './entrada/entrada';
 export {FigurasPage} from './figuras/figuras'
+export {InformacionPage} from './informacion/informacion'
