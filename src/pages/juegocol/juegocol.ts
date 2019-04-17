@@ -95,7 +95,7 @@ export class JuegocolPage {
   //   color3();
   // }, 200);
   Selectgroceries: any;
-  life: number = 5;
+  life: number = 3;
   valor: number = 0;
 
 
@@ -113,6 +113,11 @@ export class JuegocolPage {
       id:3,
       color: 'secondary',
       name: 'verde',
+    },
+    {
+      id:4,
+      color: 'warning',
+      name: 'amarillo',
     }
   ]
 
@@ -126,7 +131,7 @@ export class JuegocolPage {
 
 
   tagAleatorio(){
-    this.Selectgroceries = this.groceries[Math.floor(Math.random()*3)]
+    this.Selectgroceries = this.groceries[Math.floor(Math.random()*4)]
   }
 
 
@@ -137,19 +142,19 @@ export class JuegocolPage {
       this.valor +=10
       this. tagAleatorio();
       if(this.valor == 50){
-        this.dataAlert('Respuesta','Ganaste!!!...');
+        this.dataAlert('FELICITACIONES','Ganaste!!!...');
       }
     }else{
       //this.dataAlert('Respuesta','Color Incorrecto... Vuelve a intentar');
       this.life-=1;
       if(this.life == 0){
-        this.dataAlert('Respuesta','Vuelve a intentar');
+        this.dataAlert('PERDISTE',' Vuelve a intentar');
         //this.volverJuagr();
       }
     }
   }
 
-  dataAlert(title,message) {
+  dataAlert(title,message, ) {
     const alert = this.alertCtrl.create({
       title: title,
       subTitle: message,
@@ -161,7 +166,7 @@ export class JuegocolPage {
   volverJuagr(){
     this.tagAleatorio();
     this.valor = 0;
-    this.life = 5;
+    this.life = 3;
   }
 
 

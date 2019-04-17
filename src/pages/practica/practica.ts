@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import {PbasicoPage} from "../pbasico/pbasico";
+import {PintermedioPage} from "../pintermedio/pintermedio";
 
 /**
  * Generated class for the PracticaPage page.
@@ -28,5 +29,9 @@ export class PracticaPage {
 
   irpbasico(){
     this.navCtrl.push(PbasicoPage);
+  }
+
+  irpintermedio(){
+    this.navCtrl.push(PintermedioPage);
   }
 }

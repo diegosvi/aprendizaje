@@ -39,3 +39,4 @@ export {JuegocolPage} from './juegocol/juegocol';
 export {EntradaPage} from './entrada/entrada';
 export {FigurasPage} from './figuras/figuras'
 export {InformacionPage} from './informacion/informacion'
+export {PintermedioPage} from './pintermedio/pintermedio'

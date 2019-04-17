@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // import { PrincipalPage } from '../pages/principal/principal';
 
-import { TabsPage, AnimalesPage, PrincipalPage, IntermedioPage, AvanzadoPage, EntradaPage, ProvinciasPage} from '../pages/index.pages';
+import { TabsPage,AnimalesPage, PrincipalPage, IntermedioPage, AvanzadoPage, EntradaPage, ProvinciasPage} from '../pages/index.pages';
 
 
 @Component({

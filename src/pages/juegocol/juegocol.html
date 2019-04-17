@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>juegocol</ion-title>
+    <ion-title>RECONOCE EL COLOR</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -85,6 +85,7 @@
     Selecciona el color:
     <div text-center>{{Selectgroceries.name}}</div>
   </ion-item>
+
 
   <ion-list>
     <ion-item *ngFor="let grocery of groceries" [color]="grocery.color" (click)="chooseColor(grocery)">
