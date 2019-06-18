@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AhorcadoPage} from '../../pages/ahorcado/ahorcado';
 import { AdivinaPage} from '../../pages/adivina/adivina';
 import { JuegocolPage} from '../../pages/juegocol/juegocol';
+import { CartasPage} from '../../pages/cartas/cartas';
 /**
  * Generated class for the PbasicoPage page.
  *
@@ -34,5 +35,9 @@ export class PbasicoPage {
 
   irColores(){
     this.navCtrl.push(JuegocolPage);
+  }
+
+  irCartas(){
+    this.navCtrl.push(CartasPage);
   }
 }
