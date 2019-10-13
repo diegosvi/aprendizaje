@@ -7,14 +7,55 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Numeros</ion-title>
+    <ion-title>Números</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content class="fondon">
-<br>
+
+    <ion-grid>
+        <ion-row>
+          <ion-col col-6 >
+            <div  class="space_I" *ngFor="let numeros of numero" (click)="reproducir(numeros)" [ngClass]="{'bg-select':numeros.reproduciendo==true,'':numeros.reproduciendo==undefined}">
+              <ion-grid>
+                  <ion-row>
+                      <ion-col col-12>
+                        <div></div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col col-12>
+                        <div><img [src]="numeros.imagen" width="68" height="150"> </div>
+                      </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+          </ion-col>
+          <ion-col col-6>
+            <div class="space_I" *ngFor="let numerosi of numeroo" (click)="reproducir1(numerosi)" [ngClass]="{'bg-select':numerosi.reproduciendo==true,'':numerosi.reproduciendo==undefined}" >
+              <ion-grid>
+                <ion-row>
+                    <ion-col col-12>
+                      <div></div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col col-12>
+                      <div><img [src]="numerosi.imagen" width="68" height="150"></div>
+                    </ion-col>
+                  </ion-row>
+              </ion-grid>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+
+
+<!--br>
   <div class="container">
     <div class="row">
       <div class="col">
@@ -42,7 +83,7 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 
 
 </ion-content>

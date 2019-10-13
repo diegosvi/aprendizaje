@@ -39,9 +39,14 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  warning:    #FFFF00
+  warning:    #FFFF00,
+  tabmenu:  #00937d
 );
 
+
+$toolbar-md-background:                   color($colors, tabmenu);
+
+$toolbar-ios-background:                   color($colors, tabmenu);
 
 // App iOS Variables
 // --------------------------------------------------

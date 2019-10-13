@@ -26,7 +26,7 @@ export class NumerosPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.numero = NUMEROS.slice(0);
-    this.numeroo = NUMEROSI.slice(0);
+    this.numeroo = NUMEROSI.slice();
   }
 
   ionViewDidLoad() {
@@ -52,31 +52,31 @@ export class NumerosPage {
     this.tiempo=setTimeout (
       () => {
         nume.reproduciendo = false;
-      }, nume.duracion*1000
+      }, nume.duracion*300
     );
 
   }
 
-  reproducir1(numei: Numerosi){
-    this.pausarSonido(numei);
-    if(numei.reproduciendo){
-      numei.reproduciendo=false;
+  reproducir1(numerosi: Numerosi){
+    this.pausarSonido1(numerosi);
+    if(numerosi.reproduciendo){
+      numerosi.reproduciendo=false;
       return;
     }
-    console.log(numei);
+    console.log(numerosi);
 
     //let audio = new Audio();
-    this.audio.src = numei.audio;
+    this.audio.src = numerosi.audio;
 
 
     this.audio.load();
     this.audio.play();
 
-    numei.reproduciendo=true;
+    numerosi.reproduciendo=true;
     this.tiempo=setTimeout (
       () => {
-        numei.reproduciendo = false;
-      }, numei.duracion*1000
+        numerosi.reproduciendo = false;
+      }, numerosi.duracion*300
     );
 
   }
@@ -92,13 +92,13 @@ export class NumerosPage {
     }
   }
 
-  pausarSonido1(numeiSelected: Numerosi){
+  pausarSonido1(numerosiSelected: Numerosi){
     clearTimeout(this.tiempo);
     this.audio.pause();
     this.audio.currentTime=0;
-    for(let numei of this.numero){
-      if(numei.imagen != numeiSelected.imagen){
-        numei.reproduciendo = false;
+    for(let numerosi of this.numeroo){
+      if(numerosi.imagen != numerosiSelected.imagen){
+        numerosi.reproduciendo = false;
       }
     }
   }
