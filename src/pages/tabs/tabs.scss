@@ -1,3 +1,55 @@
 page-tabs {
 
+    .tabs-md .tabbar {
+        background: #00937d;
+    }
+
+    .tabs-md .tab-button-icon {
+        color: white;
+    }
+
+    .tabs-md .tab-button[aria-selected=true] .tab-button-icon {
+        color: #d6e015;
+        
+    }
+
+    .tabs-md .tab-button[aria-selected=true] {
+        color: #d6e015;
+        padding: 0;
+    }
+
+    .tabs-md .tab-button {
+        color: rgb(255, 255, 255);
+    }
+
+    
+
+
+    .tabs-ios .tabbar {
+        background: #00937d;
+    }
+
+    .tabs-ios .tab-button-icon {
+        color: white;
+    }
+
+    .tabs-ios .tab-button[aria-selected=true] .tab-button-icon {
+        color: #d6e015;
+        
+    }
+
+    .tabs-ios .tab-button[aria-selected=true] {
+        color: #d6e015;
+        padding: 0;
+    }
+
+    .tabs-ios .tab-button {
+        color: rgb(255, 255, 255);
+    }
+
+
+    a:link
+    {
+        text-decoration:none;
+    }
 }

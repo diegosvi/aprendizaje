@@ -1,4 +1,27 @@
 page-principal {
+ 
+  .btn_menu{
+    height: 14.6rem;
+  }
+
+  .c_img {
+    width: 80%;
+  }
+
+  .spa_letra{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    color: #000;
+  }
+
+  .spa_letraF{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 7%;
+    color: #000;
+  }
   //background-image: url("../../assets/img/pri/fondo.jpg");
 }
  .imagen{
@@ -8,7 +31,9 @@ page-principal {
  }
 .fondo{
 
-  background-image: url("../../assets/img/pri/basico.gif");
+  background-image: url("../../assets/img/pri/abecedario.gif");
+  background-position: center;
+
 }
 
 h1{

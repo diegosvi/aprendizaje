@@ -4,52 +4,145 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header >
 
-  <ion-navbar>
-    <ion-title>informacion</ion-title>
-    <button ion-item (click)="irinicio()">
+  <ion-navbar >
+    <ion-title > SELECCIONE</ion-title>
+    <!--button ion-item (click)="irinicio()">
       <ion-icon name='power' item-start></ion-icon>
       SALIR
-    </button>
+    </button-->
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content>
-  <ion-col size="4">
+<ion-content style="background-color: #efbad0">
+  <!--ion-col size="4">
 
-    </ion-col>
-  <ion-col size="4">
+    </ion-col-->
+  <!--ion-col size="4">
     <ion-card>
       <img src="../assets/img/aprendiendo.jpg" width="60" height="300">
     </ion-card>
   </ion-col>
   <ion-col size="4">
 
-  </ion-col>
-    <button ion-item (click)="irbasico()">
-      <ion-icon name='md-book' item-start></ion-icon>
-      TRABAJANDO JUNTOS
-    </button>
-    <!--<button ion-item (click)="irPagina(principal)">Básico</button>-->
-    <button ion-item (click)="iranimales()">
-      <ion-icon name='md-paw' item-start></ion-icon>
-      ANIMALES
-    </button>
-    <button ion-item (click)="irintermedio()">
-      <ion-icon name='car' item-start></ion-icon>
-      ABRIRSE AL MUNDO
-    </button>
-    <button ion-item (click)="irprofesion()">
-      <ion-icon name='md-globe' item-start></ion-icon>
-      PROFESIONES
-    </button>
-    <button ion-item (click)="iravanzado()">
-      <ion-icon name='md-school' item-start></ion-icon>
-      PREPARANDOSE PARA PRIMARIA
-    </button>
+  </ion-col-->
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <button style="background-color: #acd37e" ion-button full class="btn_menu" (click)="irbasico()">
+            <ion-grid>
+                <ion-row>
+                    <ion-col col-12>
+                      <div><img class="c_img" src="../assets/img/letras.png"></div>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col col-12 class="spa_letra">
+                      <div class="btn_letras">LETRA Y NÚMEROS</div>
+                    </ion-col>
+                  </ion-row>
+              </ion-grid>
+            </button>
+      </ion-col>
+      <ion-col col-6 text-wrap>
+        <button style="background-color: #a76da4" ion-button full class="btn_menu" (click)="iranimales()">
+          <ion-grid>
+            <ion-row>
+              <ion-col col-12>
+                <div><img class="c_img" src="../assets/img/animales.png"></div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col col-12 class="spa_letra">
+                <div class="btn_letras">ANIMALES</div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <button style="background-color: #5abdc9" ion-button full class="btn_menu" (click)="irintermedio()">
+            <ion-grid>
+                <ion-row>
+                  <ion-col col-12>
+                    <div><img class="c_img" src="../assets/img/horas1_t.PNG"></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-12 class="spa_letra">
+                    <div class="btn_letras">DIAS Y HORAS</div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button style="background-color: #dbcb68" ion-button full class="btn_menu" (click)="irprofesion()">
+            <ion-grid>
+                <ion-row>
+                  <ion-col col-12>
+                    <div><img class="c_img_s" src="../assets/img/salud_t.PNG"></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-12 class="spa_letra">
+                    <div class="btn_letras">PROFESIONALES</div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <button style="background-color: #e78f6d" ion-button full class="btn_menu" (click)="iravanzado()">
+            <ion-grid>
+                <ion-row>
+                  <ion-col col-12>
+                    <div>
+                      <img class="c_img_e" src="../assets/img/ecuador.PNG">
+                      <img class="c_img_e" src="../assets/img/avion_t.PNG">
+                      <img class="c_img_e" src="../assets/img/manzana.PNG">
+                    </div>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col col-12 class="spa_letra">
+                    <div class="btn_letras">ECUADOR, TRANSPORTE Y FRUTAS</div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!--button (click)="irbasico()">
+    <ion-icon name='md-book' item-start></ion-icon>
+    TRABAJANDO JUNTOS
+  </button-->
+  <!--<button ion-item (click)="irPagina(principal)">Básico</button>-->
+  <!--button ion-item (click)="iranimales()">
+    <ion-icon name='md-paw' item-start></ion-icon>
+    ANIMALES
+  </button>
+  <button ion-item (click)="irintermedio()">
+    <ion-icon name='car' item-start></ion-icon>
+    ABRIRSE AL MUNDO
+  </button>
+  <button ion-item (click)="irprofesion()">
+    <ion-icon name='md-globe' item-start></ion-icon>
+    PROFESIONES
+  </button>
+  <button ion-item (click)="iravanzado()">
+    <ion-icon name='md-school' item-start></ion-icon>
+    PREPARANDOSE PARA PRIMARIA
+  </button-->
 
 
 </ion-content>

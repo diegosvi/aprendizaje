@@ -1,3 +1,54 @@
 page-informacion {
 
+    .btn_menu{
+        height: 14.6rem;
+    }
+
+    .toolbar-background {
+        background-color: #00937d;
+      }
+
+    .btn_letras{
+        text-align: center;
+        color: #181717;
+    }
+
+    .btn_letrast{
+        text-align: center;
+    }
+
+    .spa_letra{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 19px;
+    }
+
+    .c_img {
+        width: 80%;
+    }
+
+    .c_img_s {
+        margin-top: 10%;
+        width: 100%;
+
+    }
+
+    .c_img_e {
+        width: 27%;
+
+    }
+
+    .ion-diagnostics-toast-message {
+        /* -webkit-flex: 1; */
+        -ms-flex: 0;
+        /* flex: 1; */
+        padding: 0px;
+        /* font-family: -apple-system,"Roboto",BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; */
+        /* font-size: 14px; */
+        /* color: #c83939; */
+    }
+
+
+   
+
 }
