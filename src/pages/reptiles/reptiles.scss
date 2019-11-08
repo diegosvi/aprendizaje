@@ -1,9 +1,24 @@
 page-reptiles {
+  .bg_name{
+    background-color: #ab315b;
+    color: white;
+    text-align: center;
+  }
 
+  .scroll-content {
+    margin-top: 40px;
+}
+
+.scroll-content {
+  left: 0;
+  right: 0;
+  top: -2%;
+  bottom: 0;
+}
 }
 .fondorep{
 
-  background-image: url("../../assets/img/pri/rep.gif");
+  background-image: url("../../assets/img/pri/rio.gif");
 }
 .fon{
   background: #E5E7E9;

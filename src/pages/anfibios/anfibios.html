@@ -14,7 +14,16 @@
 
 
 <ion-content padding class="fondoanf">
-  <div class="container">
+    <ion-grid class="class_grid">
+        <ion-row align-items-center >
+          <ion-col class="col-6" *ngFor="let anfibios of anfibio" (click)="reproducir(anfibios)">
+              <img [src]="anfibios.imagen" width="48" height="120">
+              <div class="bg_name"><p>{{anfibios.titulo}}</p></div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+  <!--div class="container">
     <div class="row">
       <div class="col-2">
 
@@ -27,7 +36,7 @@
                 <img [src]="anfibios.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!anfibios.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="anfibios.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
           </ion-row>
         </ion-grid>
 
@@ -36,6 +45,6 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 
 </ion-content>

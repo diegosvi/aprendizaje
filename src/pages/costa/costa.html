@@ -7,14 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Costa</ion-title>
+    <ion-title>COSTA</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <div class="container">
+<ion-content padding class="fondob">
+    <ion-grid class="class_grid">
+        <ion-row align-items-center >
+          <ion-col class="col-6" *ngFor="let cost of cos" (click)="reproducir(cost)">
+              <img [src]="cost.imagen" width="48" height="120">
+              <div class="bg_name"><p>{{cost.titulo}}</p></div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+  <!--div class="container">
     <div class="row">
       <div class="col-2">
 
@@ -25,10 +34,10 @@
           <ion-row>
               <ion-card *ngFor="let cost of cos" (click)="reproducir(cost)">
                 <!--<h2>{{anfibios.titulo}}</h2>-->
-                <img [src]="cost.imagen" width="100" height="250">
+                <!--img [src]="cost.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!cost.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="cost.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
           </ion-row>
         </ion-grid>
       </div>
@@ -36,5 +45,5 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 </ion-content>

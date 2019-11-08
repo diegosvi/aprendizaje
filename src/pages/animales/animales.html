@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Animales</ion-title>
+    <ion-title>NIVEL 2</ion-title>
     <ion-buttons>
       <button ion-button icon-left menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -19,45 +19,157 @@
 
 
 <ion-content padding class="fondoani">
-  <div text-center>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+              <button style="background-color: #e1bcdf" ion-button full class="btn_menu" (click)="irMamiferos()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/Lince.jpg"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">MAMÍFEROS</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+            </ion-col>
+          <ion-col col-6>
+              <button style="background-color: #e1bcdf" ion-button full class="btn_menu" (click)="irPeces()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/pez.jpg"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">PECES</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+              <button style="background-color: #e1bcdf" ion-button full class="btn_menu"  (click)="irAves()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/avesi.jpg"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">AVES</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+          </ion-col>
+          <ion-col col-6>
+              <button style="background-color: #e1bcdf" ion-button full class="btn_menu" (click)="irReptiles()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/repti.jpg"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letraF">
+                            <div class="btn_letras">REPTILES</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-6>
+                <button style="background-color: #e1bcdf" ion-button full class="btn_menu" (click)="irArtropodos()">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-12>
+                              <div><img class="c_img" src="../../assets/img/pri/mari.jpg"></div>
+                            </ion-col>
+                          </ion-row>
+                          <ion-row>
+                            <ion-col col-12 class="spa_letra">
+                              <div class="btn_letras">INVERTEBRADOS</div>
+                            </ion-col>
+                          </ion-row>
+                    </ion-grid>
+                  </button>
+            </ion-col>
+            <ion-col col-6>
+                <button style="background-color: #e1bcdf" ion-button full class="btn_menu" (click)="irAnfibios()">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-12>
+                              <div><img class="c_img" src="../../assets/img/pri/sapo.jpg"></div>
+                            </ion-col>
+                          </ion-row>
+                          <ion-row>
+                            <ion-col col-12 class="spa_letraF">
+                              <div class="btn_letras">ANFIBIOS</div>
+                            </ion-col>
+                          </ion-row>
+                    </ion-grid>
+                  </button>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    
+
+
+
+
+
+
+
+  <!--div text-center>
     <h1 class="coloa">MAMÍFEROS</h1>
     <img class="imagen" (click)="irMamiferos()" src="../../assets/img/pri/mamiferos.jpg" >
     <!--<button ion-button outline (click)="irMamiferos()">Mamiferos</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <div text-center>
     <h1 class="coloa">PECES</h1>
     <img class="imagen" (click)="irPeces()" src="../../assets/img/pri/peces.jpg">
     <!--<button ion-button outline (click)="irPeces()">Peces</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <div text-center>
     <h1 class="coloa">AVES</h1>
     <img class="imagen" (click)="irAves()" src="../../assets/img/pri/aves.jpg">
     <!--<button ion-button outline (click)="irAves()">Aves</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <div text-center>
     <h1 class="coloa" >REPTILES</h1>
-    <img class="imagen" (click)="irReptiles()" src="../../assets/img/pri/reptiles.jpg">
+    <img class="imagen" >
     <!--<button ion-button outline (click)="irReptiles()">Reptiles</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <div text-center>
     <h1 class="coloa">INVERTEBRADOS</h1>
     <img class="imagen" (click)="irArtropodos()" src="../../assets/img/pri/invertebrados.jpg">
     <!--<button ion-button outline (click)="irArtropodos()">Artropodos o Invertebrados</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <div text-center>
     <h1 class="coloa">ANFIBIOS</h1>
     <img class="imagen" (click)="irAnfibios()" src="../../assets/img/pri/anfibios.jpg">
     <!--<button ion-button outline (click)="irAnfibios()">Anfibios</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div-->
 </ion-content>

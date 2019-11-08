@@ -23,6 +23,7 @@ export class ColoresPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.color = COLORES.slice(0);
+    console.log(this.color);
   }
 
   ionViewDidLoad() {

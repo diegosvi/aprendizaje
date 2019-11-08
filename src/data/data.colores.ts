@@ -34,7 +34,7 @@ export const COLORES= [
   {
 
     audio:"assets/sound/col/rojo.mp3",
-    imagen:"assets/img/col/rojo.jpg",
+    imagen:"assets/img/col/rojo.png",
     duracion:4,
     reproduciendo: false
 
@@ -65,7 +65,7 @@ export const COLORES= [
   {
 
     audio:"assets/sound/col/morado.mp3",
-    imagen:"/assets/img/col/morado.jpg",
+    imagen:"/assets/img/col/morado.png",
     duracion:4,
     reproduciendo: false
 

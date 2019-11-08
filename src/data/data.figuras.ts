@@ -2,7 +2,7 @@ export const FIGURAS= [
 
   {
     audio:"assets/sound/col/blanco.mp3",
-    imagen:"assets/img/fig/cilindro.jpg",
+    imagen:"assets/img/fig/cilindro.png",
     duracion:4,
     reproduciendo: false
 
@@ -10,7 +10,7 @@ export const FIGURAS= [
   {
 
     audio:"assets/sound/col/negro.mp3",
-    imagen:"assets/img/fig/cuadrado.jpg",
+    imagen:"assets/img/fig/cuadrado.png",
     duracion:4,
     reproduciendo: false
 
@@ -18,7 +18,7 @@ export const FIGURAS= [
   {
 
     audio:"assets/sound/col/amarillo.mp3",
-    imagen:"/assets/img/fig/esfera.jpg",
+    imagen:"/assets/img/fig/esfera.png",
     duracion:4,
     reproduciendo: false
 
@@ -26,7 +26,7 @@ export const FIGURAS= [
 
   {
     audio:"assets/sound/col/azul.mp3",
-    imagen:"assets/img/fig/cubo.jpg",
+    imagen:"assets/img/fig/cubo.png",
     duracion:4,
     reproduciendo: false
 
@@ -34,7 +34,7 @@ export const FIGURAS= [
   {
 
     audio:"assets/sound/col/rojo.mp3",
-    imagen:"assets/img/fig/rombo.jpg",
+    imagen:"assets/img/fig/rombo.png",
     duracion:4,
     reproduciendo: false
 
@@ -42,14 +42,14 @@ export const FIGURAS= [
   {
 
     audio:"assets/sound/col/verde.mp3",
-    imagen:"/assets/img/fig/triangulo.jpg",
+    imagen:"/assets/img/fig/triangulo.png",
     duracion:4,
     reproduciendo: false
 
   },
   {
     audio:"assets/sound/col/cafe.mp3",
-    imagen:"assets/img/fig/circulo.jpg",
+    imagen:"assets/img/fig/circulo.png",
     duracion:4,
     reproduciendo: false
 
@@ -57,7 +57,7 @@ export const FIGURAS= [
   {
 
     audio:"assets/sound/col/tomate.mp3",
-    imagen:"assets/img/fig/ovalo.jpg",
+    imagen:"assets/img/fig/ovalo.png",
     duracion:4,
     reproduciendo: false
 
@@ -65,14 +65,14 @@ export const FIGURAS= [
   {
 
     audio:"assets/sound/col/morado.mp3",
-    imagen:"/assets/img/fig/rectangulo.jpg",
+    imagen:"/assets/img/fig/rectangulo.png",
     duracion:4,
     reproduciendo: false
 
   },
   {
     audio:"assets/sound/col/rosado.mp3",
-    imagen:"assets/img/fig/piramide.jpg",
+    imagen:"assets/img/fig/piramide.png",
     duracion:4,
     reproduciendo: false
 

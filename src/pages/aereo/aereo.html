@@ -7,14 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Aéreo</ion-title>
+    <ion-title>AÉREO</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="fondoae">
-  <div class="container">
+    <ion-grid class="class_grid">
+        <ion-row align-items-center >
+          <ion-col class="col-6" *ngFor="let aereo of aer" (click)="reproducir(aereo)">
+              <img [src]="aereo.imagen" width="48" height="120">
+              <div class="bg_name"><p>{{aereo.titulo}}</p></div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+  <!--div class="container">
     <div class="row">
       <div class="col-2">
 
@@ -28,7 +37,7 @@
                 <img [src]="aereo.imagen" width="150" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!aereo.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="aereo.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
           </ion-row>
         </ion-grid>
 
@@ -37,5 +46,5 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 </ion-content>

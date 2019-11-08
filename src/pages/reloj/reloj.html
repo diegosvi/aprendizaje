@@ -7,14 +7,54 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Reloj</ion-title>
+    <ion-title>HORAS DEL DIA</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="fondoh">
-<br>
+
+    <ion-grid style=" margin-top: 25%;">
+        <ion-row>
+          <ion-col col-12>
+              <button style="background-color: #50d1e1" ion-button full class="btn_menu" (click)="irHoram()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/am.jpg"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">HORAS DE LA MAÑANA</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <button style="background-color: #50d1e1" ion-button full class="btn_menu" (click)="irHorat()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_imgm"  src="../../assets/img/pri/pm.jpg"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">HORAS DE LA TARDE</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+<!--br>
   <br>
   <br>
   <br>
@@ -24,7 +64,7 @@
     <img class="imagen" (click)="irHoram()" src="../../assets/img/pri/am.jpg">
     <!--<button ion-button outline (click)="irMamiferos()">Mamiferos</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <br>
   <br>
@@ -34,6 +74,6 @@
     <img class="imagen" (click)="irHorat()" src="../../assets/img/pri/pm.jpg">
     <!--<button ion-button outline (click)="irPeces()">Peces</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div-->
 
 </ion-content>

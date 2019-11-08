@@ -1,5 +1,11 @@
 page-informacion {
 
+    .cls_title{
+        color: white;
+        font-size: 18px;
+        padding-left: 4%;
+    }
+
     .btn_menu{
         height: 14.6rem;
     }
@@ -13,6 +19,12 @@ page-informacion {
         color: #181717;
     }
 
+    .btn_letrash{
+        text-align: center;
+        color: #181717;
+        padding-bottom: 16px;
+    }
+
     .btn_letrast{
         text-align: center;
     }
@@ -20,11 +32,19 @@ page-informacion {
     .spa_letra{
         padding-left: 0px;
         padding-right: 0px;
-        padding-bottom: 19px;
+        padding-bottom: 0px;
     }
+
+    /*    padding-bottom: 0px;
+    padding-top: 17px;*/
 
     .c_img {
         width: 80%;
+    }
+
+    .c_img_h {
+        width: 70%;
+        padding-top: 9%;
     }
 
     .c_img_s {

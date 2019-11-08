@@ -7,16 +7,26 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Región Insular o Galápagos</ion-title>
+    <ion-title>GALÁPAGOS</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="fondopec">
+  <img  src="../../assets/img/prov/galapagos/galapagos.jpg">
 
-  <img  src="../../assets/img/prov/galapagos/galapago.jpg">
-  <div class="container">
+  <ion-grid class="class_grid">
+      <ion-row align-items-center >
+        <ion-col class="col-6" *ngFor="let gala of gal" (click)="reproducir(gala)">
+            <img [src]="gala.imagen" width="48" height="120">
+            <div class="bg_name"><p>{{gala.titulo}}</p></div>
+        </ion-col>
+      </ion-row>
+      
+    </ion-grid>
+
+  <!--div class="container">
     <div class="row">
       <div class="col-2">
 
@@ -26,10 +36,10 @@
           <ion-row>
               <ion-card *ngFor="let gala of gal" (click)="reproducir(gala)">
                 <!--<h2>{{anfibios.titulo}}</h2>-->
-                <img [src]="gala.imagen" width="100" height="250">
+                <!--img [src]="gala.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!gala.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="gala.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
           </ion-row>
         </ion-grid>
 
@@ -38,6 +48,6 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 
 </ion-content>

@@ -7,14 +7,52 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Frutos y Hortalizas</ion-title>
+    <ion-title>FRUTAS Y HORTALIZAS</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="fondofro">
-<br>
+    <ion-grid style=" margin-top: 25%;">
+        <ion-row>
+          <ion-col col-12>
+              <button style="background-color: #f4c750" ion-button full class="btn_menu" (click)="irFrutas()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/frutas.jpg"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">FRUTAS</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <button style="background-color: #f4c750" ion-button full class="btn_menu" (click)="irHortalizas()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_imgm"  src="../../assets/img/pri/hortalizas.jpg">></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">HORTALIZAS</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+<!--br>
   <br>
   <br>
   <br>
@@ -24,7 +62,7 @@
     <img class="imagen" (click)="irFrutas()" src="../../assets/img/pri/frutas.jpg">
     <!--<button ion-button outline (click)="irPeces()">Peces</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <br><br>
   <div text-center>
@@ -32,7 +70,7 @@
     <img class="imagen" (click)="irHortalizas()" src="../../assets/img/pri/hortalizas.jpg">
     <!--<button ion-button outline (click)="irAves()">Aves</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div-->
 
 
 </ion-content>

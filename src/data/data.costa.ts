@@ -41,7 +41,7 @@ export const COSTA= [
   },
   {
 
-    audio:"assets/sounds/prov/cos/elena.mp3",
+    audio:"assets/sound/prov/cos/elena.mp3",
     imagen:"/assets/img/prov/costa/elena.jpg",
     duracion:4,
     reproduciendo: false

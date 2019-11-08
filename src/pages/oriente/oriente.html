@@ -7,14 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Oriente o Amazonia</ion-title>
+    <ion-title>ORIENTE - AMAZONIA</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-  <div class="container">
+<ion-content padding class="fondopec">
+    <ion-grid class="class_grid">
+        <ion-row align-items-center >
+          <ion-col class="col-6" *ngFor="let orie of ori" (click)="reproducir(orie)">
+              <img [src]="orie.imagen" width="48" height="120">
+              <div class="bg_name"><p>{{orie.titulo}}</p></div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+  <!--div class="container">
     <div class="row">
       <div class="col-2">
 
@@ -25,10 +34,10 @@
           <ion-row>
               <ion-card *ngFor="let orie of ori" (click)="reproducir(orie)">
                 <!--<h2>{{anfibios.titulo}}</h2>-->
-                <img [src]="orie.imagen" width="100" height="250">
+                <!--img [src]="orie.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!orie.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="orie.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
           </ion-row>
         </ion-grid>
 
@@ -37,5 +46,5 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 </ion-content>
