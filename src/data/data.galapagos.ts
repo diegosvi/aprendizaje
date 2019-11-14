@@ -1,13 +1,6 @@
 export const GALAPAGOS= [
 
   {
-    audio:"assets/sound/prov/gala/c.mp3",
-    imagen:"assets/img/prov/galapagos/galapagos.jpg",
-    duracion:4,
-    reproduciendo: false
-
-  },
-  {
 
     audio:"assets/sound/prov/gala/cruz.mp3",
     imagen:"assets/img/prov/galapagos/cruz.jpg",

@@ -1,7 +1,34 @@
 page-transporte {
 
+  .btn_menu{
+    height: 14rem;
+    width: 20rem;
+    text-align: center;
+    margin-left: 19%;
+  }
+
+  .c_img {
+    width: 82%;
+  }
+
+  .c_imgm {
+    width: 62%;
+  }
+
+  .c_imga {
+    width: 72%;
+  }
+
+  .spa_letra{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    color: #000;
+  }
+
 }
 .fondomt{
 
-  background-image: url("../../assets/img/pri/trans.gif");
+  background-image: url("../../assets/img/pri/transformer.gif");
+  background-position: center;
 }

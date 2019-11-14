@@ -1,9 +1,38 @@
 page-animales {
 
+  .btn_menu{
+    height: 14rem;
+}
+
+.toolbar-background {
+    background-color: #00937d;
+  }
+
+.btn_letras{
+    text-align: center;
+    color: #181717;
+}
+
+.spa_letra{
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+}
+
+/*    padding-bottom: 0px;
+padding-top: 17px;*/
+
+.c_img {
+  width: 80%;
+}
+
 }
 .fondoani{
 
-  background-image: url("../../assets/img/pri/anima.gif");
+  background-image: url("../../assets/img/pri/osos.gif");
+  background-position: center;  
+  //margin-top: 10%;
+  //margin-bottom: 10%;
 }
 
 .coloa {

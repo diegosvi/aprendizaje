@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Transportes</ion-title>
+    <ion-title>TRANSPORTES</ion-title>
     <ion-buttons>
       <button ion-button icon-left menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -19,21 +19,80 @@
 
 
 <ion-content padding class="fondomt">
-  <div text-center>
+
+    <ion-grid style=" margin-top: 2%;">
+        <ion-row>
+          <ion-col col-12>
+              <button style="background-color: #f4ba65" ion-button full class="btn_menu" (click)="irTerrestre()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/terret.jpg"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">TRANSPORTE TERRESTRE</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+              <button style="background-color: #f4ba65" ion-button full class="btn_menu" (click)="irMaritimo()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_imgm" src="../../assets/img/pri/maritimo.jpg"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">TRANSPORTE MARÍTIMO</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <button style="background-color: #f4ba65" ion-button full class="btn_menu" (click)="irAereo()">
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col col-12>
+                              <div><img class="c_imga" src="../../assets/img/pri/aereo.jpg"></div>
+                            </ion-col>
+                          </ion-row>
+                          <ion-row>
+                            <ion-col col-12 class="spa_letra">
+                              <div class="btn_letras">TRANSPORTE AEREO</div>
+                            </ion-col>
+                          </ion-row>
+                    </ion-grid>
+                  </button>
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+  <!--div text-center>
     <h1>TRANSPORTE TERRESTRE</h1>
     <img class="imagen" (click)="irTerrestre()" src="../../assets/img/pri/terrestre.jpg">
     <!--<button ion-button outline (click)="irMamiferos()">Mamiferos</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <div text-center>
     <h1>TRANSPORTE MARITIMO</h1>
     <img class="imagen" (click)="irMaritimo()" src="../../assets/img/pri/maritimo.jpg">
     <!--<button ion-button outline (click)="irPeces()">Peces</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <div text-center>
     <h1>TRANSPORTE AÉREO</h1>
     <img class="imagen" (click)="irAereo()" src="../../assets/img/pri/aereo.jpg">
     <!--<button ion-button outline (click)="irAves()">Aves</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div-->
+
+</ion-content>

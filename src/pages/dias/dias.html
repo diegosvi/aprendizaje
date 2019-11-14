@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Dias</ion-title>
+    <ion-title>DIAS</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,8 +15,17 @@
 
 
 <ion-content class="fondodi">
+    <ion-grid class="class_grid">
+        <ion-row align-items-center >
+          <ion-col class="col-6" *ngFor="let dias of dia" (click)="reproducir(dias)">
+              <img [src]="dias.imagen" width="50" height="200">
+              <div class="bg_name"><p>{{dias.titulo}}</p></div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
 
-  <br>
+  <!--br>
   <div class="container">
     <div class="row">
       <div class="col">
@@ -30,7 +39,7 @@
                 <img [src]="dias.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!dias.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="dias.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -39,6 +48,6 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 
 </ion-content>

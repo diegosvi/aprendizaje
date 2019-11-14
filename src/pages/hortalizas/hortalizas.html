@@ -7,14 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>hortalizas</ion-title>
+    <ion-title>HORTALIZAS</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="fondoho">
-  <div class="container">
+    <ion-grid class="class_grid">
+        <ion-row align-items-center >
+          <ion-col class="col-6" *ngFor="let hort of hor" (click)="reproducir(hort)">
+              <img [src]="hort.imagen" width="48" height="120">
+              <div class="bg_name"><p>{{hort.titulo}}</p></div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+  <!--div class="container">
     <div class="row">
       <div class="col-2">
 
@@ -28,7 +37,7 @@
                 <img [src]="hort.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!hort.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="hort.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -38,7 +47,7 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 
 
 </ion-content>

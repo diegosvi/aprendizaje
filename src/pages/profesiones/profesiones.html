@@ -7,14 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Profesiones</ion-title>
+    <ion-title>NIVEL 4</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding class="fondopro">
-  <div class="container">
+    <ion-grid class="class_grid">
+        <ion-row align-items-center >
+          <ion-col class="col-6" *ngFor="let pro of prof" (click)="reproducir(pro)">
+              <img [src]="pro.imagen" width="48" height="120">
+              <div class="bg_name"><p>{{pro.titulo}}</p></div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+  <!--div class="container">
     <div class="row">
       <div class="col-2">
 
@@ -27,7 +36,7 @@
                 <img [src]="pro.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!pro.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="pro.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
           </ion-row>
         </ion-grid>
 
@@ -36,7 +45,7 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 
 
 </ion-content>

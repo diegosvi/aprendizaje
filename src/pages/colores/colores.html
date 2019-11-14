@@ -13,8 +13,23 @@
 </ion-header>
 
 
-<ion-content class="fondoc">
-  <br>
+<ion-content class="fondocolores">
+
+    <!--ion-list class="materialN">
+        <ion-item class="first"  (click)="reproducir(colore)"-->
+          <ion-grid>
+            <ion-row align-items-center >
+              <ion-col class="col-6" *ngFor="let colore of color"  (click)="reproducir(colore)">
+                  <img [src]="colore.imagen" width="48" height="150">
+              </ion-col>
+            </ion-row>
+            
+          </ion-grid>
+        <!--/ion-item>
+    </ion-list-->
+
+
+  <!--br>
   <div class="container">
     <div class="row">
       <div class="col">
@@ -24,11 +39,11 @@
         <ion-grid>
           <ion-row>
             <ion-col col-12 col-sm-9 col-md-6 col-lg-4 col-xl-3>
-              <ion-card *ngFor="let colore of color" (click)="reproducir(colore)">
-                <img [src]="colore.imagen" width="100" height="300">
+              <ion-card *ngFor="let colore of color | slice: 0:2" (click)="reproducir(colore)">
+                <img [src]="colore.imagen"style="height:30px;">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!colore.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="colore.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -37,6 +52,6 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 
 </ion-content>

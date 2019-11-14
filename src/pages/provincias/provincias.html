@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Provincias</ion-title>
+    <ion-title>PROVINCIAS</ion-title>
     <ion-buttons>
       <button ion-button icon-left menuToggle>
         <ion-icon name="menu"></ion-icon>
@@ -19,14 +19,85 @@
 
 
 <ion-content padding class="fondoecu">
-  <br>
+    <ion-grid style=" margin-top: 22%;">
+        <ion-row>
+          <ion-col col-6>
+              <button style="background-color: #e5f458" ion-button full class="btn_menu" (click)="irCosta()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/costamapa.png"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">COSTA</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+            </ion-col>
+          <ion-col col-6>
+              <button style="background-color: #e5f458" ion-button full class="btn_menu" (click)="irSierra()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/sierramapa.png"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">SIERRA</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6>
+              <button style="background-color: #e5f458" ion-button full class="btn_menu" (click)="irOriente()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_img" src="../../assets/img/pri/amazoniamapa.png"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letra">
+                            <div class="btn_letras">AMAZONIA</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+          </ion-col>
+          <ion-col col-6>
+              <button style="background-color: #e5f458" ion-button full class="btn_menu" (click)="irInsular()">
+                  <ion-grid>
+                      <ion-row>
+                          <ion-col col-12>
+                            <div><img class="c_imgg" src="../../assets/img/pri/glapa.png"></div>
+                          </ion-col>
+                        </ion-row>
+                        <ion-row>
+                          <ion-col col-12 class="spa_letraF">
+                            <div style="margin-top: 3%" class="btn_letras">GALÁPAGOS</div>
+                          </ion-col>
+                        </ion-row>
+                  </ion-grid>
+                </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    
+  <!--br>
   <br>
   <div text-center>
     <h1>COSTA</h1>
     <img class="imagen" (click)="irCosta()" src="../../assets/img/pri/costa.jpg">
     <!--<button ion-button outline (click)="irMeses()">Meses del Año</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <br>
   <div text-center>
@@ -34,7 +105,7 @@
     <img class="imagen" (click)="irSierra()" src="../../assets/img/pri/sierra.gif">
     <!--<button ion-button outline (click)="irMamiferos()">Mamiferos</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <br>
   <div text-center>
@@ -42,7 +113,7 @@
     <img class="imagen" (click)="irOriente()" src="../../assets/img/pri/amazonia.gif">
     <!--<button ion-button outline (click)="irMeses()">Meses del Año</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div>
   <br>
   <br>
   <div text-center>
@@ -50,7 +121,7 @@
     <img class="imagen" (click)="irInsular()" src="../../assets/img/pri/galapagos.png">
     <!--<button ion-button outline (click)="irPeces()">Peces</button>-->
     <!--<button ion-button outline [navPush]="pokedex">Pokedex</button>-->
-  </div>
+  <!--/div-->
 
 
 </ion-content>

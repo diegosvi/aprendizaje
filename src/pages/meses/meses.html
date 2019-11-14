@@ -7,14 +7,23 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Meses</ion-title>
+    <ion-title>MESES</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content class="fondocal">
-  <div class="container">
+    <ion-grid class="class_grid">
+        <ion-row align-items-center >
+          <ion-col class="col-6" *ngFor="let meses of mes" (click)="reproducir(meses)">
+              <img [src]="meses.imagen" width="48" height="160">
+              <div class="bg_name"><p>{{meses.titulo}}</p></div>
+          </ion-col>
+        </ion-row>
+        
+      </ion-grid>
+  <!--div class="container">
     <div class="row">
       <div class="col-2">
 
@@ -26,7 +35,7 @@
                 <img [src]="meses.imagen" width="100" height="250">
                 <!--<div class="card-title"><ion-icon name="play" *ngIf="!meses.reproduciendo"item-right=""></ion-icon></div>-->
                 <!--<div class="card-subtitle"><ion-icon name="pause" *ngIf="meses.reproduciendo"item-right=""></ion-icon></div>-->
-              </ion-card>
+              <!--/ion-card>
           </ion-row>
         </ion-grid>
       </div>
@@ -34,6 +43,6 @@
 
       </div>
     </div>
-  </div>
+  </div-->
 
 </ion-content>
