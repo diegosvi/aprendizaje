@@ -18,9 +18,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 export class CartasPage {
 
+  isFlipped: boolean = false;//flip card
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    let ArregloCartasBase = [];
+    /*let ArregloCartasBase = [];
 
     let carta = {id: '', valor: 0, url :''};
     let nombreCarpeta = '';
@@ -61,13 +62,27 @@ export class CartasPage {
     document.getElementById("ContenedorCartas").innerHTML = htmlCartas;
 
 
-
+*/
 
 
   }
 
+
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad CartasPage');
+  }
+
+
+  flip(){
+  	if (this.isFlipped == true) {
+      this.isFlipped = false;
+      //Card Data by ID
+      console.log("vuelta1")
+  	}else{
+      this.isFlipped = true;
+      console.log("vuelta2")
+  	}
   }
 
 

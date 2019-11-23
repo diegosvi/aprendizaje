@@ -10,24 +10,27 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <img src="../../assets/img/aho/{{numFallos}}.png" />
-      </ion-col>
-      <ion-col>
-        <ion-badge *ngFor="let fallo of fallos">{{fallo}}</ion-badge>
+      <ion-col text-center style="padding-bottom: 0px;">
+        <img class="cls_img" src="../../assets/img/aho/{{numFallos}}.png" />
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col>
-        <p id="palabra-adivinada-por-ahora">{{palabraAdivinadaPorAhora}}</p>
+      <ion-col style="background-color: #FF383F; border-radius: 10px; margin-bottom: 1%;">
+        <h1 id="palabra-adivinada-por-ahora" style="color: white; font-size: 26px; padding-top: 5px;">{{palabraAdivinadaPorAhora}}</h1>
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col id="botonera">
+      <ion-col id="botonera" style="padding-top: 3px;">
         <button *ngFor="let boton of botones" ion-button round small outline
                 (click)="botonClicked(boton)"
                 [ngClass]="boton.estado">{{boton.letra}}</button>
       </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <p>Tus aciertos fallidos:</p>
+          <ion-badge *ngFor="let fallo of fallos">{{fallo}}</ion-badge>
+        </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

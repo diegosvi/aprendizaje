@@ -11,6 +11,7 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
           TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
           CostaPage, PintermedioPage,InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
 import {Figuras} from "../interface/interface.figuras";
+import {CartasPage} from "../pages/cartas/cartas";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {Figuras} from "../interface/interface.figuras";
     PintermedioPage,
     JuegocolPage,
     EntradaPage,
+    CartasPage,
     PbasicoPage,
     PrincipalPage,
     AhorcadoPage,
@@ -70,6 +72,7 @@ import {Figuras} from "../interface/interface.figuras";
     NumerosPage,
     MesesPage,
     DiasPage,
+    CartasPage,
     ColoresPage,
     AnimalesPage,
     MamiferosPage,

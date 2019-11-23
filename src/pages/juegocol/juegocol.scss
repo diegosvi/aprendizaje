@@ -1,3 +1,48 @@
 page-juegocol {
 
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .list-md .item-block .item-inner {
+        border-bottom: 0px solid #dedede;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .list-ios .item-block .item-inner {
+        border-bottom: 0px solid #dedede;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .cls_btn {
+        width: 112px;
+        height: 112px;
+        color:  white;
+        margin: 5px;
+        padding: 10px;
+        -moz-border-radius: 50px;
+        border-radius: 95px;
+        font-size: 11px;
+    }
+
+    .item-md.item-block .item-inner {
+         padding-right: 0px; 
+         border-bottom: 0px solid #dedede;
+    }
+
+    .label-md {
+        margin: 13px 8px 1px 0;
+    }
+
+    .item-ios.item-block .item-inner {
+        padding-right: 0px;
+        border-bottom: 0px solid #c8c7cc;
+    }
+
+   .label-ios {
+       margin: 13px 8px 1px 0;
+   }
 }

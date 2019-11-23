@@ -14,7 +14,9 @@ export class AhorcadoPage {
     "Ñ", "O", "P", "Q", "R", "S", "T",
     "U", "V", "W", "X", "Y", "Z"];
 
-  readonly PALABRAS = ["CARACOLA", "TOCINO", "BARCELONA", 'BARCO', 'MOTOCICLETA', 'AVION', 'BUQUE', 'AUTOMOVIL', 'FUTBOL', 'NATACION', 'KARATE', 'TENNIS', 'BOLOS','ECUADOR', 'MEXICO', 'PANAMA', 'PORTUGAL', 'CHINA'];
+  readonly PALABRAS = ["CARACOLA", "TOCINO", "BARCELONA", 
+  'BARCO', 'MOTOCICLETA', 'AVION', 'BUQUE', 'AUTOMOVIL', 'FUTBOL', 
+  'NATACION', 'KARATE', 'TENNIS', 'BOLOS','ECUADOR', 'MEXICO', 'PANAMA', 'PORTUGAL', 'CHINA'];
 
   botones: Array<{ letra: string, estado: string }>;
 
@@ -52,6 +54,7 @@ export class AhorcadoPage {
     this.palabraAdivinadaPorAhora = "";
     for (let i = 0; i < this.palabraAAdivinar.length; i++) {
       this.palabraAdivinadaPorAhora += "-";
+      console.log(this.palabraAAdivinar)
     }
   }
 
@@ -98,7 +101,7 @@ export class AhorcadoPage {
   mostrarMensajeDePerder(): void {
     const alert = this.alertCtrl.create({
       title: 'Ha Perdido',
-      subTitle: '¡Lo siento! Pulse Ok para jugar otra vez.',
+      subTitle: 'La palabra correcta es:   '+this.palabraAAdivinar+'  ¡Lo siento! Pulse Ok para jugar otra vez.',
       buttons: [{
         text: 'Ok',
         handler: () => {
@@ -112,7 +115,7 @@ export class AhorcadoPage {
   mostrarMensajeDeGanar(): void {
     const alert = this.alertCtrl.create({
       title: 'Ha Ganado',
-      subTitle: '¡Felicidades! Pulse Ok para jugar otra vez.',
+      subTitle: 'La palabra correcta es:  '+this.palabraAAdivinar+'  ¡Felicidades! Pulse Ok para jugar otra vez.',
       buttons: [{
         text: 'Ok',
         handler: () => {
