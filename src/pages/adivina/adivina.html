@@ -7,24 +7,41 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      ADIVINA EL NUMERO
+      ADIVINA ADIVINADOR
     </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <ion-input type="number" min="1" max="20" [(ngModel)]="num" placeholder="Introduce un número del 1 al 20"></ion-input>
-  <p>El número secreto es {{ mayorMenor }}</p>
+  <div text-center><p class="cls_title">Elije un número entre el 0 al 20</p></div>
+  <ion-input text-center class="cls_number" type="number" min="1" max="20" [(ngModel)]="num" placeholder="------"></ion-input>
 
-  <ion-card *ngIf="mayorMenor=='igual'">
-    <ion-card-header>
+  <ion-card *ngIf="mayorMenor=='igual'" style="margin-top: 20px;">
+    <ion-card-header text-center style="background-color: #FFC107;">
       ¡¡¡FELICITACIONES!!!
     </ion-card-header>
-    <ion-card-content>
-      HAS ACERTADO, EL NUMERO SECRETO ES EL {{ num }}
+    <ion-card-content text-center style="background-color: #7fc016; padding-top: 15px;">
+      HAS GANADO, EL NÚMERO SECRETO ES EL {{ num }}
     </ion-card-content>
   </ion-card>
+<div *ngIf="mayorMenor!='igual'" text-center>
+    <button ion-button class="cls_adiviBtn" (click)="compruebaNumero()" text-center ion-button>ADIVINAR</button>
+    <ion-fab center top style="top: 208px; left: 35%; margin-left: 0%" (click)="compruebaNumero()" >
+        <div><img class="c_img" src="../../assets/img/pri/mano2.png" ></div>
+      </ion-fab>
+</div>
 
-  <button *ngIf="mayorMenor!='igual'" ion-button block (click)="compruebaNumero()">Adivina</button>
+<div *ngIf="mayorMenor!='igual'">
+  <p style="font-size: 15px; margin-top: 5%; color: #E91E63; font-weight: bold;">TE AYUDAMOS?</p>
+  <p>El número secreto debe ser:</p><p style="font-size: 20px;" text-center>{{ mayorMenor }} </p>
+</div>
 
-  <button *ngIf="mayorMenor=='igual'" ion-button block (click)="reinicia()">Volver a Jugar</button>
+
+  <button style="background-color: #3F51B5; margin-top: 43px;" *ngIf="mayorMenor=='igual'" ion-button block (click)="reinicia()">Volver a Jugar</button>
+
+  <!--ion-row >
+      <ion-col col>
+        <img style="margin-top: 96%" src="../../assets/img/pri/juegos.gif" height="12%">
+      </ion-col>
+  </ion-row-->
+
 </ion-content>

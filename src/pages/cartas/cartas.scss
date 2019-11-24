@@ -1,5 +1,79 @@
 page-cartas {
 
+    .card-Section{
+        position: absolute;
+        z-index: 100;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top:0;
+        top: 30%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 250px;
+    }
 
+    .flip {
+        -webkit-perspective: 800;
+        height: 100%;
+        position: relative;
+    }
+
+    .flip .swiper-slide-active .card.flipped {
+        //-webkit-transform: rotatey(-180deg);
+        transform: rotateY(180deg);
+    }
+
+    .flip .swiper-slide-active .card {
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition: 0.5s;
+    }
+
+
+    .flip .card .back{
+        left: 0;
+        right: 0;
+        top:8.5%;
+        bottom: 0;
+        margin-left: auto;
+        margin-right: auto;
+        -webkit-transform: rotatey(-180deg);
+        position: absolute;
+        max-height: 250px;
+        -webkit-backface-visibility: hidden;
+    }
+
+
+    .card-Section{
+        position: absolute;
+        z-index: 100;
+        margin-left:auto;
+        margin-right: auto;
+        margin-top:0;
+        top: 30%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 250px;
+    }
+
+    .cardImg{
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        -webkit-backface-visibility: hidden;
+        width: 80%;
+        height: 180px;
+    }
+
+
+    .card-Data-section{
+        position: absolute;
+        bottom:22%;
+        right: -28%;
+        width: 100%;
+      }
+
+      
 
 }

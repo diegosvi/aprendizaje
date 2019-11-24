@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>RECONOCE EL COLOR</ion-title>
+    <ion-title>EXPLORACIÓN DE COLORES</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -77,24 +77,37 @@
   </div>-->
 
   <ion-row>
-    <ion-col col-6>Vidas: {{life}}</ion-col>
-    <ion-col col-6>Puntos: {{valor}}</ion-col>
+    <ion-col col-6>
+        <ion-row>
+            <ion-col col-6 text-right style="background-color: #FF9800;font-size: 18px;">
+              <p style="margin-bottom: 0; padding-top: 18%; color: #FFEB3B">Vidas:</p>
+            </ion-col>
+            <ion-col col-6 text-center style="border: #FF9800 3px solid;">
+                <p style="color: #f46906; font-size: 26px;">{{life}}</p>
+            </ion-col>
+          </ion-row>
+    </ion-col>
+    <ion-col col-6>
+        <ion-row>
+            <ion-col col-6 text-right style="background-color: #00BCD4;font-size: 18px;">
+              <p style="margin-bottom: 0; padding-top: 18%; color: aliceblue">Puntos:</p>
+            </ion-col>
+            <ion-col col-6 text-center style="border: #00BCD4 3px solid;">
+                <p style="color: #02b8d0; font-size: 26px;">{{valor}}</p>
+            </ion-col>
+          </ion-row>
+    </ion-col>
   </ion-row>
 
   <ion-item>
-    Selecciona el color:
-    <div text-center>{{Selectgroceries.name}}</div>
+    <div style="margin-top: 0%; margin-bottom: 3%"><p>BUSCA EL COLOR:</p></div>
+    <div text-center style="font-size: 52px; margin-bottom: 1%; text-transform: uppercase">{{Selectgroceries.name}}</div>
   </ion-item>
 
+  <div text-center>
+      <button ion-button *ngFor="let grocery of groceries" [color]="grocery.color" (click)="chooseColor(grocery)" text-center ion-button class="cls_btn"></button>
+  </div>
 
-  <ion-list>
-    <ion-item *ngFor="let grocery of groceries" [color]="grocery.color" (click)="chooseColor(grocery)">
-      <div class="color-text">{{grocery.name}}</div>
-    </ion-item>
-  </ion-list>
-
-  <button ion-button (click)="volverJuagr()">
-    Vuleve a intentar
-  </button>
+  <div style="margin-top: 5%"><button ion-button (click)="volverJuagr()"  round style="background-color: #9C27B0"> Vuelve a intentar</button></div>
 
 </ion-content>

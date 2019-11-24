@@ -102,22 +102,22 @@ export class JuegocolPage {
   groceries = [{
     id:1,
     color: 'primary',
-    name: 'azul',
+    name: 'Azul',
   },
     {
       id:2,
       color: 'danger',
-      name: 'rojo',
+      name: 'Rojo',
     },
     {
       id:3,
       color: 'secondary',
-      name: 'verde',
+      name: 'Verde',
     },
     {
       id:4,
       color: 'warning',
-      name: 'amarillo',
+      name: 'Amarillo',
     }
   ]
 

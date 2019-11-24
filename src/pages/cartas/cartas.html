@@ -6,14 +6,158 @@
 --><ion-header>
 
   <ion-navbar>
-    <ion-title>cartas</ion-title>
+    <ion-title>MEMORIZANDO</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
 <ion-content padding>
-  <div id="ContenedorCartas">
+  <!--ion-grid>
+    <ion-row>
+      <ion-col col-6 >
+        <div  class="space_I" > <!--(click)="reproducir(abecedario)"-->
+          <!--ion-grid>
+                <ion-row>
+                  <ion-col col-12>
+                    <div><img src="../../assets/img/col/amarillo.jpg" height="110"> </div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div class="space_I" >
+          <ion-grid>
+              <ion-row>
+                <ion-col col-12>
+                  <div><img src="../../assets/img/col/cafe.jpg" height="110"></div>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 >
+        <div  class="space_I" > <!--(click)="reproducir(abecedario)"-->
+          <!--ion-grid>
+                <ion-row>
+                  <ion-col col-12>
+                    <div><img src="../../assets/img/col/rojo.png" width="68" height="110"> </div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div class="space_I" >
+          <ion-grid>
+              <ion-row>
+                <ion-col col-12>
+                  <div><img src="../../assets/img/col/amarillo.jpg" width="68" height="110"></div>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6 >
+        <div  class="space_I" > <!--(click)="reproducir(abecedario)"-->
+          <!--ion-grid>
+                <ion-row>
+                  <ion-col col-12>
+                    <div><img src="../../assets/img/col/rojo.png" width="68" height="110"> </div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div class="space_I" >
+          <ion-grid>
+              <ion-row>
+                <ion-col col-12>
+                  <div><img src="../../assets/img/col/cafe.jpg" width="68" height="110"></div>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>  
+  </ion-grid-->
 
-  </div>
+
+  
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 >
+        <div  class="space_I" > <!--(click)="reproducir(abecedario)"-->
+          <ion-grid>
+                <ion-row>
+                  <ion-col col-12>
+                    <div>
+                    
+                      <div class="card-Section">
+                        <div class="flip">
+                          <ion-slides (ionSlideDidChange)="slideChanged();">
+                            <ion-slide>
+                              <div class="card" [class.flipped]="isFlipped" (click)="flip()">
+                                <div class="face front">
+                                  <img class="cardImg" src="../../assets/img/col/abejaM.jpg" width="68" height="110">
+                                </div>
+                                <div class="face back" text-center item-center>
+                                  <img class="cardImg" src="../../assets/img/col/cafe.jpg" width="68" height="110">
+                                </div>
+                              </div>
+                            </ion-slide>
+                          </ion-slides>
+                        </div>
+                      </div>
+                    
+                    
+                    </div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+      <ion-col col-6>
+        <div class="space_I" >
+          <ion-grid>
+              <ion-row>
+                <ion-col col-12>
+                  <div>
+
+                  
+                  <div class="card-Section">
+                    <div class="flip">
+                      <ion-slides (ionSlideDidChange)="slideChanged();">
+                        <ion-slide>
+                          <div class="card" [class.flipped]="isFlipped" (click)="flip()">
+                            <div class="face front">
+                              <img class="cardImg" src="../../assets/img/col/abejaM.jpg" width="68" height="110">
+                            </div>
+                            <div class="face back" text-center item-center>
+                              <img class="cardImg" src="../../assets/img/col/cafe.jpg" width="68" height="110">
+                            </div>
+                          </div>
+                        </ion-slide>
+                      </ion-slides>
+                    </div>
+                  </div>
+                  
+                  
+                  </div>
+                </ion-col>
+              </ion-row>
+          </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
 </ion-content>

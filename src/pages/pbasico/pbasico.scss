@@ -1,3 +1,35 @@
 page-pbasico {
 
+    .cls_juego{
+        background-image: url("../../assets/img/pri/fondoj1.gif");
+    }
+
+    .cls_title{
+        color: white;
+        font-size: 18px;
+        padding-left: 4%;
+    }
+
+    .btn_menu{
+        height: 13rem;
+        width: 20rem;
+        text-align: center;
+        margin-left: 19%;
+        border-radius: 30px;
+      }
+    
+      .c_img {
+        width:75%;
+      }
+    
+     /* .c_imgm {
+        width: 62%;
+      }*/
+    
+      .spa_letra{
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        color: #000;
+      }
 }
