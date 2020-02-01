@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Slides, Select } from 'ionic-angular';
 
 /**
  * Generated class for the CartasPage page.
@@ -18,9 +18,59 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 export class CartasPage {
 
+  @ViewChild(Slides) slides: Slides;
   isFlipped: boolean = false;//flip card
 
+  cartas=[
+    
+    {
+      name:'carta1  ',
+      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
+      imagenvistaTURL:'../../assets/img/col/rojo.png',
+      select:false
+    },
+  
+    {
+      name:'carta2',
+      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
+      imagenvistaTURL:'../../assets/img/mes/abril.jpg',
+      select:false
+    },
+  
+    {
+      name:'carta3',
+      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
+      imagenvistaTURL:'../../assets/img/abc/z.jpg',
+      select:false
+    },
+  
+    {
+      name:'carta4',
+      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
+      imagenvistaTURL:'../../assets/img/mes/abril.jpg',
+      select:false
+    },
+  
+    {
+      name:'carta5',
+      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
+      imagenvistaTURL:'../../assets/img/col/rojo.png',
+      select:false
+    },
+  
+    {
+      name:'carta6',
+      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
+      imagenvistaTURL:'../../assets/img/abc/z.jpg',
+      select:false
+    }
+  ];
+
+
+  
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
     /*let ArregloCartasBase = [];
 
     let carta = {id: '', valor: 0, url :''};
@@ -84,6 +134,29 @@ export class CartasPage {
       console.log("vuelta2")
   	}
   }
+
+  slideChanged() {
+    if((this.slides.getActiveIndex()+1) == this.slides.length()){
+      this.slides.lockSwipeToNext(true);
+    }else{
+      this.slides.lockSwipeToNext(false);
+    }
+    if(this.slides.getActiveIndex()>=this.slides.length()){
+      //this.slides.slidePrev();
+      this.slides.slideTo(this.slides.length()-1);
+    }
+  }
+
+  verCarta(item){
+    
+    this.cartas.indexOf(item);
+    item.select=true;
+    
+    console.log(this.cartas[this.cartas.indexOf(item)])
+
+  }
+
+
 
 
 }
