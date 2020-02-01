@@ -1,6 +1,15 @@
 page-cartas {
 
-    .card-Section{
+    .header-menu{
+        background-color: #ffffff ;
+    }
+
+    .toolbar-background-md {
+        border-color: #ffffff;
+        background: #ffffff;
+    }
+
+    /*.card-Section{
         position: absolute;
         z-index: 100;
         margin-left:auto;
@@ -11,9 +20,15 @@ page-cartas {
         right: 0;
         bottom: 0;
         height: 250px;
+    }*/
+
+    .imgFrontCard{
+        background-image: url("../../assets/img/col/abejaM.jpg");
     }
 
-    .flip {
+    
+        
+   /* .flip {
         -webkit-perspective: 800;
         height: 100%;
         position: relative;
@@ -50,11 +65,11 @@ page-cartas {
         margin-left:auto;
         margin-right: auto;
         margin-top:0;
-        top: 30%;
+        //top: 30%;
         left: 0;
         right: 0;
-        bottom: 0;
-        height: 250px;
+       // bottom: 0;
+        height: 100px;
     }
 
     .cardImg{
@@ -62,17 +77,18 @@ page-cartas {
         display: inline-block;
         text-align: center;
         -webkit-backface-visibility: hidden;
-        width: 80%;
-        height: 180px;
+        width: 60%;
+        //height: 180px;
     }
 
 
-    .card-Data-section{
-        position: absolute;
-        bottom:22%;
-        right: -28%;
-        width: 100%;
-      }
+    
+
+    /*.swiper-wrapper {
+       
+        height: 82%;
+    }*/
+
 
       
 

@@ -10,6 +10,10 @@ page-pbasico {
         padding-left: 4%;
     }
 
+    .ion-app.md [padding] .scroll-content {
+      padding-top: 0px;
+    }
+
     .btn_menu{
         height: 13rem;
         width: 20rem;
