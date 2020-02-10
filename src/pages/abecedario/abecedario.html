@@ -15,25 +15,31 @@
 
 <ion-content class="fondoab">
 
+    <!--ion-list>
+        <button ion-item *ngFor="let fruit of fruits"><!--Recorremos el array fruits que hemos cargado en el constructor home.ts-->
+          <!--Nombre: {{ fruit.nombre }} <!--Mostramos el nombre y la cantidad-->
+        <!--/button>  
+      </ion-list-->
+
     <ion-grid>
         <ion-row>
-          <ion-col col-6 >
-            <div  class="space_I" *ngFor="let abecedario of abeceda" [ngClass]="{'bg-select':abecedario.reproduciendo==true,'':abecedario.reproduciendo==undefined}" (click)="reproducir(abecedario)">
+          <ion-col col >
+            <div  class="space_I" *ngFor="let fruit of fruits" [ngClass]="{'bg-select':fruit.reproduciendo==true,'':fruit.reproduciendo==undefined}" (click)="reproducir(fruit)">
               <ion-grid>
                   <ion-row>
                       <ion-col col-12>
                         <div></div>
                       </ion-col>
                     </ion-row>
-                    <ion-row>
-                      <ion-col col-12>
-                        <div><img [src]="abecedario.imagen" width="68" height="150"> </div>
+                    <ion-row> 
+                      <ion-col>
+                        <div><img [src]="fruit.imagen"></div>
                       </ion-col>
                     </ion-row>
                 </ion-grid>
             </div>
           </ion-col>
-          <ion-col col-6>
+          <!--ion-col col-6>
             <div class="space_I" *ngFor="let abecedarioi of abecedar" [ngClass]="{'bg-select':abecedarioi.reproduciendo==true,'':abecedarioi.reproduciendo==undefined}" (click)="reproducir1(abecedarioi)">
               <ion-grid>
                 <ion-row>
@@ -48,7 +54,7 @@
                   </ion-row>
               </ion-grid>
             </div>
-          </ion-col>
+          </ion-col-->
         </ion-row>
       </ion-grid>
 

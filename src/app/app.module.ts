@@ -3,6 +3,9 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 import { MyApp } from './app.component';
 // import { HomePage } from '../pages/home/home';
@@ -12,6 +15,17 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
           CostaPage, PintermedioPage,InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
 import {Figuras} from "../interface/interface.figuras";
 import {CartasPage} from "../pages/cartas/cartas";
+
+
+import { PequesGameServiceProvider } from '../providers/peques-game-service/peques-game-service';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyCDeZVpEmo7nkDQ1v4Hnnp7EHfHx3wsvlQ",
+  authDomain: "aprendizaje-ee087.firebaseapp.com",
+  databaseURL: "https://aprendizaje-ee087.firebaseio.com",
+  storageBucket: "aprendizaje-ee087.appspot.com",
+  messagingSenderId: '821746363831'
+};
 
 @NgModule({
   declarations: [
@@ -61,7 +75,10 @@ import {CartasPage} from "../pages/cartas/cartas";
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -104,8 +121,8 @@ import {CartasPage} from "../pages/cartas/cartas";
     HoratPage,
     HoramPage,
     AvanzadoPage,
-    DeportesPage
-    ,PbasicoPage,
+    DeportesPage,
+    PbasicoPage,
     EntradaPage,
     FigurasPage,
     InformacionPage,
@@ -114,7 +131,9 @@ import {CartasPage} from "../pages/cartas/cartas";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    AngularFireDatabase,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    PequesGameServiceProvider
   ]
 })
 export class AppModule {}
