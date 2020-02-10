@@ -4,6 +4,8 @@ import { ABECEDARIO } from '../../data/data.abecedario';
 import  { Abecedario } from '../../interface/interface.abecedario';
 import { ABECEDARIOI } from '../../data/data.abecedarioi';
 import  { Abecedarioi } from '../../interface/interface.abecedarioi';
+
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 /**
  * Generated class for the AbecedarioPage page.
  *
@@ -23,9 +25,20 @@ export class AbecedarioPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  fruits = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
+
+    pequeGameSrv.getFruits()
+      .subscribe(fruits=>{
+        
+        this.fruits = fruits;
+        console.log(fruits);
+      });
+
+
     this.abeceda = ABECEDARIO.slice(0);
-    this.abecedar = ABECEDARIOI.slice();
+    //this.abecedar = ABECEDARIOI.slice();
   }
 
   ionViewDidLoad() {
