@@ -4,12 +4,10 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Abecedario</ion-title>
-  </ion-navbar>
-
+<ion-header class="firstT">
+	<button ngClass="delivery-back-button" ion-button icon-only icon-start clear  (click)="dismiss()">
+	  <ion-icon name="arrow-back"></ion-icon><div>Abecedario</div>
+	</button>
 </ion-header>
 
 
@@ -24,7 +22,7 @@
     <ion-grid>
         <ion-row>
           <ion-col col >
-            <div  class="space_I" *ngFor="let fruit of fruits" [ngClass]="{'bg-select':fruit.reproduciendo==true,'':fruit.reproduciendo==undefined}" (click)="reproducir(fruit)">
+            <div  class="space_I" *ngFor="let abecedario of abecedarios" (click)="pruebaAudio(abecedario)">
               <ion-grid>
                   <ion-row>
                       <ion-col col-12>
@@ -33,7 +31,7 @@
                     </ion-row>
                     <ion-row> 
                       <ion-col>
-                        <div><img [src]="fruit.imagen"></div>
+                        <div><img [src]="abecedario.imagen"></div>
                       </ion-col>
                     </ion-row>
                 </ion-grid>

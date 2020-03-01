@@ -4,37 +4,36 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Números</ion-title>
-  </ion-navbar>
-
+<ion-header class="firstT">
+	<button ngClass="delivery-back-button" ion-button icon-only icon-start clear  (click)="dismiss()">
+	  <ion-icon name="arrow-back"></ion-icon><div>Números</div>
+	</button>
 </ion-header>
 
 
 <ion-content class="fondon">
 
+
     <ion-grid>
         <ion-row>
-          <ion-col col-6 >
-            <div  class="space_I" *ngFor="let numeros of numero" (click)="reproducir(numeros)" [ngClass]="{'bg-select':numeros.reproduciendo==true,'':numeros.reproduciendo==undefined}">
+          <ion-col col >
+            <div  class="space_I" *ngFor="let numero of numeros" (click)="pruebaAudio(numero)">
               <ion-grid>
                   <ion-row>
                       <ion-col col-12>
                         <div></div>
                       </ion-col>
                     </ion-row>
-                    <ion-row>
-                      <ion-col col-12>
-                        <div><img [src]="numeros.imagen" width="68" height="150"> </div>
+                    <ion-row> 
+                      <ion-col>
+                        <div><img [src]="numero.imagen"></div>
                       </ion-col>
                     </ion-row>
                 </ion-grid>
             </div>
           </ion-col>
-          <ion-col col-6>
-            <div class="space_I" *ngFor="let numerosi of numeroo" (click)="reproducir1(numerosi)" [ngClass]="{'bg-select':numerosi.reproduciendo==true,'':numerosi.reproduciendo==undefined}" >
+          <!--ion-col col-6>
+            <div class="space_I" *ngFor="let abecedarioi of abecedar" [ngClass]="{'bg-select':abecedarioi.reproduciendo==true,'':abecedarioi.reproduciendo==undefined}" (click)="reproducir1(abecedarioi)">
               <ion-grid>
                 <ion-row>
                     <ion-col col-12>
@@ -43,47 +42,13 @@
                   </ion-row>
                   <ion-row>
                     <ion-col col-12>
-                      <div><img [src]="numerosi.imagen" width="68" height="150"></div>
+                      <div><img [src]="abecedarioi.imagen" width="68" height="150"></div>
                     </ion-col>
                   </ion-row>
               </ion-grid>
             </div>
-          </ion-col>
+          </ion-col-->
         </ion-row>
       </ion-grid>
-
-
-
-
-<!--br>
-  <div class="container">
-    <div class="row">
-      <div class="col">
-
-      </div>
-      <div class="col-8">
-        <ion-grid>
-          <ion-row>
-            <ion-col size="5">
-
-              <ion-card *ngFor="let numeros of numero" (click)="reproducir(numeros)">
-                <img  [src]="numeros.imagen" width="150" height="150">
-              </ion-card>
-            </ion-col>
-            <ion-col size="6">
-              <ion-card *ngFor="let numerosi of numeroo" (click)="reproducir1(numerosi)">
-                <img [src]="numerosi.imagen" width="150" height="150">
-              </ion-card>
-
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </div>
-      <div class="col">
-
-      </div>
-    </div>
-  </div-->
-
 
 </ion-content>

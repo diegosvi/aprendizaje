@@ -16,16 +16,8 @@ import { PequesGameServiceProvider } from '../../providers/peques-game-service/p
 })
 export class InformacionPage {
 
-  fruits = [];
-  //fruit = {nombre:null, imagen:null, sound:null};
-
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-  
-    pequeGameSrv.getFruits()
-      .subscribe(fruits=>{
-        console.log(fruits)
-        this.fruits = fruits;
-      });
+
   
   }
 
