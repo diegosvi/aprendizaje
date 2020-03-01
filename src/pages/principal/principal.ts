@@ -47,4 +47,9 @@ export class PrincipalPage {
     this.navCtrl.push(FigurasPage);
   }
 
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
 }

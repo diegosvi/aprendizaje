@@ -5,6 +5,9 @@ import { NUMEROS } from '../../data/data.numeros';
 import {Numerosi} from "../../interface/interface.numerosi";
 import { NUMEROSI } from '../../data/data.numerosi';
 
+
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the NumerosPage page.
  *
@@ -24,16 +27,25 @@ export class NumerosPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.numero = NUMEROS.slice(0);
-    this.numeroo = NUMEROSI.slice();
+  numeros = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
+
+    this.pequeGameSrv.getNumeros()
+    .subscribe(numeros=>{ 
+      this.numeros = numeros;
+      console.log(numeros);
+    });
+
+   /* this.numero = NUMEROS.slice(0);
+    this.numeroo = NUMEROSI.slice();*/
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad NumerosPage');
   }
 
-  reproducir(nume: Numeros){
+  /*reproducir(nume: Numeros){
     this.pausarSonido(nume);
     if(nume.reproduciendo){
       nume.reproduciendo=false;
@@ -101,5 +113,26 @@ export class NumerosPage {
         numerosi.reproduciendo = false;
       }
     }
+  }*/
+
+  pruebaAudio(numeros){
+    console.log("esto es una prueba"+JSON.stringify(numeros.sound));
+
+    this.audio.src = numeros.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    numeros.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        numeros.reproduciendo = false;
+      }, numeros.duracion*300
+    );
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
   }
 }

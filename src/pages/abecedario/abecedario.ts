@@ -25,19 +25,18 @@ export class AbecedarioPage {
   audio: any = new Audio();
   tiempo: any;
 
-  fruits = [];
+  abecedarios = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
 
-    pequeGameSrv.getFruits()
-      .subscribe(fruits=>{
-        
-        this.fruits = fruits;
-        console.log(fruits);
+    this.pequeGameSrv.getAbecedarios()
+      .subscribe(abecedarios=>{ 
+        this.abecedarios = abecedarios;
+        console.log(abecedarios);
       });
 
 
-    this.abeceda = ABECEDARIO.slice(0);
+    //this.abeceda = ABECEDARIO.slice(0);
     //this.abecedar = ABECEDARIOI.slice();
   }
 
@@ -46,13 +45,13 @@ export class AbecedarioPage {
   }
 
 
-  reproducir(abecedario: Abecedario){
+  /*reproducir(abecedario: Abecedario){
     this.pausarSonido(abecedario);
     if(abecedario.reproduciendo){
       abecedario.reproduciendo=false;
       return;
     }
-    console.log(abecedario);
+    //console.log(abecedario);
 
     //let audio = new Audio();
     this.audio.src = abecedario.audio;
@@ -70,29 +69,6 @@ export class AbecedarioPage {
 
   }
 
-  reproducir1(abecedarioi: Abecedarioi){
-    this.pausarSonido1(abecedarioi);
-    if(abecedarioi.reproduciendo){
-      abecedarioi.reproduciendo=false;
-      return;
-    }
-    console.log(abecedarioi);
-
-    //let audio = new Audio();
-    this.audio.src = abecedarioi.audio;
-
-
-    this.audio.load();
-    this.audio.play();
-
-    abecedarioi.reproduciendo=true;
-    this.tiempo=setTimeout (
-      () => {
-        abecedarioi.reproduciendo = false;
-      }, abecedarioi.duracion*300
-    );
-
-  }
 
   pausarSonido(abecedarioSelected: Abecedario){
     clearTimeout(this.tiempo);
@@ -103,17 +79,30 @@ export class AbecedarioPage {
         abecedario.reproduciendo = false;
       }
     }
+  }*/
+
+
+  pruebaAudio(abecedario){
+    console.log("esto es una prueba"+JSON.stringify(abecedario.sound));
+
+    this.audio.src = abecedario.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    abecedario.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        abecedario.reproduciendo = false;
+      }, abecedario.duracion*300
+    );
   }
 
 
-  pausarSonido1(abecedarioiSelected: Abecedarioi){
-    clearTimeout(this.tiempo);
-    this.audio.pause();
-    this.audio.currentTime=0;
-    for(let abecedarioi of this.abecedar){
-      if(abecedarioi.imagen != abecedarioiSelected.imagen){
-        abecedarioi.reproduciendo = false;
-      }
-    }
+  dismiss(){
+    this.navCtrl.pop();
   }
+  
+
 }

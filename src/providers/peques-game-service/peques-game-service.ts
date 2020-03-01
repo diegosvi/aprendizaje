@@ -17,14 +17,19 @@ export class PequesGameServiceProvider {
     console.log('Hello PequesGameServiceProvider Provider');
   }
 
-  public getFruits(){
+  public getAbecedarios(){
     return this.afDb.list('Abecedario/').valueChanges(); 
-    //Esta función devolverá todos los datos que tengamos en el apartado fruits, en nuestra base de datos
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
   }
 
-  public getFruit(id){
+  public getAbecedario(id){
     return this.afDb.object('Abecedario/'+id).valueChanges();
-    //Devolvera la fruta con el id que le pasamos por parametro
+    //Devolvera la letra con el id que le pasamos por parametro
+  }
+
+  public getNumeros(){
+    return this.afDb.list('Numeros/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
   }
 
 }
