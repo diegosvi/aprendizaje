@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ANFIBIOS } from '../../data/data.anfibios';
 import  { Anfibios } from '../../interface/interface.anfibios';
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 
 /**
  * Generated class for the AnfibiosPage page.
@@ -21,15 +22,43 @@ export class AnfibiosPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  anfibios = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.anfibio = ANFIBIOS.slice(0);
+
+    this.pequeGameSrv.getAnfibios()
+    .subscribe(anfibios=>{ 
+      this.anfibios = anfibios;
+      console.log(anfibios);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(anfi: Anfibios){
+  pruebaAudio(anfibios){
+    console.log("esto es una prueba"+JSON.stringify(anfibios.sound));
+
+    this.audio.src = anfibios.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    anfibios.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        anfibios.reproduciendo = false;
+      }, anfibios.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+ /* reproducir(anfi: Anfibios){
     this.pausarSonido(anfi);
     if(anfi.reproduciendo){
       anfi.reproduciendo=false;
@@ -64,5 +93,5 @@ export class AnfibiosPage {
       }
     }
   }
-
+*/
 }

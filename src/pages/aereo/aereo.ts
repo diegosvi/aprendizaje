@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AEREO} from '../../data/data.aereo';
 import  { Aereo } from '../../interface/interface.aereo';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the AereoPage page.
  *
@@ -21,17 +23,46 @@ export class AereoPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  aereos = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.aer = AEREO.slice(0);
+
+    this.pequeGameSrv.getTransporteA()
+    .subscribe(aereos=>{ 
+      this.aereos = aereos;
+      console.log(aereos);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
+  pruebaAudio(aereos){
+    console.log("esto es una prueba"+JSON.stringify(aereos.sound));
+
+    this.audio.src = aereos.sound;
 
 
-  reproducir(aer: Aereo){
+    this.audio.load();
+    this.audio.play();
+
+    aereos.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        aereos.reproduciendo = false;
+      }, aereos.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+
+ /* reproducir(aer: Aereo){
     this.pausarSonido(aer);
     if(aer.reproduciendo){
       aer.reproduciendo=false;
@@ -66,4 +97,5 @@ export class AereoPage {
       }
     }
   }
+  */
 }

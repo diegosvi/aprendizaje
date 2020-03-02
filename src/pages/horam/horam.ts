@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HORAM } from '../../data/data.horam';
 import  { Horam } from '../../interface/interface.horam';
-
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 /**
  * Generated class for the HoramPage page.
  *
@@ -20,16 +20,44 @@ export class HoramPage {
   hm: Horam[] = [];
   audio: any = new Audio();
   tiempo: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  horas = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.hm = HORAM.slice(0);
+
+    this.pequeGameSrv.getHorasM()
+    .subscribe(horas=>{ 
+      this.horas = horas;
+      console.log(horas);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(hom: Horam){
+  pruebaAudio(horas){
+    console.log("esto es una prueba"+JSON.stringify(horas.sound));
+
+    this.audio.src = horas.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    horas.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        horas.reproduciendo = false;
+      }, horas.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+ /* reproducir(hom: Horam){
     this.pausarSonido(hom);
     if(hom.reproduciendo){
       hom.reproduciendo=false;
@@ -64,5 +92,5 @@ export class HoramPage {
       }
     }
   }
-
+*/
 }

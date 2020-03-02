@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ORIENTE } from '../../data/data.oriente';
 import  { Oriente } from '../../interface/interface.oriente';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the OrientePage page.
  *
@@ -20,16 +22,45 @@ export class OrientePage {
   ori: Oriente[] = [];
   audio: any = new Audio();
   tiempo: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  orientes = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.ori = ORIENTE.slice(0);
+
+    this.pequeGameSrv.getOriente()
+    .subscribe(orientes=>{ 
+      this.orientes = orientes;
+      console.log(orientes);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(orie: Oriente){
+  pruebaAudio(orientes){
+    console.log("esto es una prueba"+JSON.stringify(orientes.sound));
+
+    this.audio.src = orientes.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    orientes.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        orientes.reproduciendo = false;
+      }, orientes.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+
+/*  reproducir(orie: Oriente){
     this.pausarSonido(orie);
     if(orie.reproduciendo){
       orie.reproduciendo=false;
@@ -64,5 +95,5 @@ export class OrientePage {
       }
     }
   }
-
+*/
 }

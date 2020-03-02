@@ -14,7 +14,28 @@
 
 
 <ion-content padding class="fondote">
-    <ion-grid class="class_grid">
+  <ion-grid>
+    <ion-row>
+      <ion-col col >
+        <div  class="space_I" *ngFor="let terrestre of terrestres" (click)="pruebaAudio(terrestre)">
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-12>
+                    <div></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row> 
+                  <ion-col>
+                    <div><img [src]="terrestre.imagen"></div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <!--<ion-grid class="class_grid">
         <ion-row align-items-center >
           <ion-col class="col-6" *ngFor="let terres of terre" (click)="reproducir(terres)">
               <img [src]="terres.imagen" width="48" height="120">

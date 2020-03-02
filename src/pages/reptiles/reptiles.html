@@ -14,7 +14,28 @@
 
 
 <ion-content padding class="fondorep">
-    <ion-grid class="class_grid">
+    
+  <ion-grid>
+    <ion-row>
+      <ion-col col >
+        <div  class="space_I" *ngFor="let reptil of reptiles" (click)="pruebaAudio(reptil)">
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-12>
+                    <div></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row> 
+                  <ion-col>
+                    <div><img [src]="reptil.imagen"></div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--<ion-grid class="class_grid">
         <ion-row align-items-center >
           <ion-col class="col-6" *ngFor="let reptiles of reptil" (click)="reproducir(reptiles)">
               <img [src]="reptiles.imagen" width="48" height="120">
@@ -23,7 +44,7 @@
         </ion-row>
         
       </ion-grid>
-  <!--div class="container">
+  div class="container">
     <div class="row">
       <div class="col-2">
 

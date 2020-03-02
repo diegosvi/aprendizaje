@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HORTALIZAS} from '../../data/data.hortalizas';
 import  { Hortalizas } from '../../interface/interface.hortalizas';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 /**
  * Generated class for the HortalizasPage page.
  *
@@ -21,16 +22,45 @@ export class HortalizasPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  hortalizas = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.hor = HORTALIZAS.slice(0);
+
+    this.pequeGameSrv.getHortalizas()
+    .subscribe(hortalizas=>{ 
+      this.hortalizas = hortalizas;
+      console.log(hortalizas);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
+  pruebaAudio(hortalizas){
+    console.log("esto es una prueba"+JSON.stringify(hortalizas.sound));
 
-  reproducir(hor: Hortalizas){
+    this.audio.src = hortalizas.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    hortalizas.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        hortalizas.reproduciendo = false;
+      }, hortalizas.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+
+  /*reproducir(hor: Hortalizas){
     this.pausarSonido(hor);
     if(hor.reproduciendo){
       hor.reproduciendo=false;
@@ -64,5 +94,5 @@ export class HortalizasPage {
         hort.reproduciendo = false;
       }
     }
-  }
+  }*/
 }

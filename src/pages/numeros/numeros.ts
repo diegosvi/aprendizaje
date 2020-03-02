@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Numeros} from "../../interface/interface.numeros";
 import { NUMEROS } from '../../data/data.numeros';
-import {Numerosi} from "../../interface/interface.numerosi";
-import { NUMEROSI } from '../../data/data.numerosi';
 
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -23,7 +21,6 @@ import { PequesGameServiceProvider } from '../../providers/peques-game-service/p
 export class NumerosPage {
 
   numero: Numeros[] = [];
-  numeroo: Numerosi[] = [];
   audio: any = new Audio();
   tiempo: any;
 
@@ -45,7 +42,31 @@ export class NumerosPage {
     console.log('ionViewDidLoad NumerosPage');
   }
 
-  /*reproducir(nume: Numeros){
+ 
+
+  pruebaAudio(numeros){
+    console.log("esto es una prueba"+JSON.stringify(numeros.sound));
+
+    this.audio.src = numeros.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    numeros.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        numeros.reproduciendo = false;
+      }, numeros.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+ /*reproducir(nume: Numeros){
     this.pausarSonido(nume);
     if(nume.reproduciendo){
       nume.reproduciendo=false;
@@ -114,25 +135,4 @@ export class NumerosPage {
       }
     }
   }*/
-
-  pruebaAudio(numeros){
-    console.log("esto es una prueba"+JSON.stringify(numeros.sound));
-
-    this.audio.src = numeros.sound;
-
-
-    this.audio.load();
-    this.audio.play();
-
-    numeros.reproduciendo=true;
-    this.tiempo=setTimeout (
-      () => {
-        numeros.reproduciendo = false;
-      }, numeros.duracion*300
-    );
-  }
-
-  dismiss(){
-    this.navCtrl.pop();
-  }
 }

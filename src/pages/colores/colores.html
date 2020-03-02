@@ -15,8 +15,31 @@
 
 <ion-content class="fondocolores">
 
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col >
+        <div  class="space_I" *ngFor="let color of colores" (click)="pruebaAudio(color)">
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-12>
+                    <div></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row> 
+                  <ion-col>
+                    <div><img [src]="color.imagen"></div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
     <!--ion-list class="materialN">
-        <ion-item class="first"  (click)="reproducir(colore)"-->
+        <ion-item class="first"  (click)="reproducir(colore)"
           <ion-grid>
             <ion-row align-items-center >
               <ion-col class="col-6" *ngFor="let colore of color"  (click)="reproducir(colore)">
@@ -24,7 +47,7 @@
               </ion-col>
             </ion-row>
             
-          </ion-grid>
+          </ion-grid>-->
         <!--/ion-item>
     </ion-list-->
 

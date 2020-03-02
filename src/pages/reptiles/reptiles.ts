@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { REPTILES} from '../../data/data.reptiles';
 import  { Reptiles } from '../../interface/interface.reptiles';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the ReptilesPage page.
  *
@@ -20,15 +22,45 @@ export class ReptilesPage {
   reptil: Reptiles[] = [];
   audio: any = new Audio();
   tiempo: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  reptiles = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.reptil = REPTILES.slice(0);
+
+
+    this.pequeGameSrv.getReptiles()
+    .subscribe(reptiles=>{ 
+      this.reptiles = reptiles;
+      console.log(reptiles);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
+  pruebaAudio(reptiles){
+    console.log("esto es una prueba"+JSON.stringify(reptiles.sound));
+
+    this.audio.src = reptiles.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    reptiles.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        reptiles.reproduciendo = false;
+      }, reptiles.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+/*
   reproducir(rep: Reptiles){
     this.pausarSonido(rep);
     if(rep.reproduciendo){
@@ -64,5 +96,5 @@ export class ReptilesPage {
       }
     }
   }
-
+*/
 }

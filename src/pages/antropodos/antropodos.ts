@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ARTROPODOS } from '../../data/data.artropodos';
 import  { Artropodos } from '../../interface/interface.artropodos';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the AntropodosPage page.
  *
@@ -21,15 +23,44 @@ export class AntropodosPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  invertebrados = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.artropodo = ARTROPODOS.slice(0);
+
+    this.pequeGameSrv.getInvertebrados()
+    .subscribe(invertebrados=>{ 
+      this.invertebrados = invertebrados;
+      console.log(invertebrados);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(antr: Artropodos){
+  pruebaAudio(invertebrados){
+    console.log("esto es una prueba"+JSON.stringify(invertebrados.sound));
+
+    this.audio.src = invertebrados.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    invertebrados.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        invertebrados.reproduciendo = false;
+      }, invertebrados.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+ /* reproducir(antr: Artropodos){
     this.pausarSonido(antr);
     if(antr.reproduciendo){
       antr.reproduciendo=false;
@@ -65,5 +96,5 @@ export class AntropodosPage {
     }
   }
 
-
+*/
 }

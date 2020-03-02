@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AVES } from '../../data/data.aves';
 import  { Aves } from '../../interface/interface.aves';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the AvesPage page.
  *
@@ -21,15 +23,45 @@ export class AvesPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  aves = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.ave = AVES.slice(0);
+
+    this.pequeGameSrv.getAves()
+    .subscribe(aves=>{ 
+      this.aves = aves;
+      console.log(aves);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(aves: Aves){
+  pruebaAudio(aves){
+    console.log("esto es una prueba"+JSON.stringify(aves.sound));
+
+    this.audio.src = aves.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    aves.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        aves.reproduciendo = false;
+      }, aves.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+
+ /* reproducir(aves: Aves){
     this.pausarSonido(aves);
     if(aves.reproduciendo){
       aves.reproduciendo=false;
@@ -64,6 +96,6 @@ export class AvesPage {
       }
     }
   }
-
+*/
 
 }

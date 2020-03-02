@@ -14,7 +14,28 @@
 
 
 <ion-content padding class="fondoho">
-    <ion-grid class="class_grid">
+   
+  <ion-grid>
+    <ion-row>
+      <ion-col col >
+        <div  class="space_I" *ngFor="let hortaliza of hortalizas" (click)="pruebaAudio(hortaliza)">
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-12>
+                    <div></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row> 
+                  <ion-col>
+                    <div><img [src]="hortaliza.imagen"></div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--<ion-grid class="class_grid">
         <ion-row align-items-center >
           <ion-col class="col-6" *ngFor="let hort of hor" (click)="reproducir(hort)">
               <img [src]="hort.imagen" width="48" height="120">

@@ -16,7 +16,28 @@
 
 
 <ion-content padding class="fondoinv">
-    <ion-grid class="class_grid">
+  <ion-grid>
+    <ion-row>
+      <ion-col col >
+        <div  class="space_I" *ngFor="let invertebrado of invertebrados" (click)="pruebaAudio(invertebrado)">
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-12>
+                    <div></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row> 
+                  <ion-col>
+                    <div><img [src]="invertebrado.imagen"></div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+  <!--<ion-grid class="class_grid">
         <ion-row align-items-center >
           <ion-col class="col-6" *ngFor="let artropodos of artropodo" (click)="reproducir(artropodos)">
               <img [src]="artropodos.imagen" width="48" height="120">
@@ -25,7 +46,7 @@
         </ion-row>
         
       </ion-grid>
-  <!--div class="container">
+  div class="container">
     <div class="row">
       <div class="col-2">
 

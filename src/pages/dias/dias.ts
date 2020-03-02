@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { DIAS } from '../../data/data.dias';
 import  { Dias } from '../../interface/interface.dias';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the DiasPage page.
  *
@@ -21,15 +23,44 @@ export class DiasPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  dias = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.dia = DIAS.slice(0);
+
+    this.pequeGameSrv.getDias()
+    .subscribe(dias=>{ 
+      this.dias = dias;
+      console.log(dias);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(dias: Dias){
+  pruebaAudio(dias){
+    console.log("esto es una prueba"+JSON.stringify(dias.sound));
+
+    this.audio.src = dias.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    dias.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        dias.reproduciendo = false;
+      }, dias.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+ /* reproducir(dias: Dias){
     this.pausarSonido(dias);
     if(dias.reproduciendo){
       dias.reproduciendo=false;
@@ -63,6 +94,5 @@ export class DiasPage {
         dias.reproduciendo = false;
       }
     }
-  }
-
+  }*/
 }

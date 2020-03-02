@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PECES } from '../../data/data.peces';
 import  { Peces } from '../../interface/interface.peces';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the PecesPage page.
  *
@@ -20,16 +22,43 @@ export class PecesPage {
   pez: Peces[] = [];
   audio: any = new Audio();
   tiempo: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  peces = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.pez = PECES.slice(0);
+    this.pequeGameSrv.getPeces()
+    .subscribe(peces=>{ 
+      this.peces = peces;
+      console.log(peces);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(peze: Peces){
+  pruebaAudio(peces){
+    console.log("esto es una prueba"+JSON.stringify(peces.sound));
+
+    this.audio.src = peces.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    peces.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        peces.reproduciendo = false;
+      }, peces.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+ /* reproducir(peze: Peces){
     this.pausarSonido(peze);
     if(peze.reproduciendo){
       peze.reproduciendo=false;
@@ -64,5 +93,5 @@ export class PecesPage {
       }
     }
   }
-
+*/
 }

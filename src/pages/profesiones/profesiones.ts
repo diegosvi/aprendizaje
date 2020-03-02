@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PROFESIONES} from '../../data/data.profesiones';
 import  { Profesiones } from '../../interface/interface.profesiones';
 
+
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 /**
  * Generated class for the ProfesionesPage page.
  *
@@ -20,16 +22,44 @@ export class ProfesionesPage {
   prof: Profesiones[] = [];
   audio: any = new Audio();
   tiempo: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  profesiones = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.prof = PROFESIONES.slice(0);
+
+    this.pequeGameSrv.getProfesiones()
+    .subscribe(profesiones=>{ 
+      this.profesiones = profesiones;
+      console.log(profesiones);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(profe: Profesiones){
+  pruebaAudio(profesiones){
+    console.log("esto es una prueba"+JSON.stringify(profesiones.sound));
+
+    this.audio.src = profesiones.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    profesiones.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        profesiones.reproduciendo = false;
+      }, profesiones.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+/*  reproducir(profe: Profesiones){
     this.pausarSonido(profe);
     if(profe.reproduciendo){
       profe.reproduciendo=false;
@@ -64,5 +94,5 @@ export class ProfesionesPage {
       }
     }
   }
-
+*/
 }

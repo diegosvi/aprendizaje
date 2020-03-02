@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { SIERRA } from '../../data/data.sierra';
 import  { Sierra } from '../../interface/interface.sierra';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the SierraPage page.
  *
@@ -20,16 +22,44 @@ export class SierraPage {
   sie: Sierra[] = [];
   audio: any = new Audio();
   tiempo: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  sierras = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.sie = SIERRA.slice(0);
+
+    this.pequeGameSrv.getSierra()
+    .subscribe(sierras=>{ 
+      this.sierras = sierras;
+      console.log(sierras);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(sier: Sierra){
+  pruebaAudio(sierras){
+    console.log("esto es una prueba"+JSON.stringify(sierras.sound));
+
+    this.audio.src = sierras.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    sierras.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        sierras.reproduciendo = false;
+      }, sierras.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+  /*reproducir(sier: Sierra){
     this.pausarSonido(sier);
     if(sier.reproduciendo){
       sier.reproduciendo=false;
@@ -64,5 +94,5 @@ export class SierraPage {
       }
     }
   }
-
+*/
 }

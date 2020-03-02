@@ -32,4 +32,115 @@ export class PequesGameServiceProvider {
     //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
   }
 
+  public getColores(){
+    return this.afDb.list('Colores/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getFiguras(){
+    return this.afDb.list('Figuras/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getMamiferos(){
+    return this.afDb.list('Animales/Mamiferos/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getPeces(){
+    return this.afDb.list('Animales/Peces').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getAves(){
+    return this.afDb.list('Animales/Aves').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getReptiles(){
+    return this.afDb.list('Animales/Reptiles').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getInvertebrados(){
+    return this.afDb.list('Animales/Invertebrados').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getAnfibios(){
+    return this.afDb.list('Animales/Anfibios').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getHorasM(){
+    return this.afDb.list('Horas/horasManana').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getHorasT(){
+    return this.afDb.list('Horas/horasTarde').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getDias(){
+    return this.afDb.list('Dias/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getMeses(){
+    return this.afDb.list('Meses/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getProfesiones(){
+    return this.afDb.list('Profesiones/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getTransporteA(){
+    return this.afDb.list('Transporte/Aerero/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getTransporteM(){
+    return this.afDb.list('Transporte/Maritimo/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getTransporteT(){
+    return this.afDb.list('Transporte/Terrestre/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getFrutas(){
+    return this.afDb.list('Frutas/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+
+  public getHortalizas(){
+    return this.afDb.list('Hortalizas/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+public getCosta(){
+    return this.afDb.list('Ecuador/Costa/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getSierra(){
+    return this.afDb.list('Ecuador/Sierra/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getOriente(){
+    return this.afDb.list('Ecuador/Amazonia/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
+  public getGalapagos(){
+    return this.afDb.list('Ecuador/Galapagos/').valueChanges(); 
+    //Esta función devolverá todos los datos que tengamos en el apartado abecedario, en nuestra base de datos
+  }
+
 }

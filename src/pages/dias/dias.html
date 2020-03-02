@@ -15,7 +15,27 @@
 
 
 <ion-content class="fondodi">
-    <ion-grid class="class_grid">
+  <ion-grid>
+    <ion-row>
+      <ion-col col >
+        <div  class="space_I" *ngFor="let dia of dias" (click)="pruebaAudio(dia)">
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-12>
+                    <div></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row> 
+                  <ion-col>
+                    <div><img [src]="dia.imagen"></div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--<ion-grid class="class_grid">
         <ion-row align-items-center >
           <ion-col class="col-6" *ngFor="let dias of dia" (click)="reproducir(dias)">
               <img [src]="dias.imagen" width="50" height="200">
@@ -25,7 +45,7 @@
         
       </ion-grid>
 
-  <!--br>
+  br>
   <div class="container">
     <div class="row">
       <div class="col">

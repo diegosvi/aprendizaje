@@ -14,7 +14,27 @@
 
 
 <ion-content padding class="fondob">
-    <ion-grid class="class_grid">
+  <ion-grid>
+    <ion-row>
+      <ion-col col >
+        <div  class="space_I" *ngFor="let costa of costas" (click)="pruebaAudio(costa)">
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-12>
+                    <div></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row> 
+                  <ion-col>
+                    <div><img [src]="costa.imagen"></div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!--<ion-grid class="class_grid">
         <ion-row align-items-center >
           <ion-col class="col-6" *ngFor="let cost of cos" (click)="reproducir(cost)">
               <img [src]="cost.imagen" width="48" height="120">

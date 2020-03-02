@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FRUTAS} from '../../data/data.frutas';
 import  { Frutas } from '../../interface/interface.frutas';
 
+
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 /**
  * Generated class for the FrutasPage page.
  *
@@ -20,16 +22,45 @@ export class FrutasPage {
   fru: Frutas[] = [];
   audio: any = new Audio();
   tiempo: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+frutas = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.fru = FRUTAS.slice(0);
+
+    this.pequeGameSrv.getFrutas()
+    .subscribe(frutas=>{ 
+      this.frutas = frutas;
+      console.log(frutas);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(frut: Frutas){
+  pruebaAudio(frutas){
+    console.log("esto es una prueba"+JSON.stringify(frutas.sound));
+
+    this.audio.src = frutas.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    frutas.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        frutas.reproduciendo = false;
+      }, frutas.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+
+ /* reproducir(frut: Frutas){
     this.pausarSonido(frut);
     if(frut.reproduciendo){
       frut.reproduciendo=false;
@@ -64,4 +95,5 @@ export class FrutasPage {
       }
     }
   }
+  */
 }

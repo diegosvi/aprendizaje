@@ -15,7 +15,29 @@
 
 <ion-content padding class="fondot">
 
-    <ion-grid class="class_grid">
+  <ion-grid>
+    <ion-row>
+      <ion-col col >
+        <div  class="space_I" *ngFor="let hor of horas" (click)="pruebaAudio(hor)">
+          <ion-grid>
+              <ion-row>
+                  <ion-col col-12>
+                    <div></div>
+                  </ion-col>
+                </ion-row>
+                <ion-row> 
+                  <ion-col>
+                    <div><img [src]="hor.imagen"></div>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+ 
+
+ <!--   <ion-grid class="class_grid">
         <ion-row align-items-center >
           <ion-col class="col-6" *ngFor="let hor of ht" (click)="reproducir(hor)">
               <img [src]="hor.imagen" width="48" height="120">
@@ -24,7 +46,7 @@
         </ion-row>
         
       </ion-grid>
-  <!--div class="container">
+  div class="container">
     <div class="row">
       <div class="col-2">
 

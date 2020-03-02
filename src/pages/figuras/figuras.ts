@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { FIGURAS } from '../../data/data.figuras';
 import  { Figuras } from '../../interface/interface.figuras';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 /**
  * Generated class for the FigurasPage page.
  *
@@ -21,14 +22,43 @@ export class FigurasPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  figuras = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.figura = FIGURAS.slice(0);
+
+    this.pequeGameSrv.getFiguras()
+      .subscribe(figuras=>{ 
+        this.figuras = figuras;
+        console.log(figuras);
+      });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
+  pruebaAudio(figuras){
+    console.log("esto es una prueba"+JSON.stringify(figuras.sound));
+
+    this.audio.src = figuras.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    figuras.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        figuras.reproduciendo = false;
+      }, figuras.duracion*300
+    );
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+/**
   reproducir(colo: Figuras){
     this.pausarSonido(colo);
     if(colo.reproduciendo){
@@ -64,5 +94,6 @@ export class FigurasPage {
       }
     }
   }
+**/
 
 }

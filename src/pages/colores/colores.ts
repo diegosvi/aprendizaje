@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { COLORES } from '../../data/data.colores';
 import  { Colores } from '../../interface/interface.colores';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the ColoresPage page.
  *
@@ -21,16 +23,24 @@ export class ColoresPage {
   audio: any = new Audio();
   tiempo: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+
+  colores = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.color = COLORES.slice(0);
     console.log(this.color);
+
+    this.pequeGameSrv.getColores()
+    .subscribe(colores=>{ 
+      this.colores= colores;
+      console.log(colores);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(colo: Colores){
+ /** reproducir(colo: Colores){
     this.pausarSonido(colo);
     if(colo.reproduciendo){
       colo.reproduciendo=false;
@@ -64,6 +74,26 @@ export class ColoresPage {
         colo.reproduciendo = false;
       }
     }
+  }**/
+  pruebaAudio(colores){
+    console.log("esto es una prueba"+JSON.stringify(colores.sound));
+
+    this.audio.src = colores.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    colores.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        colores.reproduciendo = false;
+      }, colores.duracion*300
+    );
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
   }
 
 }

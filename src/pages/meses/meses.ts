@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MESES } from '../../data/data.meses';
 import  { Meses } from '../../interface/interface.meses';
 
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+
 /**
  * Generated class for the MesesPage page.
  *
@@ -20,16 +22,44 @@ export class MesesPage {
   mes: Meses[] = [];
   audio: any = new Audio();
   tiempo: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  meses = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.mes = MESES.slice(0);
+
+    this.pequeGameSrv.getMeses()
+    .subscribe(meses=>{ 
+      this.meses = meses;
+      console.log(meses);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
-  reproducir(mese: Meses){
+  pruebaAudio(meses){
+    console.log("esto es una prueba"+JSON.stringify(meses.sound));
+
+    this.audio.src = meses.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    meses.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        meses.reproduciendo = false;
+      }, meses.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+ /* reproducir(mese: Meses){
     this.pausarSonido(mese);
     if(mese.reproduciendo){
       mese.reproduciendo=false;
@@ -64,5 +94,5 @@ export class MesesPage {
       }
     }
   }
-
+*/
 }

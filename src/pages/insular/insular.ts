@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { GALAPAGOS } from '../../data/data.galapagos';
 import  { Galapagos } from '../../interface/interface.galapagos';
 
+
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 /**
  * Generated class for the InsularPage page.
  *
@@ -20,17 +22,44 @@ export class InsularPage {
   gal: Galapagos[] = [];
   audio: any = new Audio();
   tiempo: any;
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  galapagos = [];
+  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
     this.gal = GALAPAGOS.slice(0);
+
+    this.pequeGameSrv.getGalapagos()
+    .subscribe(galapagos=>{ 
+      this.galapagos = galapagos;
+      console.log(galapagos);
+    });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AbecedarioPage');
   }
 
+  pruebaAudio(galapagos){
+    console.log("esto es una prueba"+JSON.stringify(galapagos.sound));
 
-  reproducir(gala: Galapagos){
+    this.audio.src = galapagos.sound;
+
+
+    this.audio.load();
+    this.audio.play();
+
+    galapagos.reproduciendo=true;
+    this.tiempo=setTimeout (
+      () => {
+        galapagos.reproduciendo = false;
+      }, galapagos.duracion*300
+    );
+    
+  }
+
+  dismiss(){
+    this.navCtrl.pop();
+  }
+
+ /* reproducir(gala: Galapagos){
     this.pausarSonido(gala);
     if(gala.reproduciendo){
       gala.reproduciendo=false;
@@ -65,5 +94,5 @@ export class InsularPage {
       }
     }
   }
-
+*/
 }
