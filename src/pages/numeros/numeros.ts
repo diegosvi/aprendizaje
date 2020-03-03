@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Numeros} from "../../interface/interface.numeros";
-import { NUMEROS } from '../../data/data.numeros';
+//import { NUMEROS } from '../../data/data.numeros';
 
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-//import { Http } from '@angular/http';
+import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
@@ -15,7 +15,8 @@ export class PequesGameServiceProvider {
 
   constructor( private afDb:AngularFireDatabase, private afAuth:AngularFireAuth) {
     console.log('Hello PequesGameServiceProvider Provider');
-  }
+  } 
+
 
   public getAbecedarios(){
     return this.afDb.list('Abecedario/').valueChanges(); 

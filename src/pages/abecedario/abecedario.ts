@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ABECEDARIO } from '../../data/data.abecedario';
+
 import  { Abecedario } from '../../interface/interface.abecedario';
-import { ABECEDARIOI } from '../../data/data.abecedarioi';
+
 import  { Abecedarioi } from '../../interface/interface.abecedarioi';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
