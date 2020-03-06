@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+//import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuth } from 'angularfire2/auth';
-
+//import { AngularFirestore } from "@angular/fire";
 /*
   Generated class for the PequesGameServiceProvider provider.
 
@@ -13,9 +13,37 @@ import { AngularFireAuth } from 'angularfire2/auth';
 @Injectable()
 export class PequesGameServiceProvider {
 
-  constructor( private afDb:AngularFireDatabase, private afAuth:AngularFireAuth) {
+  constructor( private afDb:AngularFireDatabase, private afAuth:AngularFireAuth,  ) {
     console.log('Hello PequesGameServiceProvider Provider');
   } 
+
+login(email:string, passwword:string){
+
+  return new Promise((resolve, rejected)=>{
+    this.afAuth.auth.signInWithEmailAndPassword(email, passwword).then(user=>{
+      resolve(user)
+    }).catch(err => rejected(err))
+  });
+}
+
+register(email : string, password : string, name : string){
+
+  return new Promise ((resolve, reject) => {
+    this.afAuth.auth.createUserWithEmailAndPassword(email, password).then( res =>{
+         console.log(res.user.uid);
+      const uid = res.user.uid;
+       // this.db.collection('users').doc(uid).set({
+         // name : name,
+         // uid : uid
+        //})
+      
+      resolve(res)
+    }).catch( err => reject(err))
+  })
+  
+
+}
+
 
 
   public getAbecedarios(){

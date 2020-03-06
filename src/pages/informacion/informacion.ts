@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {  AnimalesPage, PrincipalPage, IntermedioPage, AvanzadoPage, EntradaPage, ProfesionesPage} from '../index.pages';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import {  AnimalesPage, PrincipalPage, IntermedioPage, AvanzadoPage, ProfesionesPage} from '../index.pages';
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
+import { default as EntradaPage } from "../entrada/entrada";
 /**
  * Generated class for the InformacionPage page.
  *
@@ -16,13 +17,41 @@ import { PequesGameServiceProvider } from '../../providers/peques-game-service/p
 })
 export class InformacionPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
 
   
   }
 
-  ionViewDidLoad() {
+    ionViewDidLoad() {
     console.log('ionViewDidLoad InformacionPage');
+  }
+
+  showConfirm(){
+    let alert = this.alertCtrl.create({
+      title: 'Cerrar Sesion!',
+      message: 'Seguro quiere salir',
+      buttons: [
+        
+        {
+          text: 'NO',
+          role: 'NO',
+          handler: () => {
+            console.log('Canceled');
+        }
+
+        },
+        {
+          text:'SI',
+          handler: () => {
+            console.log('Ok')
+            this.navCtrl.push(EntradaPage);
+          }
+        }  
+
+      ]
+    });
+
+    alert.present();
   }
 
   irbasico(){

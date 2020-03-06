@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 import {TabsPage} from "../tabs/tabs";
+import {RegistroPage} from "../registro/registro";
 
 /**
  * Generated class for the EntradaPage page.
@@ -15,9 +16,12 @@ import {TabsPage} from "../tabs/tabs";
   selector: 'page-entrada',
   templateUrl: 'entrada.html',
 })
-export class EntradaPage {
+export default class EntradaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+email: string;
+password: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private pequesgameservice:PequesGameServiceProvider) {
   }
 
   ionViewDidLoad() {
@@ -28,5 +32,15 @@ export class EntradaPage {
     this.navCtrl.push(TabsPage);
   }
 
+  irRegistro(){
+    this.navCtrl.push(RegistroPage);
+  }
+
+  onSubmitLogin(){
+    console.log('estas en la funcion')
+    this.pequesgameservice.login(this.email, this.password).then(res=>{
+      this.navCtrl.push(TabsPage)
+    }).catch(err=> alert('los datos son incorrectos o no existe el usuario'))  
+  }
 
 }

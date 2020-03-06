@@ -7,12 +7,14 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
+
 import { MyApp } from './app.component';
 // import { HomePage } from '../pages/home/home';
 import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, ColoresPage,AnimalesPage, MamiferosPage, AvesPage, PecesPage,
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
           TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
-          CostaPage, PintermedioPage,InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
+          CostaPage, RegistroPage,PintermedioPage,InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, 
+          AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
 import {CartasPage} from "../pages/cartas/cartas";
 
 
@@ -31,6 +33,7 @@ export const firebaseConfig = {
     MyApp,
     // HomePage
     PintermedioPage,
+    RegistroPage,
     JuegocolPage,
     EntradaPage,
     CartasPage,
@@ -85,9 +88,11 @@ export const firebaseConfig = {
     // HomePage
     PrincipalPage,
     AbecedarioPage,
+    EntradaPage,
     NumerosPage,
     MesesPage,
     DiasPage,
+    RegistroPage,
     CartasPage,
     ColoresPage,
     AnimalesPage,
@@ -122,7 +127,6 @@ export const firebaseConfig = {
     AvanzadoPage,
     DeportesPage,
     PbasicoPage,
-    EntradaPage,
     FigurasPage,
     InformacionPage,
     JuegocolPage

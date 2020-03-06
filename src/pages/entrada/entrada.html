@@ -6,16 +6,30 @@
 -->
 
 <ion-content padding style="background-color: #e0d27d">
-  <div class="img_p">
-    <img src="../../assets/img/logo.png">
-  </div>
-    <!--br>
-    <br><BR-->
-
-    <div>
-      <button  class="btn_inicio" (click)="irtabs()" ion-button block style="background-color: #00937d;">BIENVENIDO</button>
-    </div>
-    
+    <img class="icon" src="../../assets/img/logo.png">
+  <ion-item>
+<br>
+<br>
+<br>
+<br>
+<ion-label position="floating">Correo Electrónico</ion-label>
+<ion-input type= "text" [(ngModel)]="email" name="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Contraseña</ion-label>
+    <ion-input type= "password" [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
   
+    <br>
+
+
+   <!-- <div>
+      <button  class="btn_inicio" (click)="irtabs()" ion-button block style="background-color: #00937d;">BIENVENIDO</button>
+    </div>-->
+    <div>
+      <button  class="btn_inicio" (click)="onSubmitLogin()" ion-button block style="background-color: #00937d;">BIENVENIDO</button>
+    </div>
+  
+    <button class="btn_inici" ion-button block style="background-color: #009325;" (click)="irRegistro()">CREAR CUENTA</button>
   <!--/div-->
 </ion-content>

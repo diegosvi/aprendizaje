@@ -36,7 +36,9 @@ export {PracticaPage} from './practica/practica';
 export {AdivinaPage} from './adivina/adivina';
 export {PbasicoPage} from './pbasico/pbasico';
 export {JuegocolPage} from './juegocol/juegocol';
-export {EntradaPage} from './entrada/entrada';
+export {default as EntradaPage} from './entrada/entrada';
+//export {EntradaPage} from './entrada/entrada';
 export {FigurasPage} from './figuras/figuras'
 export {InformacionPage} from './informacion/informacion'
 export {PintermedioPage} from './pintermedio/pintermedio'
+export {RegistroPage} from './registro/registro'
