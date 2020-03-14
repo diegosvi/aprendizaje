@@ -40,7 +40,7 @@ password: string;
     console.log('estas en la funcion')
     this.pequesgameservice.login(this.email, this.password).then(res=>{
       this.navCtrl.push(TabsPage)
-    }).catch(err=> alert('los datos son incorrectos o no existe el usuario'))  
+    }).catch(err=> alert('Los datos son incorrectos o no existe el usuario'))  
   }
 
 }

@@ -21,14 +21,10 @@
       <ion-col col >
         <div  class="space_I" *ngFor="let galapago of galapagos" (click)="pruebaAudio(galapago)">
           <ion-grid>
-              <ion-row>
-                  <ion-col col-12>
-                    <div></div>
-                  </ion-col>
-                </ion-row>
+             
                 <ion-row> 
                   <ion-col>
-                    <div><img [src]="galapago.imagen"></div>
+                    <div class="icon"><img [src]="galapago.imagen"></div>
                   </ion-col>
                 </ion-row>
             </ion-grid>

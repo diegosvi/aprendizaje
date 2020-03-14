@@ -16,18 +16,22 @@
 
     <ion-grid>
         <ion-row>
-          <ion-col col >
-            <div  class="space_I" *ngFor="let numero of numeros" (click)="pruebaAudio(numero)">
+          <ion-col col  >
+            <div  *ngFor="let numero of numeros" (click)="pruebaAudio(numero)">
               <ion-grid>
-                  <ion-row>
+                  <!--<ion-row>
                       <ion-col col-12>
                         <div></div>
                       </ion-col>
-                    </ion-row>
+                    </ion-row>-->
                     <ion-row> 
-                      <ion-col>
-                        <div><img [src]="numero.imagen"></div>
+                      
+                      
+                      <ion-col >
+                        <div class="icon"><img [src]="numero.imagen"></div>
                       </ion-col>
+                      
+                  
                     </ion-row>
                 </ion-grid>
             </div>

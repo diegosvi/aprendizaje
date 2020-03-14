@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 //import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { AngularFireDatabase } from 'angularfire2/database';
-import { AngularFireAuth } from 'angularfire2/auth';
+//import { AngularFireAuth } from 'angularfire2/auth';
+import { AngularFireAuth } from "@angular/fire/auth";
 //import { AngularFirestore } from "@angular/fire";
 /*
   Generated class for the PequesGameServiceProvider provider.
@@ -42,9 +43,12 @@ register(email : string, password : string, name : string){
   })
   
 
+
 }
 
-
+logout(){
+  this.afAuth.auth.signOut();
+}
 
   public getAbecedarios(){
     return this.afDb.list('Abecedario/').valueChanges(); 

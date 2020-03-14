@@ -15,10 +15,10 @@
           <ion-row align-items-center >
             <ion-col class="col-6" *ngFor="let item of cartas" (click)="verCarta(item)">
               <div class="face front" class="flip" >
-                  <img *ngIf="item.select==true" [src]="item.imagenvistaTURL" width="20" height="150">
+                  <img *ngIf="item.select==true" [src]="item.imagenvistaTURL" width="150" height="150">
               </div>
               <div class="face back">
-                  <img *ngIf="item.select==false" [src]="item.imagevistaFURL" width="20" height="150">
+                  <img *ngIf="item.select==false" [src]="item.imagevistaFURL" width="150" height="150">
               </div>
                 
             </ion-col>

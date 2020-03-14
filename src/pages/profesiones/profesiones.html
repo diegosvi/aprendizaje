@@ -19,14 +19,10 @@
       <ion-col col >
         <div  class="space_I" *ngFor="let profesion of profesiones" (click)="pruebaAudio(profesion)">
           <ion-grid>
-              <ion-row>
-                  <ion-col col-12>
-                    <div></div>
-                  </ion-col>
-                </ion-row>
+              
                 <ion-row> 
                   <ion-col>
-                    <div><img [src]="profesion.imagen"></div>
+                    <div class="icon"><img [src]="profesion.imagen"></div>
                   </ion-col>
                 </ion-row>
             </ion-grid>

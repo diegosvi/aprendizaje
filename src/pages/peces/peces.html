@@ -20,14 +20,10 @@
       <ion-col col >
         <div  class="space_I" *ngFor="let pez of peces" (click)="pruebaAudio(pez)">
           <ion-grid>
-              <ion-row>
-                  <ion-col col-12>
-                    <div></div>
-                  </ion-col>
-                </ion-row>
+              
                 <ion-row> 
                   <ion-col>
-                    <div><img [src]="pez.imagen"></div>
+                    <div class="icon"><img [src]="pez.imagen"></div>
                   </ion-col>
                 </ion-row>
             </ion-grid>

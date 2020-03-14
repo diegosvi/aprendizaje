@@ -25,13 +25,9 @@
             <div  class="space_I" *ngFor="let abecedario of abecedarios" (click)="pruebaAudio(abecedario)">
               <ion-grid>
                   <ion-row>
-                      <ion-col col-12>
-                        <div></div>
-                      </ion-col>
-                    </ion-row>
-                    <ion-row> 
-                      <ion-col>
-                        <div><img [src]="abecedario.imagen"></div>
+                      
+                      <ion-col >
+                        <div class="icon"><img [src]="abecedario.imagen"></div>
                       </ion-col>
                     </ion-row>
                 </ion-grid>
