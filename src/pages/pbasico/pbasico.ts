@@ -4,6 +4,7 @@ import { AhorcadoPage} from '../../pages/ahorcado/ahorcado';
 import { AdivinaPage} from '../../pages/adivina/adivina';
 import { JuegocolPage} from '../../pages/juegocol/juegocol';
 import { CartasPage} from '../../pages/cartas/cartas';
+import { MoverPage } from "../../pages/mover/mover";
 import { default as EntradaPage } from "../entrada/entrada";
 import { PequesGameServiceProvider } from "../../providers/peques-game-service/peques-game-service";
 
@@ -66,6 +67,9 @@ export class PbasicoPage {
     alert.present();
   }
 
+  irMover(){
+    this.navCtrl.push(MoverPage);
+  }
 
   irAhorcado(){
     this.navCtrl.push(AhorcadoPage);

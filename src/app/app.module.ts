@@ -14,7 +14,7 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
           TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
           CostaPage, RegistroPage,PintermedioPage,InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, 
-          AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
+          AdivinaPage, PbasicoPage, EntradaPage, MoverPage} from '../pages/index.pages'
 import {CartasPage} from "../pages/cartas/cartas";
 
 
@@ -75,7 +75,7 @@ export const firebaseConfig = {
     FruhoPage,
     RelojPage,
     HoratPage,
-    HoramPage,FigurasPage,InformacionPage
+    HoramPage,FigurasPage,InformacionPage,MoverPage
   ],
   imports: [
     BrowserModule,
@@ -131,7 +131,8 @@ export const firebaseConfig = {
     PbasicoPage,
     FigurasPage,
     InformacionPage,
-    JuegocolPage
+    JuegocolPage,
+    MoverPage
   ],
   providers: [
     StatusBar,

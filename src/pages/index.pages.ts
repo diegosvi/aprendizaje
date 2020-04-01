@@ -1,3 +1,5 @@
+import { from } from 'rxjs';
+
 export {PrincipalPage} from './principal/principal';
 export {AbecedarioPage} from './abecedario/abecedario';
 export {ColoresPage} from './colores/colores';
@@ -41,3 +43,4 @@ export {FigurasPage} from './figuras/figuras'
 export {InformacionPage} from './informacion/informacion'
 export {PintermedioPage} from './pintermedio/pintermedio'
 export {RegistroPage} from './registro/registro'
+export {MoverPage} from './mover/mover'
