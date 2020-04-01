@@ -1,5 +1,15 @@
 page-informacion {
 
+    .wrapper {
+        //margin-top: 10rem;
+        display: grid;
+       // grid-template-columns: repeat(8, 1fr);
+        grid-gap: 80px;
+        grid-auto-rows: 250px;
+        align-items: start;
+        
+      }
+
     .icon{
         display: block;
         text-align: right;
@@ -16,7 +26,7 @@ page-informacion {
     }
 
     .btn_menu{
-        height: 14.6rem;
+        height: 29.6rem;
     }
 
     .btn_letras{
@@ -65,7 +75,7 @@ page-informacion {
 
     .ion-diagnostics-toast-message {
         /* -webkit-flex: 1; */
-        -ms-flex: 0;
+        //ms-flex: 0;
         /* flex: 1; */
         padding: 0px;
         /* font-family: -apple-system,"Roboto",BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; */

@@ -35,8 +35,9 @@ export class RegistroPage {
   OnSubmitRegister(){
     this.pequesgameservice.register(this.email, this.password,this.name).then( auth => {
       this.navCtrl.push(EntradaPage)
+      alert('Su registro fue exitoso')
       console.log(auth)
-    }).catch(err => alert('Debe llenar todos los campos'))
+    }).catch( err => alert('Debe llenar todos los campos'))
   }
 
 }

@@ -23,7 +23,6 @@ export {HortalizasPage} from './hortalizas/hortalizas';
 export {RelojPage} from './reloj/reloj';
 export {HoramPage} from './horam/horam';
 export {HoratPage} from './horat/horat';
-export {DeportesPage} from './deportes/deportes';
 export {AvanzadoPage} from './avanzado/avanzado';
 export {CostaPage} from './costa/costa';
 export {SierraPage} from './sierra/sierra';

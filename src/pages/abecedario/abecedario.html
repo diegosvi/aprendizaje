@@ -24,11 +24,15 @@
           <ion-col col >
             <div  class="space_I" *ngFor="let abecedario of abecedarios" (click)="pruebaAudio(abecedario)">
               <ion-grid>
-                  <ion-row>
+                  <ion-row class="row responsive-md">
                       
-                      <ion-col >
-                        <div class="icon"><img [src]="abecedario.imagen"></div>
+                   
+
+                      <ion-col class="col col-50 ">
+                        <div class="icon "><img [src]="abecedario.imagen"></div>
                       </ion-col>
+
+                    
                     </ion-row>
                 </ion-grid>
             </div>

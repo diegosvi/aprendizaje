@@ -4,6 +4,7 @@ import { PequesGameServiceProvider } from '../../providers/peques-game-service/p
 import {TabsPage} from "../tabs/tabs";
 import {RegistroPage} from "../registro/registro";
 
+
 /**
  * Generated class for the EntradaPage page.
  *
@@ -38,7 +39,7 @@ password: string;
 
   onSubmitLogin(){
     console.log('estas en la funcion')
-    this.pequesgameservice.login(this.email, this.password).then(res=>{
+    this.pequesgameservice.login(this.email, this.password).then(auth=>{
       this.navCtrl.push(TabsPage)
     }).catch(err=> alert('Los datos son incorrectos o no existe el usuario'))  
   }

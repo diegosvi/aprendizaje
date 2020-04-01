@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import { AngularFireDatabase } from 'angularfire2/database';
 //import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFireAuth } from "@angular/fire/auth";
-//import { AngularFirestore } from "@angular/fire";
+import { AngularFirestore } from "@angular/fire/firestore";
 /*
   Generated class for the PequesGameServiceProvider provider.
 
@@ -14,7 +14,7 @@ import { AngularFireAuth } from "@angular/fire/auth";
 @Injectable()
 export class PequesGameServiceProvider {
 
-  constructor( private afDb:AngularFireDatabase, private afAuth:AngularFireAuth,  ) {
+  constructor( private afDb:AngularFireDatabase, private afAuth:AngularFireAuth,private db: AngularFirestore  ) {
     console.log('Hello PequesGameServiceProvider Provider');
   } 
 
@@ -33,10 +33,10 @@ register(email : string, password : string, name : string){
     this.afAuth.auth.createUserWithEmailAndPassword(email, password).then( res =>{
          console.log(res.user.uid);
       const uid = res.user.uid;
-       // this.db.collection('users').doc(uid).set({
-         // name : name,
-         // uid : uid
-        //})
+        this.db.collection('users').doc(uid).set({
+          name : name,
+          uid : uid
+        })
       
       resolve(res)
     }).catch( err => reject(err))

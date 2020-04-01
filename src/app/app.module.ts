@@ -6,13 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
+import { AngularFirestore, AngularFirestoreModule } from "@angular/fire/firestore";
 
 import { MyApp } from './app.component';
 // import { HomePage } from '../pages/home/home';
 import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, ColoresPage,AnimalesPage, MamiferosPage, AvesPage, PecesPage,
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
-          TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, DeportesPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
+          TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
           CostaPage, RegistroPage,PintermedioPage,InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, 
           AdivinaPage, PbasicoPage, EntradaPage} from '../pages/index.pages'
 import {CartasPage} from "../pages/cartas/cartas";
@@ -24,8 +24,11 @@ export const firebaseConfig = {
   apiKey: "AIzaSyCDeZVpEmo7nkDQ1v4Hnnp7EHfHx3wsvlQ",
   authDomain: "aprendizaje-ee087.firebaseapp.com",
   databaseURL: "https://aprendizaje-ee087.firebaseio.com",
+  projectId: "aprendizaje-ee087",
   storageBucket: "aprendizaje-ee087.appspot.com",
-  messagingSenderId: '821746363831'
+  messagingSenderId: "821746363831",
+  appId: "1:821746363831:web:2a91036670456036c74c32",
+  measurementId: "G-PYNB63NF5K"
 };
 
 @NgModule({
@@ -72,15 +75,15 @@ export const firebaseConfig = {
     FruhoPage,
     RelojPage,
     HoratPage,
-    HoramPage,
-    DeportesPage,FigurasPage,InformacionPage
+    HoramPage,FigurasPage,InformacionPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -125,7 +128,6 @@ export const firebaseConfig = {
     HoratPage,
     HoramPage,
     AvanzadoPage,
-    DeportesPage,
     PbasicoPage,
     FigurasPage,
     InformacionPage,
@@ -134,6 +136,7 @@ export const firebaseConfig = {
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFirestore,
     AngularFireDatabase,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PequesGameServiceProvider

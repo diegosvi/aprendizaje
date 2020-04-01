@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 // import { TransportePage} from '../../pages/transporte/transporte';
 import { DiasPage} from '../../pages/dias/dias';
 import { MesesPage} from '../../pages/meses/meses';
-import { DeportesPage} from '../../pages/deportes/deportes';
+
 import { RelojPage} from '../../pages/reloj/reloj';
 
 /**
@@ -48,7 +48,5 @@ export class IntermedioPage {
     this.navCtrl.push(MesesPage);
   }
 
-  irDeportes(){
-    this.navCtrl.push(DeportesPage);
-  }
+
 }
