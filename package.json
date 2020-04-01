@@ -40,7 +40,7 @@
     "firebase": "^7.13.1",
     "ionic-angular": "3.7.1",
     "ionicons": "3.0.0",
-    "jquery": "^1.9.1",
+    "jquery": "^3.4.0",
     "ngx-bootstrap": "^2.0.4",
     "popper.js": "^1.16.1",
     "promise-polyfill": "^8.1.3",
