@@ -1,10 +1,6 @@
 page-pbasico {
 
-  .icon{
-    display: block;
-    text-align: right;
-    font-size: 30px;
-  }
+  
     .cls_juego{
         background-image: url("../../assets/img/pri/fondoj1.gif");
     }
@@ -23,7 +19,8 @@ page-pbasico {
         height: 13rem;
         width: 20rem;
         text-align: center;
-        margin-left: 19%;
+        margin-left: auto;
+        margin-right: auto;
         border-radius: 30px;
       }
     

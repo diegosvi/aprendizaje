@@ -1,8 +1,43 @@
 page-animales {
 
-  .btn_menu{
-    height: 14rem;
-}
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+
+  .header-md .toolbar-md:last-child .toolbar-background-md {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
+  .icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    color: #d6e015 !important;
+  }
+
+  .toolbar-title-ios {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
+
+  .back-button-text-ios {
+    letter-spacing: 0.2em;
+    color: #d6e015;
+    padding-left: 17%;
+  }
+
 
 /*.toolbar-background {
     background-color: #00937d;
@@ -13,17 +48,25 @@ page-animales {
     color: #181717;
 }
 
-.spa_letra{
-  padding-left: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
+.btn_letras{
+  text-align: center;
+  color: #181717;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: 'Kalam';
 }
 
 /*    padding-bottom: 0px;
 padding-top: 17px;*/
 
 .c_img {
-  width: 80%;
+  width: 73%;
+  height: 66px;
+}
+
+.btn_menu{
+  //height: 14.6rem;
+  height: 20.6rem;
 }
 
 }
@@ -38,3 +81,4 @@ padding-top: 17px;*/
 .coloa {
   color: #488aff;
 }
+

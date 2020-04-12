@@ -16,22 +16,22 @@
 <ion-content padding style="background-color: #e0d27d">
   <img class="icon" src="../../assets/img/logo.png">
   <ion-item>
-    <ion-label position="floating" > Nombre</ion-label>
+    <ion-label position="floating" style="font-family: 'Kalam';" > Nombre</ion-label>
     <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
   </ion-item>
 
 <ion-item>
-<ion-label position="floating" > Correo electrónico</ion-label>
-<ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
+<ion-label position="floating" style="font-family: 'Kalam';"> Correo electrónico</ion-label>
+<ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
 </ion-item>
 <ion-item>
-<ion-label position="floating" > Contraseña</ion-label>
+<ion-label position="floating" style="font-family: 'Kalam';" > Contraseña</ion-label>
 <ion-input  type="password" [(ngModel)]="password" name="password"></ion-input>
 </ion-item>
 <br>
-<button ion-button block style="background-color: #00937d;" expand="block" (click)="OnSubmitRegister()">REGISTRARSE</button>
+<button ion-button block style="background-color: #00937d; font-family: 'Kalam';" expand="block" (click)="OnSubmitRegister()">REGISTRARSE</button>
 <br>
-<button class="btn_inici" ion-button block style="background-color: #c00303;" (click)="irEntrada()">YA TENGO CUENTA</button>
+<button class="btn_inici" ion-button block style="background-color: #f67d32; font-family: 'Kalam';" (click)="irEntrada()">YA TENGO CUENTA</button>
 
 
 </ion-content>

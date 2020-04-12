@@ -14,3 +14,34 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+#ion-diagnostics-toast {
+    visibility: hidden;
+}
+
+/*
+@font-face {
+    font-family: 'Architects Daughter';
+    src: url('../assets/font/ArchitectsDaughter-Regular.ttf') format('truetype');
+}*/
+
+
+@font-face {
+    font-family: 'Gochi Hand';
+    src: url('../assets/font/GochiHand-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Kalam';
+    src: url('../assets/font/Kalam-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Luckiest Guy';
+    src: url('../assets/font/LuckiestGuy-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Permanent Marker';
+    src: url('../assets/font/PermanentMarker-Regular.ttf') format('truetype');
+}

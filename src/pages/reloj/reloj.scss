@@ -2,6 +2,54 @@ page-reloj {
 
   .btn_menu{
     height: 14rem;
+  }
+
+  .c_img {
+    width: 73%;
+    height: 74px;
+  }
+
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+
+  .header-md .toolbar-md:last-child .toolbar-background-md {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
+  .icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    color: #d6e015 !important;
+  }
+
+  .toolbar-title-ios {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
+
+  .back-button-text-ios {
+    letter-spacing: 0.2em;
+    color: #d6e015;
+    padding-left: 17%;
+  }
+
+
+  /*.btn_menu{
+    height: 14rem;
     width: 20rem;
     text-align: center;
     margin-left: 19%;
@@ -13,14 +61,22 @@ page-reloj {
 
   .c_imgm {
     width: 72%;
-  }
+  }*/
 
-  .spa_letra{
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    color: #000;
-  }
+  .btn_letras{
+    text-align: center;
+    color: #181717;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Kalam';
+}
+
+  .vertical-align-content 
+{
+     display: flex!important;
+     align-content: center!important;
+     align-items: center!important;
+}
 
 }
 .fondoh{

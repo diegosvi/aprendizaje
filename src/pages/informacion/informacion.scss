@@ -1,11 +1,13 @@
 page-informacion {
 
+    
+    
     .wrapper {
         //margin-top: 10rem;
         display: grid;
        // grid-template-columns: repeat(8, 1fr);
-        grid-gap: 80px;
-        grid-auto-rows: 250px;
+        grid-gap: 12px;
+        grid-auto-rows: 215px;
         align-items: start;
         
       }
@@ -26,62 +28,89 @@ page-informacion {
     }
 
     .btn_menu{
-        height: 29.6rem;
+        //height: 29.6rem;
+        height: 20.6rem;
     }
 
     .btn_letras{
         text-align: center;
         color: #181717;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: 'Kalam';
     }
 
-    .btn_letrash{
-        text-align: center;
-        color: #181717;
-        padding-bottom: 16px;
-    }
 
-    .btn_letrast{
-        text-align: center;
-    }
-
-    .spa_letra{
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-bottom: 0px;
-    }
 
     /*    padding-bottom: 0px;
     padding-top: 17px;*/
 
     .c_img {
-        width: 80%;
+        width: 73%;
+        height: 90px;
     }
 
     .c_img_h {
-        width: 70%;
-        padding-top: 9%;
+        width: 69%;
+        height: 90px;
     }
 
     .c_img_s {
-        margin-top: 10%;
-        width: 100%;
+        width: 73%;
+        height: 90px;
 
     }
 
     .c_img_e {
-        width: 27%;
-
+        width: 22%;
+        height: 90px;   
     }
 
-    .ion-diagnostics-toast-message {
-        /* -webkit-flex: 1; */
-        //ms-flex: 0;
-        /* flex: 1; */
-        padding: 0px;
-        /* font-family: -apple-system,"Roboto",BlinkMacSystemFont,"Segoe UI","Helvetica Neue",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; */
-        /* font-size: 14px; */
-        /* color: #c83939; */
+
+    /*.t_font{
+        text-transform: uppercase; 
+        font-family: 'Architects Daughter';
+        font-size: 27px;
+    }*/
+
+/*
+    .t_font{
+        text-transform: uppercase; 
+        font-family: 'Architects Daughter';
+        font-size: 27px;
     }
+*/
+    
+ /*       
+    .t_font{
+        text-transform: uppercase; 
+        font-family: 'Gochi Hand';
+        font-size: 27px;
+    }
+*/
+/*
+    .t_font{
+        text-transform: uppercase; 
+        font-family: 'Kalam';
+        font-size: 27px;
+    }
+*/
+/*
+
+    .t_font{
+        text-transform: uppercase; 
+        font-family: 'Luckiest Guy';
+        font-size: 27px;
+    }
+  */ 
+
+  .t_font{
+    text-transform: uppercase; 
+    font-family: 'Permanent Marker';
+    font-size: 27px;
+}
+
+
 
 
    

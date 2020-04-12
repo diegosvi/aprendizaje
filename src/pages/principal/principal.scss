@@ -1,6 +1,83 @@
 page-principal {
 
 
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+
+  .header-md .toolbar-md:last-child .toolbar-background-md {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
+  .toolbar-title-ios {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
+  .icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    color: #d6e015 !important;
+  }
+
+  .back-button-text-ios {
+    letter-spacing: 0.2em;
+    color: #d6e015;
+    padding-left: 17%;
+  }
+
+  /*.toolbar-background-md {
+      border-color: #005448;
+      background: #005448;
+      color: white; 
+  }
+
+  .toolbar-md {
+    padding: 4px;
+    min-height: 26px;
+    position: relative;
+    top: -16px;
+    color: white; 
+  }
+
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: white;
+  }*/
+
+/*.back-button-icon-md {
+  margin: 0;
+  padding: 0 6px;
+  text-align: left;
+  text-align: start;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: rgb(19, 95, 53);
+}
+
+.back-button-icon-ios {
+  margin: 0;
+  padding: 0 6px;
+  text-align: left;
+  text-align: start;
+  font-size: 2.4rem;
+  font-weight: normal;
+  color: rgb(19, 95, 53);
+}*/
 
 .pag {
   margin-top: 50;
@@ -11,36 +88,23 @@ page-principal {
     color: white;
     margin-bottom: 10px;
   }
-
-  .firstT{
-      padding: 2% 0 0 2%;
-      background-color: #005448;
-  }
-  
  
   .btn_menu{
-    //height: 14.6rem;
-    height: 28.6rem;
+    height: 14rem;
   }
 
   .c_img {
-    width: 80%;
+    width: 73%;
+    height: 74px;
   }
 
-  .spa_letra{
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    color: #000;
-  }
-
-  .spa_letraF{
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-top: 7%;
-    color: #000;
-  }
+  .btn_letras{
+    text-align: center;
+    color: #181717;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Kalam';
+}
   //background-image: url("../../assets/img/pri/fondo.jpg");
 }
  .imagen{

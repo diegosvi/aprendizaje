@@ -20,7 +20,26 @@
 
   </ion-col-->
   
-  <ion-icon  class="icon" round (click)="showConfirm()" color="danger" name="exit"></ion-icon>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="col-9">
+       
+      </ion-col>
+      <ion-col class="col-3" style="padding-left: 0px; height: 29px;">
+        <div align="right">
+          <button ion-button icon-start round style="font-size: 10px; padding: 14%; height: 25px; margin-top: 10px;" (click)="showConfirm()" color="dark">
+            <ion-icon name="exit" style="font-size: 18px;"></ion-icon><p style="
+            text-transform: uppercase;
+            font-family: 'Kalam'; margin-bottom: 0px;">Salir</p></button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col class="col-12" align-self-end>
+          <div class="t_font" style="text-align: center; height: 24px;">PequesGame</div>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
   <!--<div class="clsTitulo" text-center>PequesGame</div>-->
   
 
@@ -71,7 +90,7 @@
                 </ion-row>
                 <ion-row>
                   <ion-col col-12 class="spa_letra">
-                    <div class="btn_letrash" text-wrap>MESES, DIAS Y HORAS</div>
+                    <div class="btn_letras" text-wrap>MESES, DIAS Y HORAS</div>
                   </ion-col>
                 </ion-row>
             </ion-grid>

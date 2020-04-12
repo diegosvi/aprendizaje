@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angular';
 import {  AnimalesPage, PrincipalPage, IntermedioPage, AvanzadoPage, ProfesionesPage} from '../index.pages';
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 import { default as EntradaPage } from "../entrada/entrada";
@@ -17,7 +17,8 @@ import { default as EntradaPage } from "../entrada/entrada";
 })
 export class InformacionPage {
 
-  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, 
+    public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
 
   
   }
@@ -72,4 +73,6 @@ export class InformacionPage {
   irinicio(){
     this.navCtrl.push(EntradaPage);
   }
+
+  
 }

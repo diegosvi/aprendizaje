@@ -5,10 +5,10 @@
   Ionic pages and navigation.
 -->
 <ion-header class="firstT">
-	<button ngClass="delivery-back-button" ion-button icon-only icon-start clear  (click)="dismiss()">
-	  <ion-icon name="arrow-back"></ion-icon><div>Números</div>
-	</button>
-</ion-header>
+    <ion-navbar class="header-menu">
+      <ion-title style="color: white">NÚMEROS</ion-title>
+    </ion-navbar>
+  </ion-header>
 
 
 <ion-content class="fondon">
@@ -27,8 +27,8 @@
                     <ion-row> 
                       
                       
-                      <ion-col >
-                        <div class="icon"><img [src]="numero.imagen"></div>
+                      <ion-col class="col col-50 " style="text-align: center;" >
+                        <div class="icon"><img style="width: 90% !important;" [src]="numero.imagen"></div>
                       </ion-col>
                       
                   
