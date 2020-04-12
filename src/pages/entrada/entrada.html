@@ -6,25 +6,25 @@
 -->
 
 <ion-content padding style="background-color: #e0d27d">
-    <img class="icon" src="../../assets/img/logo.png">
+    <img class="icon" src="../../assets/img/logo.png" style="margin-top: 27%;">
   <ion-item>
 <br>
 <br>
 <br>
 <br>
-<ion-label position="floating">Correo Electrónico</ion-label>
-<ion-input type= "text" [(ngModel)]="email" name="email"></ion-input>
+<ion-label position="floating" style="font-family: 'Kalam';">Correo Electrónico</ion-label>
+<ion-input type= "email" [(ngModel)]="email" name="email"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">Contraseña</ion-label>
+    <ion-label position="floating" style="font-family: 'Kalam';">Contraseña</ion-label>
     <ion-input type= "password" [(ngModel)]="password" name="password"></ion-input>
       </ion-item>
   
     <br>
     <div>
-      <button  class="btn_inicio" (click)="onSubmitLogin()" ion-button block style="background-color: #00937d;">BIENVENIDO</button>
+      <button  class="btn_inicio" (click)="onSubmitLogin()" ion-button block style="background-color: #00937d; font-family: 'Kalam';">BIENVENIDO</button>
     </div>
   <br>
-    <button class="btn_inici" ion-button block style="background-color: #009325;" (click)="irRegistro()">CREAR CUENTA</button>
+    <button class="btn_inici" ion-button block style="background-color: #f67d32; font-family: 'Kalam';" (click)="irRegistro()">CREAR CUENTA</button>
 
 </ion-content>

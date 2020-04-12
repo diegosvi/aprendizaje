@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 import {TabsPage} from "../tabs/tabs";
 import {RegistroPage} from "../registro/registro";
@@ -22,7 +22,8 @@ export default class EntradaPage {
 email: string;
 password: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private pequesgameservice:PequesGameServiceProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+    private pequesgameservice:PequesGameServiceProvider) {
   }
 
   ionViewDidLoad() {
@@ -40,8 +41,10 @@ password: string;
   onSubmitLogin(){
     console.log('estas en la funcion')
     this.pequesgameservice.login(this.email, this.password).then(auth=>{
-      this.navCtrl.push(TabsPage)
+      this.navCtrl.push(TabsPage);
     }).catch(err=> alert('Los datos son incorrectos o no existe el usuario'))  
   }
+
+  
 
 }

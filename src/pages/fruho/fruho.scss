@@ -1,25 +1,64 @@
 page-fruho {
+  
+
   .btn_menu{
     height: 14rem;
-    width: 20rem;
-    text-align: center;
-    margin-left: 19%;
   }
 
   .c_img {
-    width: 72%;
+    width: 73%;
+    height: 74px;
   }
 
-  .c_imgm {
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+
+  .header-md .toolbar-md:last-child .toolbar-background-md {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
+  .icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    color: #d6e015 !important;
+  }
+
+  .toolbar-title-ios {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
+
+  .back-button-text-ios {
+    letter-spacing: 0.2em;
+    color: #d6e015;
+    padding-left: 17%;
+  }
+
+  /*.c_imgm {
     width: 62%;
-  }
+  }*/
 
-  .spa_letra{
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    color: #000;
-  }
+  .btn_letras{
+    text-align: center;
+    color: #181717;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Kalam';
+}
 
 }
 .fondofro{
