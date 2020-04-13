@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AhorcadoPage} from '../../pages/ahorcado/ahorcado';
 import { AdivinaPage} from '../../pages/adivina/adivina';
 import { JuegocolPage} from '../../pages/juegocol/juegocol';
@@ -8,33 +8,24 @@ import { MoverPage } from "../../pages/mover/mover";
 import { default as EntradaPage } from "../entrada/entrada";
 import { PequesGameServiceProvider } from "../../providers/peques-game-service/peques-game-service";
 /**
- * Generated class for the PintermedioPage page.
+ * Generated class for the PavanzadoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var htmlCartas = '';
-var cartasCompletas = [];
 
 @IonicPage()
 @Component({
-  selector: 'page-pintermedio',
-  templateUrl: 'pintermedio.html',
+  selector: 'page-pavanzado',
+  templateUrl: 'pavanzado.html',
 })
+export class PavanzadoPage {
 
-export class PintermedioPage {
-
-  constructor(public pequeGameSrv:PequesGameServiceProvider, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
-
-  
+  constructor(public pequeGameSrv:PequesGameServiceProvider, private alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    //console.log('ionViewDidLoad PintermedioPage');
-    //document.getElementById("ContenedorCartas").innerHTML = htmlCartas;
-
-    //window.addEventListener("click", voltearCarta(this))
-
+    console.log('ionViewDidLoad PavanzadoPage');
   }
 
   onLogout(){

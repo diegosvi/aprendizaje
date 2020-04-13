@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 // import { PrincipalPage } from '../pages/principal/principal';
 
-import { TabsPage,AnimalesPage, PrincipalPage, IntermedioPage, AvanzadoPage, EntradaPage, ProvinciasPage} from '../pages/index.pages';
+import {  EntradaPage} from '../pages/index.pages';
 
 
 @Component({
@@ -14,14 +14,14 @@ import { TabsPage,AnimalesPage, PrincipalPage, IntermedioPage, AvanzadoPage, Ent
 export class MyApp {
   rootPage:any = EntradaPage;
   // rootPage:any = TabsPage;
-  animal: any = AnimalesPage;
-  principal:any = PrincipalPage;
-  intermedio: any = IntermedioPage;
-  provincias: any = ProvinciasPage;
+  //animal: any = AnimalesPage;
+  //principal:any = PrincipalPage;
+  //intermedio: any = IntermedioPage;
+  //provincias: any = ProvinciasPage;
 
-  avanzado: any = AvanzadoPage;
+  //avanzado: any = AvanzadoPage;
   inicio: any = EntradaPage;
-  tab1: any = TabsPage;
+  //tab1: any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, private _menuCtrl:MenuController) {
     platform.ready().then(() => {

@@ -5,6 +5,12 @@
   Ionic pages and navigation.
 -->
 
+<ion-header class="firstT">
+  <ion-navbar class="header-menu">
+    <ion-title >VAMOS A JUGAR</ion-title>
+  </ion-navbar>
+</ion-header>
+
 <ion-content padding class="cls_juego">
   <!--<button   (click)="irPagina()" ion-button block style="background-color: #00937d;">BIENVENIDO</button>-->
   <ion-grid>
@@ -23,64 +29,7 @@
   </ion-grid>
 
     <ion-grid style=" margin-top: 2%;">
-        <ion-row>
-          <ion-col col-12>
-              <button style="background-color: #000" ion-button full class="btn_menu" (click)="irAhorcado()">
-                  <ion-grid>
-                      <ion-row>
-                          <ion-col col-12>
-                            <div><img class="c_img" style="margin-top: 16%;" src="../../assets/img/pri/ahorcadogame.png"></div>
-                            <div><img class="c_img" src="../../assets/img/pri/pacmanfantasma.gif"></div>
-                          </ion-col>
-                        </ion-row>
-                  </ion-grid>
-                </button>
-            </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col col-12>
-              <button style="background-color: #000" ion-button full class="btn_menu" (click)="irAdivina()">
-                  <ion-grid>
-                      <ion-row>
-                          <ion-col col-12>
-                            <div><img class="c_img" style="margin-top: 16%;" src="../../assets/img/adivina.png"></div>
-                            <div><img class="c_img" src="../../assets/img/pri/pacmanfantasma.gif"></div>
-                          </ion-col>
-                        </ion-row>
-                  </ion-grid>
-                </button>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col col-12>
-                <button style="background-color: #000" ion-button full class="btn_menu" (click)="irColores()">
-                    <ion-grid>
-                        <ion-row>
-                            <ion-col col-12>
-                              <div><img class="c_img" style="margin-top: 16%;" src="../../assets/img/pri/coloresgamet.png"></div>
-                              <div><img class="c_img" src="../../assets/img/pri/pacmanfantasma.gif"></div>
-                            </ion-col>
-                          </ion-row>
-                    </ion-grid>
-                  </button>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-              <ion-col col-12>
-                  <button style="background-color: #000" ion-button full class="btn_menu" (click)="irCartas()">
-                      <ion-grid>
-                          <ion-row>
-                              <ion-col col-12>
-                                <div><img class="c_img" style="margin-top: 16%;" src="../../assets/img/pri/juegosmemoria.jpg"></div>
-                                <div><img class="c_img" src="../../assets/img/pri/pacmanfantasma.gif"></div>
-                              </ion-col>
-                            </ion-row>
-                      </ion-grid>
-                    </button>
-              </ion-col>
-            </ion-row>
-
-
+      
             <ion-row>
               <ion-col col-12>
                   <button style="background-color: #000" ion-button full class="btn_menu" (click)="irMover()">

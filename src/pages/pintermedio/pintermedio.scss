@@ -1,10 +1,41 @@
 page-pintermedio {
 
-  .carta{
-    display: inline-block;
-    width: 100px;
-    height: 100px;
-    background: #488aff;
+  .cls_juego{
+    background-image: url("../../assets/img/pri/fondoj1.gif");
+}
+
+.cls_title{
+    color: white;
+    font-size: 18px;
+    padding-left: 4%;
+}
+
+.ion-app.md [padding] .scroll-content {
+  padding-top: 0px;
+}
+
+.btn_menu{
+    height: 13rem;
+    width: 20rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+  }
+
+  .c_img {
+    width:75%;
+  }
+
+ /* .c_imgm {
+    width: 62%;
+  }*/
+
+  .spa_letra{
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    color: #000;
   }
 
 }

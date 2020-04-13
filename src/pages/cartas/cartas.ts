@@ -21,142 +21,105 @@ export class CartasPage {
   @ViewChild(Slides) slides: Slides;
   isFlipped: boolean = false;//flip card
 
-  cartas=[
-    
-    {
-      name:'carta1  ',
-      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
-      imagenvistaTURL:'../../assets/img/col/rojo.png',
-      select:false
-    },
-  
-    {
-      name:'carta2',
-      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
-      imagenvistaTURL:'../../assets/img/mes/abril.jpg',
-      select:false
-    },
-  
-    {
-      name:'carta3',
-      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
-      imagenvistaTURL:'../../assets/img/abc/z.jpg',
-      select:false
-    },
-  
-    {
-      name:'carta4',
-      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
-      imagenvistaTURL:'../../assets/img/mes/abril.jpg',
-      select:false
-    },
-  
-    {
-      name:'carta5',
-      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
-      imagenvistaTURL:'../../assets/img/col/rojo.png',
-      select:false
-    },
-  
-    {
-      name:'carta6',
-      imagevistaFURL:'../../assets/img/col/abejaM.jpg',
-      imagenvistaTURL:'../../assets/img/abc/z.jpg',
-      select:false
-    }
-  ];
-
-
-  
+  private images = [
+    {id: 1, url: "/assets/img/images/a.jpg"},
+    {id: 2, url: "/assets/img/images/amaril.png"},
+    {id: 3, url: "/assets/img/images/leon.jpg"},
+    {id: 4, url: "/assets/img/images/diciembre.jpg"}
+   ];
+   public images_inact = "/assets/img/col/abejaM.jpg";
+   public cards = [];
+   private last_select_id = null;
+   private aciertos = 4;
+   private count_aciertos = 0;
+   public intentos = 12;
+   public cont_intentos = 0;  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-    /*let ArregloCartasBase = [];
-
-    let carta = {id: '', valor: 0, url :''};
-    let nombreCarpeta = '';
-    let imagen = '';
-    for(let i = 1; i <= 5; i++){
-      carta.id = 'CARTA_'+i;
-      carta.valor = i;
-      if(i === 1) imagen = 'a.png';
-      if(i === 2) imagen = 'b.png';
-      if(i === 3) imagen = 'c.png';
-      if(i === 4) imagen = 'd.png';
-      if(i === 5) imagen = 'e.png';
-
-      carta.url = '../img/'+nombreCarpeta+'/'+imagen;
-      ArregloCartasBase.push(carta);
-
-    }
-    let pares = [];
-    pares = ArregloCartasBase;
-    //uno los 2 arreglos
-    ArregloCartasBase = ArregloCartasBase.concat(pares);
-    let estaMezclado = false;
-    let htmlCartas = '';
-    let cartasCompletas = [];
-    let  aleatorio = 0;
-    for (let i = 0 ; i < 10; i++) {
-      aleatorio = Math.floor(Math.random()*(ArregloCartasBase.length));
-      let seleccion = ArregloCartasBase[aleatorio];
-      console.log(seleccion.id);
-      ArregloCartasBase.splice(aleatorio, 1);
-      cartasCompletas.push(seleccion);
-    }
-    //crea el html para mostrar las cartas
-    for(let i = 0; i < cartasCompletas.length ; i++){
-      htmlCartas+= "<div id='"+cartasCompletas[i].id+"'><img src='"+cartasCompletas[i].url+"'>"+cartasCompletas[i].valor+"</div>";
-    }
-
-    document.getElementById("ContenedorCartas").innerHTML = htmlCartas;
-
-
-*/
-
-
   }
-
-
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CartasPage');
   }
 
-
-  flip(){
-  	if (this.isFlipped == true) {
-      this.isFlipped = false;
-      //Card Data by ID
-      console.log("vuelta1")
-  	}else{
-      this.isFlipped = true;
-      console.log("vuelta2")
-  	}
-  }
-
-  slideChanged() {
-    if((this.slides.getActiveIndex()+1) == this.slides.length()){
-      this.slides.lockSwipeToNext(true);
-    }else{
-      this.slides.lockSwipeToNext(false);
+  ngOnInit() {
+    let count_index = 0;
+    for (let i = 0; i < this.aciertos * 2; i++) {
+     if (count_index == this.aciertos) {
+      count_index = 0;
+     }
+     let img = this.images[count_index];
+     this.cards.push({
+      id: img.id,
+      url: img.url,
+      visible: false, //si la imagen se muestra
+      active: true //seleccionable
+     });
+     count_index++;
     }
-    if(this.slides.getActiveIndex()>=this.slides.length()){
-      //this.slides.slidePrev();
-      this.slides.slideTo(this.slides.length()-1);
+    this.RandomArray(this.cards);
+   }
+  
+  
+   card_selected(idx) {
+    if (!this.cards[idx].active) {
+     return;
     }
-  }
+    this.cards[idx].visible = true;
+  
+    if (this.last_select_id == null) {
+     this.last_select_id = idx;
+     this.cards[idx].visible = true;
+     this.cards[idx].active = false;
+    } else {
+     if (this.cards[this.last_select_id].id == this.cards[idx].id) { //aumentar aciertos si coinciden
+      this.count_aciertos++;
+      this.cards[idx].visible = true;
+      this.cards[idx].active = false;
+      this.last_select_id = null;
+     } else { //no hacen match
+  
+      let _this = this;
+      setTimeout(function () {
+       _this.cards[_this.last_select_id].visible = false; //ocultar
+       _this.cards[_this.last_select_id].active = true; //activar
+       _this.cards[idx].visible = false;
+       _this.last_select_id = null;
+      }, 0.2 * 1000)
+  
+     }
+    }
+    if (this.aciertos == this.count_aciertos) {
+     alert("Juego Terminado");
+     window.location.reload();
+    }
+    if (this.cont_intentos == this.intentos - 1) {
+     alert("Perdiste");
+     window.location.reload();
+    }
+    this.cont_intentos++;
+  
+   }
+  
+   RandomArray(array) {
+    let currentIndex = array.length, temporaryValue, randomIndex;
+  
+    while (0 !== currentIndex) {
+  
+     randomIndex = Math.floor(Math.random() * currentIndex);
+     currentIndex -= 1;
+  
+     temporaryValue = array[currentIndex];
+     array[currentIndex] = array[randomIndex];
+     array[randomIndex] = temporaryValue;
+    }
+  
+    return array;
+   }
+  
 
-  verCarta(item){
-    
-    this.cartas.indexOf(item);
-    item.select=true;
-    
-    console.log(this.cartas[this.cartas.indexOf(item)])
-
-  }
-
-
+ 
 
 
 }

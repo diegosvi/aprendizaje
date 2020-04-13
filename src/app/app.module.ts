@@ -14,7 +14,7 @@ import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, Colore
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
           TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
           CostaPage, RegistroPage,PintermedioPage,InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, 
-          AdivinaPage, PbasicoPage, EntradaPage, MoverPage} from '../pages/index.pages'
+          AdivinaPage, PbasicoPage, EntradaPage, MoverPage, PavanzadoPage} from '../pages/index.pages'
 import {CartasPage} from "../pages/cartas/cartas";
 
 
@@ -36,6 +36,7 @@ export const firebaseConfig = {
     MyApp,
     // HomePage
     PintermedioPage,
+    PavanzadoPage,
     RegistroPage,
     JuegocolPage,
     EntradaPage,
@@ -119,6 +120,7 @@ export const firebaseConfig = {
     FrutasPage,
     TransportePage,
     ProfesionesPage,
+    PavanzadoPage,
     TerrestrePage,
     AereoPage,
     MaritimoPage,

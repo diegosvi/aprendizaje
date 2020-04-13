@@ -1,18 +1,37 @@
 page-practica {
 
-}
-.imagen{
-  height: 85px;
-  width: 100px;
-  //background-image: url("../../assets/img/pri/fondo.jpg");
-}
-.pract{
-
-  background-image: url("../../assets/img/pensan.gif");
-}
-
-h1{
-  color: black;
-  font-weight: bold;
-  font-size: xx-large;
+  .imagen{
+    height: 85px;
+    width: 100px;
+    //background-image: url("../../assets/img/pri/fondo.jpg");
+  }
+  .pract{
+  
+    background-image: url("../../assets/img/aprendo.gif");
+  }
+  
+  h1{
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+  }
+  
+  .ion-app.md [padding] .scroll-content {
+    padding-top: 0px;
+  }
+  
+  .btn_menu{
+      height: 22rem;
+      width: 30rem;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 30px;
+    }
+  
+    .c_img {
+      width:80%;
+    }
+  
+  
 }

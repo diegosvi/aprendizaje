@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { PavanzadoPage } from "../pavanzado/pavanzado";
 import {PbasicoPage} from "../pbasico/pbasico";
 import {PintermedioPage} from "../pintermedio/pintermedio";
 
@@ -33,5 +33,9 @@ export class PracticaPage {
 
   irpintermedio(){
     this.navCtrl.push(PintermedioPage);
+  }
+
+  irpavanzado(){
+    this.navCtrl.push(PavanzadoPage);
   }
 }

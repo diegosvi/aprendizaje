@@ -1,5 +1,6 @@
 import { from } from 'rxjs';
 
+export {PavanzadoPage} from './pavanzado/pavanzado';
 export {PrincipalPage} from './principal/principal';
 export {AbecedarioPage} from './abecedario/abecedario';
 export {ColoresPage} from './colores/colores';

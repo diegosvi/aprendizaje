@@ -3,6 +3,9 @@ import { IonicPage, NavController, NavParams, AlertController} from 'ionic-angul
 import {  AnimalesPage, PrincipalPage, IntermedioPage, AvanzadoPage, ProfesionesPage} from '../index.pages';
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 import { default as EntradaPage } from "../entrada/entrada";
+import { AngularFireAuth } from "@angular/fire/auth";
+import { auth } from "firebase/app";
+
 /**
  * Generated class for the InformacionPage page.
  *
@@ -16,16 +19,25 @@ import { default as EntradaPage } from "../entrada/entrada";
   templateUrl: 'informacion.html',
 })
 export class InformacionPage {
-
+  nombres = [];
   constructor(private alertCtrl: AlertController, public navCtrl: NavController, 
-    public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
+    public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider, public afauth: AngularFireAuth,) {
 
-  
+      this.pequeGameSrv.getNombres()
+      .subscribe(nombres=>{ 
+        this.nombres = this.nombres;
+        console.log(this.nombres);
+      });
   }
 
     ionViewDidLoad() {
     console.log('ionViewDidLoad InformacionPage');
   }
+
+cerrar(){
+  this.afauth.auth.signOut();
+  this.navCtrl.push(EntradaPage);
+}
 
   showConfirm(){
     let alert = this.alertCtrl.create({
