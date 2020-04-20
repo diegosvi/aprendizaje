@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
+import { PintermedioPage } from '../../pages/pintermedio/pintermedio';
 
 /**
  * Generated class for the CartasPage page.
@@ -21,12 +22,13 @@ export class CartasPage {
   @ViewChild(Slides) slides: Slides;
   isFlipped: boolean = false;//flip card
 
-  private images = [
+  images = [
     {id: 1, url: "/assets/img/images/a.jpg"},
     {id: 2, url: "/assets/img/images/amaril.png"},
     {id: 3, url: "/assets/img/images/leon.jpg"},
     {id: 4, url: "/assets/img/images/diciembre.jpg"}
    ];
+   //citrus: this.images.slice:0:3;
    public images_inact = "/assets/img/col/abejaM.jpg";
    public cards = [];
    private last_select_id = null;
@@ -92,11 +94,16 @@ export class CartasPage {
     }
     if (this.aciertos == this.count_aciertos) {
      alert("Juego Terminado");
-     window.location.reload();
+    //window.location.reload();
+     this.irIntermed();
+     //this.volverJuagr();
     }
-    if (this.cont_intentos == this.intentos - 1) {
+    else if (this.cont_intentos == this.intentos - 1) {
      alert("Perdiste");
-     window.location.reload();
+     this.irIntermed();
+     this.intentos=0;
+     //window.location.reload();
+    // this.volverJuagr();
     }
     this.cont_intentos++;
   
@@ -117,6 +124,15 @@ export class CartasPage {
   
     return array;
    }
+
+   irIntermed(){
+    this.navCtrl.push(PintermedioPage);
+  }
+
+  volverJuagr(){
+    this.RandomArray(this.cards);
+    this.intentos = 12;
+  }
   
 
  

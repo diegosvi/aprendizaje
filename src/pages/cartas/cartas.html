@@ -7,10 +7,11 @@
 
 
 <ion-header class="firstT">
-  <ion-navbar class="header-menu">
-    <ion-title >MEMORIZANDO</ion-title>
-  </ion-navbar>
-</ion-header>
+    <ion-navbar class="header-menu">
+      <ion-title >CARTAS</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
 
 <ion-content padding style="
 text-transform: uppercase;
@@ -34,19 +35,15 @@ font-family: 'Kalam';">
           </ion-row> 
       </ion-grid>
 -->
-<ion-grid>
-  <ion-row align-items-center >
-    <ion-col class="col-6" >
-      <div class="intentos">
-        <b>Intentos restantes:</b> {{intentos-cont_intentos}}
-       </div>
-      <div class="mesa-cartas">
-        <span *ngFor="let card of cards; index as i">
-         <img class="img-card" src="{{card.visible ? card.url : images_inact}}" (click)="card_selected(i)">
-        </span>
-       </div>
-     
-      </ion-col>
+<div class="intentos">
+  <b>Intentos restantes:</b> {{intentos-cont_intentos}}
+ </div>
+ <ion-grid>
+  <ion-row align-items-center class="mesa-cartas" >
+    <ion-col class="col-6" *ngFor="let card of cards; index as i">
+      <img class="img-card" src="{{card.visible ? card.url : images_inact}}" (click)="card_selected(i)">
+    </ion-col>
     </ion-row> 
-</ion-grid>
+ </ion-grid>
+ 
 </ion-content>

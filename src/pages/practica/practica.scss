@@ -1,5 +1,28 @@
 page-practica {
 
+  .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+
+  .header-md .toolbar-md:last-child .toolbar-background-md {
+    border-width: 0 0 0.55px;
+    background-color: #005448;
+  }
+  .toolbar-title-md {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
+  .toolbar-title-ios {
+    padding: 0 12px;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fefefe;
+  }
+
   .imagen{
     height: 85px;
     width: 100px;
