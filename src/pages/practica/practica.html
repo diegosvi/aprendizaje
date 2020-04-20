@@ -4,28 +4,37 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>DIVIERTETE JUGANDO</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding class="pract">
-  <div class="container">
-    <div class="row">
-      <div class="col">
 
-      </div>
+
+    <ion-grid>
+        <ion-row>
+          <ion-col class="col-9">
+           
+          </ion-col>
+          <ion-col class="col-3" style="padding-left: 0px; height: 29px;">
+           <!--<div style="text-align: center;"><img class="c_img" [src]="nom.name"></div>-->
+            <div align="right">
+              <button ion-button icon-start round style="font-size: 10px; padding: 14%; height: 25px; margin-top: 10px; background-color: #f67d32;" (click)="showConfirm()">
+                <ion-icon name="exit" style="font-size: 18px;"></ion-icon><p style="
+                text-transform: uppercase;
+                font-family: 'Kalam'; margin-bottom: 0px;">Salir</p></button>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+
+  <div class="container" style="margin-top: 2%">
+    <div class="row">
       <div class="col-md-12">
         <button (click)="irpbasico()"  type="button" style="background-color: #000" ion-button full class="btn_menu btn-lg btn-block">
           <ion-grid>
             <ion-row>
                 <ion-col col-12>
-                  <h1>VAMOS A JUGAR</h1>
-                  <div><img class="c_img" style="margin-top: 16%;" src="../../assets/img/3.png"></div>                
+                  <!--h1>VAMOS A JUGAR</h1-->
+                  <div><img class="c_img" src="../../assets/img/3.png"></div>                
                 </ion-col>
               </ion-row>
         </ion-grid>
@@ -39,8 +48,8 @@
           <ion-grid>
             <ion-row>
                 <ion-col col-12>
-                  <h1>TU PUEDES</h1>
-                  <div><img class="c_img" style="margin-top: 16%;" src="../../assets/img/4.png"></div>                
+                  <!--h1>TU PUEDES</h1-->
+                  <div><img class="c_img" src="../../assets/img/4.png"></div>                
                 </ion-col>
               </ion-row>
         </ion-grid>
@@ -54,8 +63,8 @@
           <ion-grid>
             <ion-row>
                 <ion-col col-12>
-                  <h1>DEMUESTRA LO QUE SABES</h1>
-                  <div><img class="c_img" style="margin-top: 16%;" src="../../assets/img/5.png"></div>                
+                  <!--h1>DEMUESTRA LO QUE SABES</h1-->
+                  <div><img class="c_img" src="../../assets/img/5.png"></div>                
                 </ion-col>
               </ion-row>
         </ion-grid>
