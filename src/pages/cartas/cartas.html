@@ -38,14 +38,12 @@ font-family: 'Kalam';">
 <div class="intentos">
   <b>Intentos restantes:</b> {{intentos-cont_intentos}}
  </div>
- 
-<ion-grid>
-  <ion-row align-items-center >
-    <ion-col col-6 >
-      <ion-item class="mesa-cartas" *ngFor='let card of cards; index as i'>
-         <img class="img-card" src="{{card.visible ? card.url : images_inact}}" (click)="card_selected(i)">
-      </ion-item>  
-      </ion-col>
+ <ion-grid>
+  <ion-row align-items-center class="mesa-cartas" >
+    <ion-col class="col-6" *ngFor="let card of cards; index as i">
+      <img class="img-card" src="{{card.visible ? card.url : images_inact}}" (click)="card_selected(i)">
+    </ion-col>
     </ion-row> 
-</ion-grid>
+ </ion-grid>
+ 
 </ion-content>

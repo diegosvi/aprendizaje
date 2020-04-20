@@ -94,13 +94,16 @@ export class CartasPage {
     }
     if (this.aciertos == this.count_aciertos) {
      alert("Juego Terminado");
-     //window.location.reload();
-     //this.irIntermed();
+    //window.location.reload();
+     this.irIntermed();
+     //this.volverJuagr();
     }
-    if (this.cont_intentos == this.intentos - 1) {
+    else if (this.cont_intentos == this.intentos - 1) {
      alert("Perdiste");
+     this.irIntermed();
+     this.intentos=0;
      //window.location.reload();
-    // this.irIntermed();
+    // this.volverJuagr();
     }
     this.cont_intentos++;
   
@@ -124,6 +127,11 @@ export class CartasPage {
 
    irIntermed(){
     this.navCtrl.push(PintermedioPage);
+  }
+
+  volverJuagr(){
+    this.RandomArray(this.cards);
+    this.intentos = 12;
   }
   
 
