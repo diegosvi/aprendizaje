@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MAMIFEROS } from '../../data/data.mamiferos';
+//import { MAMIFEROS } from '../../data/data.mamiferos';
 import  { Mamiferos } from '../../interface/interface.mamiferos';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -24,7 +24,7 @@ export class MamiferosPage {
   tiempo: any;
   mamiferos = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.mamifero = MAMIFEROS.slice(0);
+    //this.mamifero = MAMIFEROS.slice(0);
 
     this.pequeGameSrv.getMamiferos()
     .subscribe(mamiferos=>{ 

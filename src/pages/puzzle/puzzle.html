@@ -1,0 +1,115 @@
+<!--
+  Generated template for the PuzzlePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar class="header-menu">
+    <ion-title >ROMPECABEZAS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+ 
+ 
+<ion-row>
+  <ion-col col-6>
+    <ion-row>
+        <ion-col col-6 text-right style="background-color: #FF9800;font-size: 12px;">
+          <p style="margin-bottom: 0; padding-top: 15%; color: #FFEB3B">Tiempo</p>
+        </ion-col>
+        <ion-col col-6 text-center style="border: #FF9800 3px solid;">
+            <p style="color: #f46906; font-size: 15px;">{{ ticks }}</p>
+        </ion-col>
+      </ion-row>
+</ion-col>
+  <ion-col col-6>
+    <ion-row>
+        <ion-col col-6 text-right style="background-color: #00BCD4;font-size: 13px;">
+          <p style="margin-bottom: 0; padding-top: 15%; color: aliceblue"> Steps :</p>
+        </ion-col>
+        <ion-col col-6 text-center style="border: #00BCD4 3px solid;">
+            <p style="color: #02b8d0; font-size: 15px;"> {{steps}}</p>
+        </ion-col>
+      </ion-row>
+</ion-col>
+
+</ion-row>
+  <div class="finalImage" [ngStyle]="{'background-image':'url(' + imageUrl + ') '}"></div>
+<ion-row>
+<div class="image-url">
+  <div class="input-group">
+    <span class="input-group-btn">
+               <div class="btn btn-default" >Image Url!</div>
+            </span>
+           
+    <input type="url" class="form-control" placeholder="Image Url..." [(ngModel)]="imageUrl">
+  </div>
+</div>
+<div center class="successMessage" *ngIf="gameComplete">
+  Juego Completado. <br>
+  Has ganado Felicidades!
+</div>
+</ion-row> 
+
+<div >
+<ion-item>
+  
+ <!-- <div class="unsolvedPuzzle">
+      <div class="puzzle" dropzone="true">
+      <div *ngFor="let img of Image" class="cls_btn" [draggable]="true" [id]="img.index" (dragstart)="onDragStart($event, dropData)"
+      (cdkDropListDropped)="drop($event)" (dragover)="allowDrop($event)" [style.width.px]="boxSize" [style.height.px]="boxSize"
+        [ngStyle]="{'background-image':'url(' + imageUrl + ') ','background-repeat':'no-repeat', 'background-position': '' + img.x_pos + ' '  + img.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
+  
+    </div>
+    </div>
+  </div>-->
+
+  <div class="unsolvedPuzzle">
+    <div dragula="VAMPIRES"  class="puzzle" dropzone="true">
+      <div *ngFor="let img of Image" class="cls_btn"  [id]="img.index"
+           [style.width.px]="boxSize" [style.height.px]="boxSize"
+           [ngStyle]="{'background-image':'url(' + imageUrl + ') ','background-repeat':'no-repeat', 'background-position': '' + img.x_pos + ' '  + img.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
+  
+      </div>
+    </div>
+    </div>
+ </ion-item>     
+</div>
+<ion-row> 
+<h3  style="font-size: 20px; margin-bottom: 1%; text-transform: uppercase;" >NIVELES DE DIFICULTAD</h3>
+<div class="difficulty-levels">
+  
+  <br>
+  <div class="input-group">
+    <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="2" checked (change)="startGame()">Low
+  </div>
+  <div class="input-group">
+    <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="3" (change)="startGame()">Medium
+  </div>
+  <div class="input-group">
+    <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="4" (change)="startGame()">High
+  </div>
+</div>
+</ion-row>
+    <div class="score-detail">
+      <div style="margin-top: 5%"><button ion-button (click)="startGame()"  round style="background-color: #9C27B0; font-family: 'Kalam'"> Vuelve a intentar</button></div>
+      <div style="margin-top: 5%"><button ion-button (click)="reRandomize()"  round style="background-color: #9C27B0; font-family: 'Kalam'"> Mezclar</button></div>
+    </div>
+
+</ion-content>
+<!--
+<div class="unsolvedPuzzle">
+  <h1 class="sectionName">{{imageName}}</h1>
+  <div class="puzzle" dropzone="true">
+    <div cdkDropList cdkDrag *ngFor="let img of Image" class="cls_btn" [draggable]="true" [id]="img.index" (dragstart)="onDragStart($event, dropData)"
+    (cdkDropListDropped)="drop($event)" (dragover)="allowDrop($event)" [style.width.px]="boxSize" [style.height.px]="boxSize"
+      [ngStyle]="{'background-image':'url(' + imageUrl + ') ','background-repeat':'no-repeat', 'background-position': '' + img.x_pos + ' '  + img.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
+
+  </div>
+  </div>
+</div>-->

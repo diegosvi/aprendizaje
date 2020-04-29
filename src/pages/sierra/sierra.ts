@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { SIERRA } from '../../data/data.sierra';
+//import { SIERRA } from '../../data/data.sierra';
 import  { Sierra } from '../../interface/interface.sierra';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -24,7 +24,7 @@ export class SierraPage {
   tiempo: any;
   sierras = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.sie = SIERRA.slice(0);
+    //this.sie = SIERRA.slice(0);
 
     this.pequeGameSrv.getSierra()
     .subscribe(sierras=>{ 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ORIENTE } from '../../data/data.oriente';
+//import { ORIENTE } from '../../data/data.oriente';
 import  { Oriente } from '../../interface/interface.oriente';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -24,7 +24,7 @@ export class OrientePage {
   tiempo: any;
   orientes = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.ori = ORIENTE.slice(0);
+    //this.ori = ORIENTE.slice(0);
 
     this.pequeGameSrv.getOriente()
     .subscribe(orientes=>{ 

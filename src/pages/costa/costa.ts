@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { COSTA } from '../../data/data.costa';
+//import { COSTA } from '../../data/data.costa';
 import  { Costa } from '../../interface/interface.costa';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -24,7 +24,7 @@ export class CostaPage {
 
   costas = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.cos = COSTA.slice(0);
+    //this.cos = COSTA.slice(0);
 
     this.pequeGameSrv.getCosta()
     .subscribe(costas=>{ 

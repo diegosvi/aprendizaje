@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AEREO} from '../../data/data.aereo';
+//import { AEREO} from '../../data/data.aereo';
 import  { Aereo } from '../../interface/interface.aereo';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -26,7 +26,7 @@ export class AereoPage {
   aereos = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.aer = AEREO.slice(0);
+    //this.aer = AEREO.slice(0);
 
     this.pequeGameSrv.getTransporteA()
     .subscribe(aereos=>{ 

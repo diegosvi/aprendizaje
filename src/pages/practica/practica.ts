@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
 import { PavanzadoPage } from "../pavanzado/pavanzado";
 import {PbasicoPage} from "../pbasico/pbasico";
 import {PintermedioPage} from "../pintermedio/pintermedio";
+import { default as EntradaPage } from "../entrada/entrada";
 
 /**
  * Generated class for the PracticaPage page.
@@ -18,14 +19,40 @@ import {PintermedioPage} from "../pintermedio/pintermedio";
 })
 export class PracticaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PracticaPage');
   }
 
+  showConfirm(){
+    let alert = this.alertCtrl.create({
+      title: 'Cerrar Sesion!',
+      message: 'Seguro quiere salir',
+      buttons: [
+        
+        {
+          text: 'NO',
+          role: 'NO',
+          handler: () => {
+            console.log('Canceled');
+        }
 
+        },
+        {
+          text:'SI',
+          handler: () => {
+            console.log('Ok')
+            this.navCtrl.push(EntradaPage);
+          }
+        }  
+
+      ]
+    });
+
+    alert.present();
+  }
 
   irpbasico(){
     this.navCtrl.push(PbasicoPage);

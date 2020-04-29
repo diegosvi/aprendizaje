@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { REPTILES} from '../../data/data.reptiles';
+//import { REPTILES} from '../../data/data.reptiles';
 import  { Reptiles } from '../../interface/interface.reptiles';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -24,7 +24,7 @@ export class ReptilesPage {
   tiempo: any;
   reptiles = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.reptil = REPTILES.slice(0);
+    //this.reptil = REPTILES.slice(0);
 
 
     this.pequeGameSrv.getReptiles()

@@ -1,5 +1,4 @@
-import { from } from 'rxjs';
-
+export {PuzzlePage} from './puzzle/puzzle'
 export {PavanzadoPage} from './pavanzado/pavanzado';
 export {PrincipalPage} from './principal/principal';
 export {AbecedarioPage} from './abecedario/abecedario';

@@ -1,6 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Slides } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Slides, AlertController } from 'ionic-angular';
 import { PintermedioPage } from '../../pages/pintermedio/pintermedio';
+import { PavanzadoPage } from "../../pages/pavanzado/pavanzado";
 
 /**
  * Generated class for the CartasPage page.
@@ -37,7 +38,7 @@ export class CartasPage {
    public intentos = 12;
    public cont_intentos = 0;  
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
 
   }
 
@@ -93,21 +94,78 @@ export class CartasPage {
      }
     }
     if (this.aciertos == this.count_aciertos) {
-     alert("Juego Terminado");
-    //window.location.reload();
-     this.irIntermed();
-     //this.volverJuagr();
+      let alert = this.alertCtrl.create({
+        title: 'Has ganado!',
+        message: '¿Quieres ir al siguiente nivel?',
+        buttons: [
+          
+          {
+            text: 'NO',
+            role: 'NO',
+            handler: () => {
+              console.log('Canceled');
+              this.navCtrl.push(PintermedioPage);
+          }
+  
+          },
+          {
+            text:'SI',
+            handler: () => {
+              console.log('Ok')
+              this.navCtrl.push(PavanzadoPage);
+            }
+          }  
+  
+        ]
+      });
+  
+      alert.present();
     }
     else if (this.cont_intentos == this.intentos - 1) {
-     alert("Perdiste");
-     this.irIntermed();
-     this.intentos=0;
+      this.intentos=0;
+      
+      let alert = this.alertCtrl.create({
+        title: 'Has perdido!',
+        message: '¿Quieres volver a jugar?',
+        buttons: [
+          
+          {
+            text: 'NO',
+            role: 'NO',
+            handler: () => {
+              console.log('Canceled');
+              this.navCtrl.push(PintermedioPage);
+          }
+  
+          },
+          {
+            text:'SI',
+            handler: () => {
+              console.log('Ok')
+              this.navCtrl.push(CartasPage);
+              //this.volverJuagr();
+            }
+          }  
+  
+        ]
+      });
+  
+      alert.present();
+      
+    }
+
+    this.cont_intentos++;
+
+    // alert("Perdiste");
+     //this.irIntermed();
+     
      //window.location.reload();
     // this.volverJuagr();
-    }
-    this.cont_intentos++;
+    
+    
   
    }
+  
   
    RandomArray(array) {
     let currentIndex = array.length, temporaryValue, randomIndex;

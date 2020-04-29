@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PROFESIONES} from '../../data/data.profesiones';
+//import { PROFESIONES} from '../../data/data.profesiones';
 import  { Profesiones } from '../../interface/interface.profesiones';
 
 
@@ -24,7 +24,7 @@ export class ProfesionesPage {
   tiempo: any;
   profesiones = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.prof = PROFESIONES.slice(0);
+    //this.prof = PROFESIONES.slice(0);
 
     this.pequeGameSrv.getProfesiones()
     .subscribe(profesiones=>{ 

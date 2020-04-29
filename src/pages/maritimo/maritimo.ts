@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MARITIMO} from '../../data/data.maritimo';
+//import { MARITIMO} from '../../data/data.maritimo';
 import  { Maritimo } from '../../interface/interface.maritimo';
 
 
@@ -25,7 +25,7 @@ export class MaritimoPage {
 
   maritimos = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.marit = MARITIMO.slice(0);
+    //this.marit = MARITIMO.slice(0);
 
     this.pequeGameSrv.getTransporteM()
     .subscribe(maritimos=>{ 

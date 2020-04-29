@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FIGURAS } from '../../data/data.figuras';
+//import { FIGURAS } from '../../data/data.figuras';
 import  { Figuras } from '../../interface/interface.figuras';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -25,7 +25,7 @@ export class FigurasPage {
   figuras = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.figura = FIGURAS.slice(0);
+    //this.figura = FIGURAS.slice(0);
 
     this.pequeGameSrv.getFiguras()
       .subscribe(figuras=>{ 

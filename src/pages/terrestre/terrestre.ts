@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { TERRESTRE} from '../../data/data.terrestre';
+//import { TERRESTRE} from '../../data/data.terrestre';
 import  { Terrestre } from '../../interface/interface.terrestre';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -23,7 +23,7 @@ export class TerrestrePage {
   tiempo: any;
   terrestres = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.terre = TERRESTRE.slice(0);
+    //this.terre = TERRESTRE.slice(0);
 
     this.pequeGameSrv.getTransporteT()
     .subscribe(terrestres=>{ 

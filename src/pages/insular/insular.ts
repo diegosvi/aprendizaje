@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { GALAPAGOS } from '../../data/data.galapagos';
+//import { GALAPAGOS } from '../../data/data.galapagos';
 import  { Galapagos } from '../../interface/interface.galapagos';
 
 
@@ -24,7 +24,7 @@ export class InsularPage {
   tiempo: any;
   galapagos = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.gal = GALAPAGOS.slice(0);
+    //this.gal = GALAPAGOS.slice(0);
 
     this.pequeGameSrv.getGalapagos()
     .subscribe(galapagos=>{ 

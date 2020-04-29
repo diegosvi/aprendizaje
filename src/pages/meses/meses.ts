@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MESES } from '../../data/data.meses';
+//import { MESES } from '../../data/data.meses';
 import  { Meses } from '../../interface/interface.meses';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -24,7 +24,7 @@ export class MesesPage {
   tiempo: any;
   meses = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.mes = MESES.slice(0);
+    //this.mes = MESES.slice(0);
 
     this.pequeGameSrv.getMeses()
     .subscribe(meses=>{ 

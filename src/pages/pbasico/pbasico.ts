@@ -7,7 +7,7 @@ import { CartasPage} from '../../pages/cartas/cartas';
 import { MoverPage } from "../../pages/mover/mover";
 import { default as EntradaPage } from "../entrada/entrada";
 import { PequesGameServiceProvider } from "../../providers/peques-game-service/peques-game-service";
-
+import { PuzzlePage } from "../../pages/puzzle/puzzle";
 
 /**
  * Generated class for the PbasicoPage page.
@@ -85,5 +85,9 @@ export class PbasicoPage {
 
   irCartas(){
     this.navCtrl.push(CartasPage);
+  }
+
+  irPuzzle(){
+    this.navCtrl.push(PuzzlePage);
   }
 }

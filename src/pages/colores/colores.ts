@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { COLORES } from '../../data/data.colores';
+//import { COLORES } from '../../data/data.colores';
 import  { Colores } from '../../interface/interface.colores';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -26,7 +26,7 @@ export class ColoresPage {
 
   colores = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.color = COLORES.slice(0);
+   // this.color = COLORES.slice(0);
     console.log(this.color);
 
     this.pequeGameSrv.getColores()

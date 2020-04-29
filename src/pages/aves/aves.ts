@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AVES } from '../../data/data.aves';
+//import { AVES } from '../../data/data.aves';
 import  { Aves } from '../../interface/interface.aves';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -25,7 +25,7 @@ export class AvesPage {
 
   aves = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.ave = AVES.slice(0);
+   // this.ave = AVES.slice(0);
 
     this.pequeGameSrv.getAves()
     .subscribe(aves=>{ 

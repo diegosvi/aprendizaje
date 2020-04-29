@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ANFIBIOS } from '../../data/data.anfibios';
+//import { ANFIBIOS } from '../../data/data.anfibios';
 import  { Anfibios } from '../../interface/interface.anfibios';
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 
@@ -24,7 +24,7 @@ export class AnfibiosPage {
 
   anfibios = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.anfibio = ANFIBIOS.slice(0);
+    //this.anfibio = ANFIBIOS.slice(0);
 
     this.pequeGameSrv.getAnfibios()
     .subscribe(anfibios=>{ 

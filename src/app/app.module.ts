@@ -7,17 +7,17 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreModule } from "@angular/fire/firestore";
-
-import { MyApp } from './app.component';
+//import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { DragulaModule } from 'ng2-dragula';
+import { MyApp} from './app.component';
 // import { HomePage } from '../pages/home/home';
-import { PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, ColoresPage,AnimalesPage, MamiferosPage, AvesPage, PecesPage,
+import { PuzzlePage,PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasPage, ColoresPage,AnimalesPage, MamiferosPage, AvesPage, PecesPage,
           ReptilesPage, AnfibiosPage, AntropodosPage, IntermedioPage,HortalizasPage,FruhoPage, FrutasPage, TransportePage, ProfesionesPage,
           TerrestrePage,AereoPage,MaritimoPage, RelojPage, HoratPage, HoramPage, AvanzadoPage, OrientePage, InsularPage,SierraPage,
           CostaPage, RegistroPage,PintermedioPage,InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, 
           AdivinaPage, PbasicoPage, EntradaPage, MoverPage, PavanzadoPage} from '../pages/index.pages'
 import {CartasPage} from "../pages/cartas/cartas";
-
-
+//import { DragDropModule } from "@angular/cdk/drag-drop";
 import { PequesGameServiceProvider } from '../providers/peques-game-service/peques-game-service';
 
 export const firebaseConfig = {
@@ -76,7 +76,8 @@ export const firebaseConfig = {
     FruhoPage,
     RelojPage,
     HoratPage,
-    HoramPage,FigurasPage,InformacionPage,MoverPage
+    HoramPage,FigurasPage,InformacionPage,MoverPage,
+    PuzzlePage
   ],
   imports: [
     BrowserModule,
@@ -85,6 +86,9 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
+    DragulaModule.forRoot()
+    //BrowserAnimationsModule,
+    //DragDropModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -134,7 +138,8 @@ export const firebaseConfig = {
     FigurasPage,
     InformacionPage,
     JuegocolPage,
-    MoverPage
+    MoverPage,
+    PuzzlePage
   ],
   providers: [
     StatusBar,

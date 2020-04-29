@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ARTROPODOS } from '../../data/data.artropodos';
+//import { ARTROPODOS } from '../../data/data.artropodos';
 import  { Artropodos } from '../../interface/interface.artropodos';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -26,7 +26,7 @@ export class AntropodosPage {
   invertebrados = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.artropodo = ARTROPODOS.slice(0);
+   // this.artropodo = ARTROPODOS.slice(0);
 
     this.pequeGameSrv.getInvertebrados()
     .subscribe(invertebrados=>{ 

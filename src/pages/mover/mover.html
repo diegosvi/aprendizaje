@@ -13,18 +13,16 @@
 
 <ion-content padding style="text-transform: uppercase;
 font-family: 'Kalam';">
-  <ion-col col-6>
+  <ion-col>
     <ion-row>
-        <ion-col col-6 text-right style="background-color: #00BCD4;font-size: 18px;">
-          <p style="margin-bottom: 0; padding-top: 18%; color: aliceblue">Puntos:</p>
+        <ion-col text-right style="background-color: #00BCD4;font-size: 18px;">
+          <p style=" text-align: center; margin-bottom: 0; padding-top: 6%; padding-bottom: 6%; color: aliceblue">Arrastra y gana</p>
         </ion-col>
-        <ion-col col-6 text-center style="border: #00BCD4 3px solid;">
-            <p style="color: #02b8d0; font-size: 26px;">{{valor}}</p>
-        </ion-col>
+      
       </ion-row>
 </ion-col>
   <section id="container" >
-    <div class="padre" >
+    <!--<div class="padre" >
        <div class="tipo" id="fuego" (drop)="drop($event)" (dragover)="allowDrop($event)"></div>
        <div class="tipo" id="agua"(drop)="drop($event)" (dragover)="allowDrop($event)"></div>
     </div>
@@ -32,6 +30,18 @@ font-family: 'Kalam';">
     <img class="pokemon" src="../../assets/img/col/azul.jpg" draggable="true" (dragstart)="drag($event)" id="drag2" name="agua"/>
     <img class="pokemon" src="../../assets/img/col/amaril.png" draggable="true" (dragstart)="drag($event)" id="drag3" name="fuego"/>
     <img class="pokemon" src="../../assets/img/col/azull.jpg" draggable="true" (dragstart)="drag($event)" id="drag4" name="agua"/>
+  -->
+    <div class="padre" >
+      <div dragula="DRAGULA_FACTS" class="tipo" id="fuego" ></div>
+      <div dragula="DRAGULA_FACTS" class="tipo" id="agua"></div>
+    </div>
+    <div class="container" dragula="DRAGULA_FACTS" >
+        <img class="pokemon" src="../../assets/img/col/amarillo.png"  id="drag1" name="fuego"/>
+        <img class="pokemon" src="../../assets/img/col/azul.png"  id="drag2" name="agua"/>
+        <img class="pokemon" src="../../assets/img/col/amaril.png"  id="drag3" name="fuego"/>
+        <img class="pokemon" src="../../assets/img/col/azull.png"  id="drag4" name="agua"/>
+    </div>
+  
   </section>
   <div id="resultado">...</div>
 </ion-content>

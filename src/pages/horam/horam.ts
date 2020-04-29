@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HORAM } from '../../data/data.horam';
+//import { HORAM } from '../../data/data.horam';
 import  { Horam } from '../../interface/interface.horam';
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 /**
@@ -22,7 +22,7 @@ export class HoramPage {
   tiempo: any;
   horas = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.hm = HORAM.slice(0);
+    //this.hm = HORAM.slice(0);
 
     this.pequeGameSrv.getHorasM()
     .subscribe(horas=>{ 

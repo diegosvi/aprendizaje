@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { FRUTAS} from '../../data/data.frutas';
+//import { FRUTAS} from '../../data/data.frutas';
 import  { Frutas } from '../../interface/interface.frutas';
 
 
@@ -24,7 +24,7 @@ export class FrutasPage {
   tiempo: any;
 frutas = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.fru = FRUTAS.slice(0);
+    //this.fru = FRUTAS.slice(0);
 
     this.pequeGameSrv.getFrutas()
     .subscribe(frutas=>{ 

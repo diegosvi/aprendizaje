@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HORTALIZAS} from '../../data/data.hortalizas';
+//import { HORTALIZAS} from '../../data/data.hortalizas';
 import  { Hortalizas } from '../../interface/interface.hortalizas';
 
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -24,7 +24,7 @@ export class HortalizasPage {
 
   hortalizas = [];
   constructor(public navCtrl: NavController, public navParams: NavParams, public pequeGameSrv:PequesGameServiceProvider) {
-    this.hor = HORTALIZAS.slice(0);
+    //this.hor = HORTALIZAS.slice(0);
 
     this.pequeGameSrv.getHortalizas()
     .subscribe(hortalizas=>{ 

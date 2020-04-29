@@ -1,0 +1,184 @@
+page-puzzle {
+
+    .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+        border-width: 0 0 0.55px;
+        background-color: #005448;
+      }
+    
+      .header-md .toolbar-md:last-child .toolbar-background-md {
+        border-width: 0 0 0.55px;
+        background-color: #005448;
+      }
+      .toolbar-title-md {
+        padding: 0 12px;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #fefefe;
+      }
+    
+      .toolbar-title-ios {
+        padding: 0 12px;
+        font-size: 2rem;
+        font-weight: 500;
+        color: #fefefe;
+      }
+    
+      .icon {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        color: #d6e015 !important;
+      }
+    
+      .back-button-text-ios {
+        letter-spacing: 0.2em;
+        color: #d6e015;
+        padding-left: 17%;
+      }
+    
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .list-md .item-block .item-inner {
+        border-bottom: 0px solid #dedede;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .list-ios .item-block .item-inner {
+        border-bottom: 0px solid #dedede;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+
+    .cls_btn {
+        width: 50px;
+        height: 50px;
+        color:  white;
+        //margin: 5px;
+        padding: 10px;
+        //-moz-border-radius: 50px;
+       // border-radius: 95px;
+        font-size: 11px;
+    }
+
+    .item-md.item-block .item-inner {
+         padding-right: 0px; 
+         border-bottom: 0px solid #dedede;
+    }
+
+    .label-md {
+        margin: 13px 8px 1px 0;
+    }
+
+    .item-ios.item-block .item-inner {
+        padding-right: 0px;
+        border-bottom: 0px solid #c8c7cc;
+    }
+
+   .label-ios {
+       margin: 13px 8px 1px 0;
+   }     
+
+
+
+
+.imagePuzzle {
+    color: white;
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    background-color: lightslategrey;
+}
+
+.unsolvedPuzzle {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 5%;
+    width: 1200px;
+    height: 250px;
+}
+
+.scoreboard {
+width: auto;
+
+}
+.sectionName {
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 500px;
+    height: 50px;
+}
+
+.score-detail{
+    color: blue;
+    display: flex;
+    justify-content: space-around;
+}
+.difficulty-levels {
+    justify-content: space-around;
+    display: flex;
+    text-align: center;
+}
+
+li {
+    width: 100px;
+    list-style-type: none;
+}
+
+.puzzle {
+    width: 250px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-wrap: wrap;
+    //box-sizing: initial;
+   // border: 1px solid red;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+   // display: inline-block;
+  
+   // border: 0;
+    //padding: 0;
+   // margin: 0;
+}
+
+.finalImage {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    /*background-image: url("../../assets/images/taj.jpg");*/
+    background-size: 100% 100%;
+}
+
+.unsolved, .solved {
+    width: 50%;
+}
+
+.image-url {
+    margin-top: 5%;
+}
+
+.successMessage{
+    margin: auto;
+    border: 1px solid green;
+    border-radius: 10px;
+    color: black;
+    background-color: lightgreen;
+    padding: 5%;
+    text-align: center;
+}
+
+
+
+}
