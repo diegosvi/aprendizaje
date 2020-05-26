@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, normalizeURL, ToastController } from 'ionic-angular';
 import { Observable, Subscription } from 'rxjs/Rx';
 import {DragulaService} from "ng2-dragula";
+
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Crop } from '@ionic-native/crop';
+import { AlertController } from 'ionic-angular';
+import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
 /**
  * Generated class for the PuzzlePage page.
  *
@@ -20,7 +25,7 @@ export class PuzzlePage {
     console.log('ionViewDidLoad PuzzlePage');
   }
 
-  imageUrl: string = '../assets/images/1.jpg';
+  imageUrl: string = '../assets/images/4.jpg';
   imageSize: number = 200;
   gridsize: number = 2;
   boxSize: number = 100 / (this.gridsize - 1);
@@ -35,12 +40,21 @@ export class PuzzlePage {
   timeVar: any;
   gameComplete: Boolean = false;
 
+  imgTemp: any;
+
   indexes: number[] = [];
   position: number[] = [];
   subs = new Subscription();
 
 
-  constructor(public navCtrl: NavController,  private dragulaService: DragulaService) {
+  imageResponse: any;
+  options: any;
+
+
+  constructor(public navCtrl: NavController,  private dragulaService: DragulaService,
+     public imagePicker: ImagePicker, public firebaseService: PequesGameServiceProvider,
+     public cropService: Crop,
+     public toastCtrl: ToastController, public alertCtrl: AlertController) {
 
   }
 
@@ -81,6 +95,85 @@ export class PuzzlePage {
     );
 
      }
+
+     openImagePicker(){
+      this.options = {
+        // Android only. Max images to be selected, defaults to 15. If this is set to 1, upon
+        // selection of a single image, the plugin will return it.
+        //maximumImagesCount: 3,
+  
+        // max width and height to allow the images to be.  Will keep aspect
+        // ratio no matter what.  So if both are 800, the returned image
+        // will be at most 800 pixels wide and 800 pixels tall.  If the width is
+        // 800 and height 0 the image will be 800 pixels wide if the source
+        // is at least that wide.
+        width: 200,
+        //height: 200,
+  
+        // quality of resized image, defaults to 100
+        quality: 25,
+  
+        // output type, defaults to FILE_URIs.
+        // available options are 
+        // window.imagePicker.OutputType.FILE_URI (0) or 
+        // window.imagePicker.OutputType.BASE64_STRING (1)
+        outputType: 1
+      };
+      this.imageResponse = [];
+      this.imagePicker.getPictures(this.options).then((results) => {
+        for (var i = 0; i < results.length; i++) {
+          //this.imageResponse.push('data:image/jpeg;base64,' + results[i]);
+          this.imgTemp=this.imageResponse.push('data:image/jpeg;base64,' + results[i]);
+          /*this.imageUrl = this.imgTemp;*/
+          //alert(results);
+          this.imageUrl = results;
+        }
+      }, (err) => {
+        alert(err);
+      });
+    
+     /* this.imagePicker.hasReadPermission().then(
+        (result) => {
+          if(result == false){
+            this.imagePicker.requestReadPermission();
+          }
+          else if(result == true){
+            this.imagePicker.getPictures({
+              maximumImagesCount: 1
+            }).then(
+              (results) => {
+                for (var i = 0; i < results.length; i++) {
+                  this.uploadImageToFirebase(results[i]);
+                  alert(JSON.stringify(results[i]));
+                }
+              }, (err) => console.log(err)
+            );
+          }
+        }, (err) => {
+          alert(err);
+        });*/
+    }
+
+    /*showAlert() {
+      const alert = this.alertCtrl.create({
+        title: 'New Friend!',
+        subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+        buttons:[
+          {
+            text: 'Cancel',
+            handler: data => {
+              console.log(this.openImagePicker());
+            }
+          },
+        ]
+      });
+      alert.present();
+    }*/
+
+    
+
+
+
 
      drag(event){
       console.log("asdasd")

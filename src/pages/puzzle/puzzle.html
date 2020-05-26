@@ -13,12 +13,11 @@
 
 
 <ion-content padding>
-
  
- 
-<ion-row>
+<ion-grid style="padding-top: 0px;">
+<ion-row style="position: relative; top: -7px;">
   <ion-col col-6>
-    <ion-row>
+    <ion-row > 
         <ion-col col-6 text-right style="background-color: #FF9800;font-size: 12px;">
           <p style="margin-bottom: 0; padding-top: 15%; color: #FFEB3B">Tiempo</p>
         </ion-col>
@@ -26,80 +25,133 @@
             <p style="color: #f46906; font-size: 15px;">{{ ticks }}</p>
         </ion-col>
       </ion-row>
-</ion-col>
-  <ion-col col-6>
-    <ion-row>
+    </ion-col>
+    <ion-col col-6>
+      <ion-row>
         <ion-col col-6 text-right style="background-color: #00BCD4;font-size: 13px;">
-          <p style="margin-bottom: 0; padding-top: 15%; color: aliceblue"> Steps :</p>
+          <p style="margin-bottom: 0; padding-top: 15%; color: aliceblue"> Puntos :</p>
         </ion-col>
         <ion-col col-6 text-center style="border: #00BCD4 3px solid;">
             <p style="color: #02b8d0; font-size: 15px;"> {{steps}}</p>
         </ion-col>
       </ion-row>
-</ion-col>
-
+    </ion-col>
 </ion-row>
-  <div class="finalImage" [ngStyle]="{'background-image':'url(' + imageUrl + ') '}"></div>
+  <ion-row>
+    <ion-col>
+      <div style="font-size: 20px; margin-bottom: 1%; text-transform: uppercase;" >NIVELES DE DIFICULTAD</div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <!--ion-list class="difficulty-levels">
+        <ion-item class="input-group">
+            <ion-label>Low</ion-label>
+            <ion-checkbox [(ngModel)]="difficulty" name="difficulty" value="2" checked (ionChange)="startGame()"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item class="input-group">
+          <ion-label>Medium</ion-label>
+          <ion-checkbox [(ngModel)]="difficulty" name="difficulty" value="3" (ionChange)="startGame()"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item class="input-group">
+            <ion-label>High</ion-label>
+            <ion-checkbox [(ngModel)]="difficulty" name="difficulty" value="4"  (ionChange)="startGame()"></ion-checkbox>
+        </ion-item>
+        </ion-list-->
+        
+
+        <div class="difficulty-levels">
+            <div class="input-group">
+              <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="2" checked (change)="startGame()">BÁSICO
+            </div>
+            <div class="input-group">
+              <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="3" (change)="startGame()">INTERMEDIO
+            </div>
+            <div class="input-group" style="padding-left: 6%;">
+              <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="4" (change)="startGame()">AVANZADO
+            </div>
+        </div>
+    </ion-col>
+</ion-row>
+
 <ion-row>
-<div class="image-url">
-  <div class="input-group">
-    <span class="input-group-btn">
-               <div class="btn btn-default" >Image Url!</div>
-            </span>
-           
-    <input type="url" class="form-control" placeholder="Image Url..." [(ngModel)]="imageUrl">
-  </div>
-</div>
-<div center class="successMessage" *ngIf="gameComplete">
-  Juego Completado. <br>
-  Has ganado Felicidades!
-</div>
+    <ion-col style="padding-bottom: 0px;">
+        <ion-row>
+          <ion-col class="col-4" style="padding-right: 0px;">
+              <div style="margin-top: 5%">
+                <button ion-button class="btn_mover" (click)="reRandomize()" round> Mezclar</button>
+              </div>
+          </ion-col>
+          <ion-col class="col-4" style="padding-left: 9px;">
+              <div class="finalImage" [ngStyle]="{'background-image':'url(' + imageUrl + ') '}"></div>
+          </ion-col>
+          <ion-col class="col-4" style="padding-top: 8%;">
+              <div center class="successMessage" *ngIf="gameComplete">
+                  Has ganado Felicidades!
+              </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+  
+  
+  <!--div class="image-url">
+    <div class="input-group">
+      <span class="input-group-btn">
+                <div class="btn btn-default" >Image Url!</div>
+              </span>
+            
+      <input type="url" class="form-control" placeholder="Image Url..." [(ngModel)]="imageUrl">
+    </div>
+  </div-->
+  
 </ion-row> 
-
-<div >
-<ion-item>
-  
- <!-- <div class="unsolvedPuzzle">
-      <div class="puzzle" dropzone="true">
-      <div *ngFor="let img of Image" class="cls_btn" [draggable]="true" [id]="img.index" (dragstart)="onDragStart($event, dropData)"
-      (cdkDropListDropped)="drop($event)" (dragover)="allowDrop($event)" [style.width.px]="boxSize" [style.height.px]="boxSize"
-        [ngStyle]="{'background-image':'url(' + imageUrl + ') ','background-repeat':'no-repeat', 'background-position': '' + img.x_pos + ' '  + img.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
-  
+<ion-row> <!-- *ngIf="imageUrl!=undefined; else firstLetter"-->
+    <ion-col style="padding-top: 0px; padding-bottom: 0px;">
+        <ion-item class="unsolvedPuzzle">
+            <div dragula="VAMPIRES"  class="puzzle" dropzone="true">
+              <div *ngFor="let img of Image" class="cls_btn"  [id]="img.index"
+                   [style.width.px]="boxSize" [style.height.px]="boxSize"
+                   [ngStyle]="{'background-image':'url(' + imageUrl + ') ','background-repeat':'no-repeat', 'background-position': '' + img.x_pos + ' '  + img.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
+          
+              </div>
+            </div>
+          </ion-item>
+    </ion-col>
+</ion-row>
+  <!--ng-template #firstLetter>
+    <ion-row>
+      <ion-col>
+        
+        <div class="images">
+          <p>holi</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ng-template-->
+<ion-row>
+    <div class="score-detail">
+        <div><button ion-button class="btn_volver" (click)="startGame()"  round > Vuelve a intentar</button></div>
     </div>
-    </div>
-  </div>-->
+</ion-row>
 
-  <div class="unsolvedPuzzle">
-    <div dragula="VAMPIRES"  class="puzzle" dropzone="true">
-      <div *ngFor="let img of Image" class="cls_btn"  [id]="img.index"
-           [style.width.px]="boxSize" [style.height.px]="boxSize"
-           [ngStyle]="{'background-image':'url(' + imageUrl + ') ','background-repeat':'no-repeat', 'background-position': '' + img.x_pos + ' '  + img.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
-  
+<button ion-button (click)="openImagePicker()">Select Photo</button>
+
+
+<!--ion-row>
+  <ion-col>
+    <div class="images">
+      <div class="one-image" *ngFor="let img of imageResponse">
+        <img src="{{img}}" alt="" srcset="">
       </div>
     </div>
-    </div>
- </ion-item>     
-</div>
-<ion-row> 
-<h3  style="font-size: 20px; margin-bottom: 1%; text-transform: uppercase;" >NIVELES DE DIFICULTAD</h3>
-<div class="difficulty-levels">
-  
-  <br>
-  <div class="input-group">
-    <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="2" checked (change)="startGame()">Low
-  </div>
-  <div class="input-group">
-    <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="3" (change)="startGame()">Medium
-  </div>
-  <div class="input-group">
-    <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="4" (change)="startGame()">High
-  </div>
-</div>
-</ion-row>
-    <div class="score-detail">
-      <div style="margin-top: 5%"><button ion-button (click)="startGame()"  round style="background-color: #9C27B0; font-family: 'Kalam'"> Vuelve a intentar</button></div>
-      <div style="margin-top: 5%"><button ion-button (click)="reRandomize()"  round style="background-color: #9C27B0; font-family: 'Kalam'"> Mezclar</button></div>
-    </div>
+  </ion-col>
+</ion-row-->
+
+
+
+</ion-grid>
 
 </ion-content>
 <!--

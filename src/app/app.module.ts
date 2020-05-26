@@ -17,8 +17,13 @@ import { PuzzlePage,PrincipalPage, AbecedarioPage, NumerosPage, MesesPage, DiasP
           CostaPage, RegistroPage,PintermedioPage,InformacionPage,FigurasPage,ProvinciasPage,JuegocolPage, AhorcadoPage, TabsPage, PracticaPage, 
           AdivinaPage, PbasicoPage, EntradaPage, MoverPage, PavanzadoPage} from '../pages/index.pages'
 import {CartasPage} from "../pages/cartas/cartas";
+import { AngularFireStorageModule } from 'angularfire2/storage';  
 //import { DragDropModule } from "@angular/cdk/drag-drop";
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Crop } from '@ionic-native/crop';
 import { PequesGameServiceProvider } from '../providers/peques-game-service/peques-game-service';
+import 'hammerjs';
+//import * as firebase from "firebase";
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCDeZVpEmo7nkDQ1v4Hnnp7EHfHx3wsvlQ",
@@ -86,6 +91,7 @@ export const firebaseConfig = {
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireStorageModule,
     DragulaModule.forRoot()
     //BrowserAnimationsModule,
     //DragDropModule
@@ -146,6 +152,8 @@ export const firebaseConfig = {
     SplashScreen,
     AngularFirestore,
     AngularFireDatabase,
+    ImagePicker,
+    Crop,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PequesGameServiceProvider
   ]

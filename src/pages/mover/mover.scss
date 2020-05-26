@@ -39,7 +39,7 @@ page-mover {
   
     #container {
         width: 333px;
-        height: 250px;
+        height: 200px;
         margin: 0 auto;
         border: 1px solid black;
         text-align: center;
@@ -61,6 +61,7 @@ page-mover {
       #resultado {
         text-align: center;
         font-size: 30px;
+        margin-top: 20px;
       }
       .pokemon {
          margin: 10px;

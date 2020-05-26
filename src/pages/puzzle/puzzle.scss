@@ -1,5 +1,33 @@
 page-puzzle {
 
+    .image-container {
+        min-height: 200px;
+        background-size: cover;
+      }
+       
+      @media (min-width: 0px) {
+        .images {
+          column-count: 2;
+        }
+      }
+       
+      @media (min-width: 420px) {
+        .images {
+          column-count: 3;
+        }
+      }
+       
+      @media (min-width: 720px) {
+        .images {
+          column-count: 4;
+        }
+      }
+       
+      .one-image {
+        margin: 2px;
+      }
+
+      
     .header-ios .toolbar-ios:last-child .toolbar-background-ios {
         border-width: 0 0 0.55px;
         background-color: #005448;
@@ -71,7 +99,13 @@ page-puzzle {
     }
 
     .label-md {
-        margin: 13px 8px 1px 0;
+        margin: 0px 0px 0px 0px;
+        font-size: 12px;
+    }
+
+    .label-ios {
+        margin: 0px 0px 0px 0px;
+        font-size: 12px;
     }
 
     .item-ios.item-block .item-inner {
@@ -79,9 +113,10 @@ page-puzzle {
         border-bottom: 0px solid #c8c7cc;
     }
 
-   .label-ios {
-       margin: 13px 8px 1px 0;
-   }     
+/*.item-md {
+        padding-left: 16px;
+    }*/
+   
 
 
 
@@ -97,11 +132,15 @@ page-puzzle {
 }
 
 .unsolvedPuzzle {
-    width: 50%;
+    width: 100%;
     box-sizing: border-box;
     padding: 0 5%;
-    width: 1200px;
-    height: 250px;
+//width: 1200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    flex-wrap: wrap;
 }
 
 .scoreboard {
@@ -120,12 +159,35 @@ width: auto;
     color: blue;
     display: flex;
     justify-content: space-around;
+    width: 200px;
+    margin: 0 auto;
 }
+
 .difficulty-levels {
-    justify-content: space-around;
+    //justify-content: space-around;
+    //display: flex;
+    //text-align: center;
+   // width: 69%;
+    //margin: 0 auto;
+
     display: flex;
-    text-align: center;
+    width: 89%;
+    margin: 0 auto;
+    //margin-left: 15%;
 }
+
+[type=checkbox], [type=radio] {
+    margin-top: 2%;
+    margin-right: 4%;
+}
+
+ion-app.md [padding] .scroll-content {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    padding-top: 0px;
+}
+
 
 li {
     width: 100px;
@@ -133,12 +195,16 @@ li {
 }
 
 .puzzle {
-    width: 250px;
-    height: 200px;
+    //width: 250px;
+    //height: 200px;
     display: flex;
     justify-content: center;
     padding: 0;
     flex-wrap: wrap;
+    width: 200px;
+    margin: 0 auto;
+    padding-bottom: 13%;
+
     //box-sizing: initial;
    // border: 1px solid red;
 }
@@ -175,8 +241,40 @@ li {
     border-radius: 10px;
     color: black;
     background-color: lightgreen;
-    padding: 5%;
+    //padding: 5%;
     text-align: center;
+}
+
+.btn_mover{
+    background-color: rgb(99, 216, 231);
+    font-family: 'Kalam';
+    /* border-radius: 200px 200px 200px 200px; */
+    width: 60px;
+    height: 60px;
+    /* background-color: #03800b; */
+    margin: 5px;
+    /* padding: 10px; */
+    border-radius: 50px;
+    font-size: 11px;
+    /* line-height: 32px; */
+    text-transform: uppercase;
+    float: right;
+    color: black;
+    margin-top: 14%;
+}
+
+.btn_volver{
+    background-color: #9C27B0;
+    font-size: 12px;
+    font-family: 'Kalam';
+    height: 2.6rem;
+    padding: 0 10px;
+}
+
+.item.item-md .checkbox-md {
+    position: static;
+    display: block;
+    margin: 9px 10px 9px 4px;
 }
 
 
