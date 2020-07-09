@@ -50,11 +50,18 @@ page-profesiones {
     text-align: center;
   }
 
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
+  }
+
 }
 .fondopro{
-
-  background-image: url("../../assets/img/pri/Homer.gif");
-  background-position: center;
+  background-color: #ff8a60;
+  /*background-image: url("../../assets/img/pri/Homer.gif");
+  background-position: center;*/
 }
 .fon{
   background: #E5E7E9;

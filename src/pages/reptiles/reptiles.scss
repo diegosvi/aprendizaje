@@ -54,6 +54,13 @@ page-reptiles {
     margin-top: 40px;
 }
 
+.play {
+  background-color: #202222;
+  color: black;
+ // height: auto;
+ // width: auto;
+}
+
 .scroll-content {
   left: 0;
   right: 0;
@@ -62,8 +69,8 @@ page-reptiles {
 }
 }
 .fondorep{
-
-  background-image: url("../../assets/img/pri/rio.gif");
+  background-color: #bfe2fe;
+  //background-image: url("../../assets/img/pri/rio.gif");
 }
 .fon{
   background: #E5E7E9;

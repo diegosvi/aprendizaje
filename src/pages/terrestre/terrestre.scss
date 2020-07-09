@@ -31,6 +31,13 @@ page-terrestre {
     color: #fefefe;
   }
 
+  .play {
+    background-color: #202222;
+    color: black;
+   
+   // height: auto;
+   // width: auto;
+  }
 
   .back-button-text-ios {
     letter-spacing: 0.2em;
@@ -52,8 +59,8 @@ page-terrestre {
 
 }
 .fondote{
-
-  background-image: url("../../assets/img/pri/bici.gif");
+  background-color: #5d71e0;
+  //background-image: url("../../assets/img/pri/bici.gif");
 }
 .fon{
   background: #E5E7E9;

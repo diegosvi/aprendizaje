@@ -47,10 +47,17 @@ page-peces {
     color: white;
     text-align: center;
   }
+
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
+  }
 }
 .fondopec{
-
-  background-image: url("../../assets/img/pri/pecesgif.gif");
+  background-color: #fdd5a1;
+  //background-image: url("../../assets/img/pri/pecesgif.gif");
 }
 
 .fon{

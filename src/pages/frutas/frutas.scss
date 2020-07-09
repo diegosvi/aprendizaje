@@ -49,11 +49,18 @@ page-frutas {
     text-align: center;
   }
 
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
+  }
+
 }
 .fondofru{
-
-  background-image: url("../../assets/img/pri/platano.gif");
-  background-position: center;
+  background-color: #d44073;
+  /*background-image: url("../../assets/img/pri/platano.gif");
+  background-position: center;*/
 }
 .fon{
   background: #E5E7E9;

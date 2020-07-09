@@ -22,7 +22,9 @@
               
                 <ion-row> 
                   <ion-col style="text-align: center;">
-                    <ion-icon class="play" name="play"></ion-icon>
+                      <ion-fab right bottom>
+                          <button ion-fab class="play"><ion-icon name="play"></ion-icon></button>
+                        </ion-fab> 
                     <div style="text-align: center;"><h1>{{mamifero.nombre}}</h1><img class="c_img" [src]="mamifero.imagen"></div>
                   </ion-col>
                 </ion-row>
