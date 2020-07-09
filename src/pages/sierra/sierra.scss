@@ -37,6 +37,13 @@ page-sierra {
     padding-left: 17%;
   }
 
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
+  }
+
   .c_img {
     vertical-align: middle;
     width: 1250px;
@@ -48,8 +55,9 @@ page-sierra {
       }
 
       .fondos{
-        background-image: url("../../assets/img/pri/ave.gif");
-        background-position: center;
+        /*background-image: url("../../assets/img/pri/ave.gif");
+        background-position: center;*/
+        background-color: #c6a5ff;
       }
 
 }

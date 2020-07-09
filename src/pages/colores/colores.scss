@@ -36,13 +36,20 @@ page-colores {
     color: #d6e015;
     padding-left: 17%;
   }
+
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
+  }
   
 }
 
 .fondocolores{
-
-  background-image: url("../../assets/img/pri/coloresgif.gif");
-  background-position: center;
+  background-color: #ffa3a3;
+  /*background-image: url("../../assets/img/pri/coloresgif.gif");
+  background-position: center;*/
 }
 
 .card-background-page1 {

@@ -49,11 +49,18 @@ page-dias {
     color: white;
     text-align: center;
   }
+
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
+  }
 }
 
 .fondodi{
-
-  background-image: url("../../assets/img/pri/dias.gif");
+  background-color: slateblue;
+  //background-image: url("../../assets/img/pri/dias.gif");
 }
 
 .card-background-page1 {

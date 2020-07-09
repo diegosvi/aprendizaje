@@ -36,14 +36,21 @@ page-figuras {
     color: #d6e015;
     padding-left: 17%;
   }
+
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
+  }
   
 
 }
 
 .fondofigura{
-
-  background-image: url("../../assets/img/pri/fuegoa.gif");
-  background-position: center;
+  background-color: #f7ffb0
+  /*background-image: url("../../assets/img/pri/fuegoa.gif");
+  background-position: center;*/
 }
 
 .card-background-page1 {

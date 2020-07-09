@@ -30,16 +30,18 @@ page-abecedario {
     width: 80%;
     color: #d6e015 !important;
   }
-
-  .play {
-    color: black;
-    height: auto;
-    width: auto;
-  }
+  
   .back-button-text-ios {
     letter-spacing: 0.2em;
     color: #d6e015;
     padding-left: 17%;
+  }
+
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
   }
 
 }
@@ -55,9 +57,9 @@ page-abecedario {
 }
 
 .fondoab{
-
-  background-image: url("../../assets/img/pri/pocoyo-gif1.gif");
-  background-position: center;
+  background-color: #f2a5ff;
+ /* background-image: url("../../assets/img/pri/pocoyo-gif1.gif");
+  background-position: center;*/
 }
 
 .card-background-page1 {

@@ -107,29 +107,42 @@
   </div-->
   
 </ion-row> 
-<ion-row> <!-- *ngIf="imageUrl!=undefined; else firstLetter"-->
-    <ion-col style="padding-top: 0px; padding-bottom: 0px;">
-        <ion-item class="unsolvedPuzzle">
-            <div dragula="VAMPIRES"  class="puzzle" dropzone="true">
-              <div *ngFor="let img of Image" class="cls_btn"  [id]="img.index"
-                   [style.width.px]="boxSize" [style.height.px]="boxSize"
-                   [ngStyle]="{'background-image':'url(' + imageUrl + ') ','background-repeat':'no-repeat', 'background-position': '' + img.x_pos + ' '  + img.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
-          
-              </div>
-            </div>
-          </ion-item>
-    </ion-col>
-</ion-row>
-  <!--ng-template #firstLetter>
-    <ion-row>
-      <ion-col>
+<ion-row *ngIf="Image!=undefined; else firstLetter" > <!-- -->
+  <ion-col style="padding-top: 0px; padding-bottom: 0px;">
+      <ion-item class="unsolvedPuzzle">
+          <div dragula="VAMPIRES"  class="puzzle" dropzone="true">
+            <div *ngFor="let img of Image" class="cls_btn"  [id]="img.index"
+                 [style.width.px]="boxSize" [style.height.px]="boxSize"
+                 [ngStyle]="{'background-image':'url(' + imageUrl + ') ','background-repeat':'no-repeat', 'background-position': '' + img.x_pos + ' '  + img.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
         
-        <div class="images">
-          <p>holi</p>
-        </div>
+            </div>
+          </div>
+      </ion-item>
+  </ion-col>
+</ion-row>
+<ng-template #firstLetter>
+  <ion-row>
+      <ion-col class="col-4" style="padding-left: 9px;">
+          <div class="finalImage" [ngStyle]="{'background-image':'url(' + imgTemp + ') '}"></div>
       </ion-col>
-    </ion-row>
-  </ng-template-->
+    <ion-col>
+      <div class="images">
+          <!--ion-item class="unsolvedPuzzle">
+              <div dragula="VAMPIRES"  class="puzzle" dropzone="true">
+                <div *ngFor="let imgTemp of imageResponse" class="cls_btn"  [id]="imgTemp.index"
+                     [style.width.px]="boxSize" [style.height.px]="boxSize"
+                     [ngStyle]="{'background-image':'url(' + imgTemp + ') ','background-repeat':'no-repeat', 'background-position': '' + imgTemp.x_pos + ' '  + imgTemp.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
+            
+                </div>
+              </div>
+          </ion-item-->
+        <div class="one-image" *ngFor="let imgTemp of imageResponse">
+          <img src="{{imgTemp}}" alt="" srcset="">
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ng-template>
 <ion-row>
     <div class="score-detail">
         <div><button ion-button class="btn_volver" (click)="startGame()"  round > Vuelve a intentar</button></div>

@@ -51,14 +51,22 @@ page-numeros {
 }
 
 .fondon{
-
-  background-image: url("../../assets/img/pri/numeros.gif");
+  background-color: #ffb343
+  //background-image: url("../../assets/img/pri/numeros.gif");
 }
 
 .ima{
 
   width: 300%;
   height: 300%;
+}
+
+.playn {
+  background-color: #202222;
+  color: black;
+  
+ // height: auto;
+ // width: auto;
 }
 
 .card-background-page {

@@ -11,15 +11,17 @@
 </ion-header>
 
 
-<ion-content padding class="fondote">
+<ion-content class="fondote">
   <ion-grid>
     <ion-row>
       <ion-col col >
         <div  class="space_I" *ngFor="let terrestre of terrestres" (click)="pruebaAudio(terrestre)">
           <ion-grid>
-                <ion-row class="icon"> 
-                  <ion-col style="text-align: center;">
-                    <ion-icon class="play" name="play"></ion-icon>
+                <ion-row> 
+                  <ion-col>
+                      <ion-fab right bottom>
+                          <button ion-fab class="play"><ion-icon name="play"></ion-icon></button>
+                        </ion-fab>  
                     <div style="text-align: center;"><h1>{{terrestre.nombre}}</h1><img class="c_img" [src]="terrestre.imagen"></div>
                   </ion-col>
                 </ion-row>

@@ -47,10 +47,17 @@ page-aereo {
     color: white;
     text-align: center;
   }
+
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
+  }
 }
 .fondoae{
-
-  background-image: url("../../assets/img/pri/aereo.gif");
+  background-color: aquamarine;
+  //background-image: url("../../assets/img/pri/aereo.gif");
 }
 .fon{
   background: #E5E7E9;

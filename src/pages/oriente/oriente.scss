@@ -50,7 +50,15 @@ page-oriente {
       }
 
       .fondopec{
-        background-image: url("../../assets/img/pri/loroo.gif");
-        background-position: center;
+        background-color: #3737a1;
+        /*background-image: url("../../assets/img/pri/loroo.gif");
+        background-position: center;*/
+      }
+
+      .play {
+        background-color: #202222;
+        color: black;
+       // height: auto;
+       // width: auto;
       }
 }

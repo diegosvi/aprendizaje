@@ -22,7 +22,9 @@
               
                 <ion-row> 
                   <ion-col class="col col-50 " style="text-align: center;">
-                    <ion-icon class="play" name="play"></ion-icon>
+                    <ion-fab right bottom>
+                      <button ion-fab class="play"><ion-icon name="play"></ion-icon></button>
+                    </ion-fab> 
                     <div><h1>{{color.nombre}}</h1><img style="width: 90% !important;" [src]="color.imagen"></div>
                   </ion-col>
                 </ion-row>

@@ -54,10 +54,17 @@ page-aves {
     text-align: center;
   }
 
+  .play {
+    background-color: #202222;
+    color: black;
+   // height: auto;
+   // width: auto;
+  }
+
 }
 .fondoave{
-
-  background-image: url("../../assets/img/pri/colibri.gif");
+  background-color: #ffa3d5;
+  //background-image: url("../../assets/img/pri/colibri.gif");
 }
 .fon{
   background: #E5E7E9;
