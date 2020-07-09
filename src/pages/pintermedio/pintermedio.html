@@ -12,7 +12,8 @@
 
 
 <ion-content padding class="cls_juego">
-  <ion-grid style=" margin-top: 2%;">
+  <ion-grid style=" margin-top: 17%;">
+    <h1 class="btn_letras">ESCOGE EL COLOR</h1>
   <ion-row>
       <ion-col col-12>
           <button style="background-color: #000" ion-button full class="btn_menu" (click)="irColores()">
@@ -27,10 +28,15 @@
             </button>
       </ion-col>
     </ion-row>
+  </ion-grid>
+    <ion-grid style=" margin-top: 17%;">
     <ion-row>
         <ion-col col-12>
+          <h1 class="btn_letras">MEMORIZA LA CARTA</h1> 
             <button style="background-color: #000" ion-button full class="btn_menu" (click)="irCartas()">
-                <ion-grid>
+               
+              <ion-grid>
+                  
                     <ion-row>
                         <ion-col col-12>
                           <div><img class="c_img" style="margin-top: 16%;" src="../../assets/img/pri/juegosmemoria.jpg"></div>
