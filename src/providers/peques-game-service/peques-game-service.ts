@@ -51,6 +51,17 @@ register(email : string, password : string, name : string){
 
 }
 
+//Register, SignIn, SignOut
+public createUser(email,password,data){
+  return this.afAuth.auth.createUserWithEmailAndPassword(email,password).then(confirm=>{
+    data.id=confirm.user.uid;
+    this.afDb.object('Usuario/'+confirm.user.uid).set(data);
+  }).catch(e=>{
+    //console.log(e)
+    return e;
+  })
+} 
+
 logout(){
   this.afAuth.auth.signOut();
 }

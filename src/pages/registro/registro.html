@@ -14,24 +14,84 @@
 
 
 <ion-content padding style="background-color: #e0d27d">
-  <img class="icon" src="../../assets/img/logo.png">
-  <ion-item>
-    <ion-label position="floating" style="font-family: 'Kalam';" > Nombre</ion-label>
-    <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
-  </ion-item>
+  <img class="icon" src="../../assets/img/logo.png" style="width: 30vh; height: 25vh; margin-left: auto; margin-right: auto;" >
+    <form [formGroup]="userRegisterForm" >
+      <ion-list no-lines>
 
-<ion-item>
-<ion-label position="floating" style="font-family: 'Kalam';"> Correo electrónico</ion-label>
-<ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
-</ion-item>
-<ion-item>
-<ion-label position="floating" style="font-family: 'Kalam';" > Contraseña</ion-label>
-<ion-input  type="password" [(ngModel)]="password" name="password"></ion-input>
-</ion-item>
-<br>
-<button ion-button block style="background-color: #00937d; font-family: 'Kalam';" expand="block" (click)="OnSubmitRegister()">REGISTRARSE</button>
-<br>
-<button class="btn_inici" ion-button block style="background-color: #f67d32; font-family: 'Kalam';" (click)="irEntrada()">YA TENGO CUENTA</button>
-<img class="icon" src="../../assets/img/logoal.jpg" style="margin-top:6%; width:25vh; margin-left: auto; margin-right: auto;">
+        <ion-item class="bg-transparent">
+          <ion-label position="floating" style="font-family: 'Kalam';" > Nombre</ion-label>
+          <ion-input [ngClass]="{'border-red':(userRegisterForm.controls['names'].errors && userRegisterForm.controls['names'].touched)==true}" 
+          formControlName="names" [(ngModel)]="user.nombre" type="text" value="" placeholder="Nombres" (ionChange)="changeData()"></ion-input>
+        </ion-item>
+        <ion-label style="margin-bottom: 0px; margin-top: 0px;">
+          <span *ngIf="userRegisterForm.controls['names'].errors && userRegisterForm.controls['names'].touched" class="validations"> * El nombre es requerido</span>
+        </ion-label>
+        <ion-label style="margin-bottom: 0px; margin-top: 0px;">
+          <span *ngIf="(user.nombre == null || user.nombre == '') && errorsForm && !userRegisterForm.controls['names'].touched" class="validations"> * El nombre es requerido</span>
+        </ion-label>
+            
+        <ion-item  class="bg-transparent">
+          <ion-label position="floating" style="font-family: 'Kalam';" >Apellido</ion-label>
+          <ion-input [ngClass]="{'border-red':userRegisterForm.controls['lastnames'].errors && userRegisterForm.controls['lastnames'].touched==true}" 
+          formControlName="lastnames" [(ngModel)]="user.apellido" type="text" value="" placeholder="Apellidos" (ionChange)="changeData()"></ion-input>
+        </ion-item>
+        <ion-label style="margin-bottom: 0px; margin-top: 0px;">
+          <span *ngIf="userRegisterForm.controls['lastnames'].errors && userRegisterForm.controls['lastnames'].touched" class="validations"> * El apellido es requerido</span>
+        </ion-label>   
+        <ion-label style="margin-bottom: 0px; margin-top: 0px;">
+          <span *ngIf="(user.apellido == null || user.apellido == '') && errorsForm && !userRegisterForm.controls['lastnames'].touched" class="validations"> * El apellido es requerido</span>
+        </ion-label> 
+        
+        <ion-item  class="bg-transparent">
+          <ion-label position="floating" style="font-family: 'Kalam';" >Correo</ion-label>
+          <ion-input [ngClass]="{'border-red':userRegisterForm.controls['email'].errors && userRegisterForm.controls['email'].touched==true,'border-red':emailExists}" 
+          formControlName="email" [(ngModel)]="user.correo" type="email" value="" placeholder="Correo" (ionChange)="changeData()"></ion-input>
+        </ion-item>
+        <ion-label style="margin-bottom: 0px; margin-top: 0px;">
+          <span *ngIf="userRegisterForm.controls['email'].errors && userRegisterForm.controls['email'].touched" class="validations"> * El correo es requerido.</span>
+          <span *ngIf="emailExists" class="validations"> * El correo ya existe.</span>
+          <br *ngIf="emailIncorrect && userRegisterForm.controls['email'].touched">
+          <span *ngIf="emailIncorrect && userRegisterForm.controls['email'].touched" class="validations"> * El formato del correo no es el correcto.</span>
+        </ion-label>  
+        <ion-label style="margin-bottom: 0px; margin-top: 0px;">
+          <span *ngIf="(user.correo == null || user.correo == '') && errorsForm && !userRegisterForm.controls['email'].touched" class="validations"> * El correo es requerido</span>
+        </ion-label> 
+        
+        <div class="row">
+          <div class="col-10">
+            <ion-item class="bg-transparent">
+              <ion-label position="floating" style="font-family: 'Kalam';" >Contraseña</ion-label>
+              <ion-input [ngClass]="{'border-red':userRegisterForm.controls['password'].errors && userRegisterForm.controls['password'].touched==true}" 
+              formControlName="password" [(ngModel)]="user.contrasenia" type="{{type}}" value="" placeholder="Contraseña" (ionChange)="changeData()"></ion-input> <!--[ngClass]="{'bg_inpass-ios':isIOs==true,'bg_inpass-android':isIOs==false}"--> 
+            </ion-item>
+          </div>
+          <div class="col-2">
+            <div style="margin-top: 60%;">
+              <ion-icon *ngIf="!showPass" class="bg_eyeicon" name="ios-eye-off-outline" (click)="showPassword()" color="dark" item-end></ion-icon>
+              <ion-icon *ngIf="showPass" class="bg_eyeicon" name="ios-eye-outline" (click)="showPassword()" color="dark" item-end></ion-icon>
+              </div>
+          </div>
+        </div>
+            
+        <ion-label style="margin-bottom: 0px; margin-top: 0px;">
+          <span *ngIf="userRegisterForm.controls['password'].errors && userRegisterForm.controls['password'].touched" class="validations"> * La contraseña es requerida</span>
+          <br *ngIf="userRegisterForm.controls['password'].errors && userRegisterForm.controls['password'].touched">
+          <span *ngIf="passwordIncorrect && userRegisterForm.controls['password'].touched" class="validations"> * La contraseña debe tener por lo menos 6 caracteres, <br> una letra mayúscula, una minúscula y un número</span>
+        </ion-label>
+        <ion-label style="margin-bottom: 0px; margin-top: 0px;">
+          <span *ngIf="(user.contrasenia == null || user.contrasenia == '') && errorsForm && !userRegisterForm.controls['password'].touched" class="validations"> * La contraseña es requerida</span>
+        </ion-label> 
 
+      </ion-list>  
+    </form>
+    
+    <div text-right class="btn-margin">
+        <button ion-button block style="background-color: #00937d; font-family: 'Kalam';" expand="block" (click)="createNewUser()">REGISTRARSE</button>
+        <button class="btn_inici" ion-button block style="margin-top: 2%; background-color: #f67d32; font-family: 'Kalam';" (click)="irEntrada()">YA TENGO CUENTA</button>
+    </div>
+
+    <div>
+        <img class="icon" src="../../assets/img/logoal.jpg" style="width: 38vh; margin-left: auto; margin-right: auto;">
+    </div>
+  
 </ion-content>

@@ -1,5 +1,14 @@
 page-registro {
 
+  .validations{
+    font-size: 10px;
+    color:#FF0000;	
+  }
+
+  .list-md .item-input:last-child {
+    border-bottom: 0px solid #dedede;
+}
+
     .item-md {
         padding-left: 16px;
         padding-right: 0;

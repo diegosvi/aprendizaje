@@ -21,6 +21,7 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 //import { DragDropModule } from "@angular/cdk/drag-drop";
 import { ImagePicker } from '@ionic-native/image-picker';
 import { Crop } from '@ionic-native/crop';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 import { PequesGameServiceProvider } from '../providers/peques-game-service/peques-game-service';
 import 'hammerjs';
 //import * as firebase from "firebase";
@@ -154,6 +155,7 @@ export const firebaseConfig = {
     AngularFireDatabase,
     ImagePicker,
     Crop,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PequesGameServiceProvider
   ]

@@ -44,24 +44,6 @@
   </ion-row>
   <ion-row>
     <ion-col>
-        <!--ion-list class="difficulty-levels">
-        <ion-item class="input-group">
-            <ion-label>Low</ion-label>
-            <ion-checkbox [(ngModel)]="difficulty" name="difficulty" value="2" checked (ionChange)="startGame()"></ion-checkbox>
-        </ion-item>
-      
-        <ion-item class="input-group">
-          <ion-label>Medium</ion-label>
-          <ion-checkbox [(ngModel)]="difficulty" name="difficulty" value="3" (ionChange)="startGame()"></ion-checkbox>
-        </ion-item>
-      
-        <ion-item class="input-group">
-            <ion-label>High</ion-label>
-            <ion-checkbox [(ngModel)]="difficulty" name="difficulty" value="4"  (ionChange)="startGame()"></ion-checkbox>
-        </ion-item>
-        </ion-list-->
-        
-
         <div class="difficulty-levels">
             <div class="input-group">
               <input type="radio" [(ngModel)]="difficulty" name="difficulty" value="2" checked (change)="startGame()">BÁSICO
@@ -95,19 +77,8 @@
         </ion-row>
       </ion-col>
   
-  
-  <!--div class="image-url">
-    <div class="input-group">
-      <span class="input-group-btn">
-                <div class="btn btn-default" >Image Url!</div>
-              </span>
-            
-      <input type="url" class="form-control" placeholder="Image Url..." [(ngModel)]="imageUrl">
-    </div>
-  </div-->
-  
 </ion-row> 
-<ion-row *ngIf="Image!=undefined; else firstLetter" > <!-- -->
+<ion-row > <!-- *ngIf="Image!=undefined; else firstLetter" -->
   <ion-col style="padding-top: 0px; padding-bottom: 0px;">
       <ion-item class="unsolvedPuzzle">
           <div dragula="VAMPIRES"  class="puzzle" dropzone="true">
@@ -120,61 +91,15 @@
       </ion-item>
   </ion-col>
 </ion-row>
-<ng-template #firstLetter>
-  <ion-row>
-      <ion-col class="col-4" style="padding-left: 9px;">
-          <div class="finalImage" [ngStyle]="{'background-image':'url(' + imgTemp + ') '}"></div>
-      </ion-col>
-    <ion-col>
-      <div class="images">
-          <!--ion-item class="unsolvedPuzzle">
-              <div dragula="VAMPIRES"  class="puzzle" dropzone="true">
-                <div *ngFor="let imgTemp of imageResponse" class="cls_btn"  [id]="imgTemp.index"
-                     [style.width.px]="boxSize" [style.height.px]="boxSize"
-                     [ngStyle]="{'background-image':'url(' + imgTemp + ') ','background-repeat':'no-repeat', 'background-position': '' + imgTemp.x_pos + ' '  + imgTemp.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
-            
-                </div>
-              </div>
-          </ion-item-->
-        <div class="one-image" *ngFor="let imgTemp of imageResponse">
-          <img src="{{imgTemp}}" alt="" srcset="">
-        </div>
-      </div>
-    </ion-col>
-  </ion-row>
-</ng-template>
+
 <ion-row>
     <div class="score-detail">
         <div><button ion-button class="btn_volver" (click)="startGame()"  round > Vuelve a intentar</button></div>
     </div>
 </ion-row>
 
-<button ion-button (click)="openImagePicker()">Select Photo</button>
-
-
-<!--ion-row>
-  <ion-col>
-    <div class="images">
-      <div class="one-image" *ngFor="let img of imageResponse">
-        <img src="{{img}}" alt="" srcset="">
-      </div>
-    </div>
-  </ion-col>
-</ion-row-->
-
-
+<button ion-button (click)="openImage()" round style="background-color: #f46906">Seleccionar foto</button>
 
 </ion-grid>
 
 </ion-content>
-<!--
-<div class="unsolvedPuzzle">
-  <h1 class="sectionName">{{imageName}}</h1>
-  <div class="puzzle" dropzone="true">
-    <div cdkDropList cdkDrag *ngFor="let img of Image" class="cls_btn" [draggable]="true" [id]="img.index" (dragstart)="onDragStart($event, dropData)"
-    (cdkDropListDropped)="drop($event)" (dragover)="allowDrop($event)" [style.width.px]="boxSize" [style.height.px]="boxSize"
-      [ngStyle]="{'background-image':'url(' + imageUrl + ') ','background-repeat':'no-repeat', 'background-position': '' + img.x_pos + ' '  + img.y_pos + '','background-size':''+ (gridsize * 100) +'% '+ (gridsize * 100) +'%'}">
-
-  </div>
-  </div>
-</div>-->

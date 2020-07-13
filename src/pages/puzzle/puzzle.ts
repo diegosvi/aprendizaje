@@ -4,6 +4,7 @@ import { Observable, Subscription } from 'rxjs/Rx';
 import {DragulaService} from "ng2-dragula";
 
 import { ImagePicker } from '@ionic-native/image-picker';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 import { Crop } from '@ionic-native/crop';
 import { AlertController } from 'ionic-angular';
 import { PequesGameServiceProvider } from '../../providers/peques-game-service/peques-game-service';
@@ -54,7 +55,8 @@ export class PuzzlePage {
   constructor(public navCtrl: NavController,  private dragulaService: DragulaService,
      public imagePicker: ImagePicker, public firebaseService: PequesGameServiceProvider,
      public cropService: Crop,
-     public toastCtrl: ToastController, public alertCtrl: AlertController) {
+     public toastCtrl: ToastController, public alertCtrl: AlertController,
+    public camera: Camera) {
 
   }
 
@@ -113,11 +115,13 @@ export class PuzzlePage {
 
           console.log('Image URI: ' + normalizeURL(results[i]));
           this.imgTemp = normalizeURL(results[i]);
+
           alert(this.imgTemp);
         }
       }, (err) => {
         alert(err);
       });
+
     
      /* this.imagePicker.hasReadPermission().then(
         (result) => {
@@ -139,6 +143,32 @@ export class PuzzlePage {
         }, (err) => {
           alert(err);
         });*/
+    }
+
+    openImage(){
+        const options: CameraOptions = {
+          quality: 75,
+          destinationType: this.camera.DestinationType.DATA_URL,
+          sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+          mediaType: this.camera.PictureSourceType.PHOTOLIBRARY
+         /* allowEdit: false,
+          encodingType: this.camera.EncodingType.JPEG,
+          targetWidth: 300,
+          targetHeight: 300,
+          saveToPhotoAlbum: false*/
+        };
+        console.log("este es formato"+options);
+        this.camera.getPicture(options).then(imageData => {
+          console.log("arreglo data imgen"+imageData)
+          let txtforImage = 'data:image/jpeg;base64,' + imageData;
+          this.imgTemp = txtforImage;
+          this.imageUrl = this.imgTemp;
+          console.log("imagen ruta"+this.imgTemp);
+        })
+        .catch(error => {
+          alert(error);
+          console.error(error);
+        })
     }
 
     /*showAlert() {
